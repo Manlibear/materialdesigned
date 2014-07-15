@@ -9,5 +9,5 @@ A Tumblr theme that uses all Google Design principles
 
 ###Third Party's Plugins:
 
-* (Html5Shiv)[https://github.com/aFarkas/html5shiv];
-* (Simple-Left-Sidebar)[https://github.com/dcdeiv/Simple-Left-Sidebar];
+* [Html5Shiv](https://github.com/aFarkas/html5shiv]);
+* [Simple-Left-Sidebar](https://github.com/dcdeiv/Simple-Left-Sidebar);
