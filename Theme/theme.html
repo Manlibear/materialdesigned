@@ -3,7 +3,7 @@
 <head>
     <title>{block:TagPage}{Tag} - {/block:TagPage} {block:SearchPage}{lang:Search results for SearchQuery} - {/block:SearchPage}{block:PostSummary}{PostSummary} - {/block:PostSummary}{Title}</title>
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
-    <meta name="description" content="{MetaDescription}" >
+    <meta name="description" content="{MetaDescription}">
     
     <!--CUSTOMISATION-->
     <meta name="color:Document Font" content="#2a2a2a">
@@ -12,7 +12,7 @@
     <meta name="color:Menu Button" content="#FFF">
     <meta name="color:Header Font" content="#FFF">
     <meta name="color:Icon Arrows" content="#4db6ac">
-    <meta name="if:Cards" content="1"
+    <meta name="if:Cards" content="1">
     <!--END CUSTOMIZATION-->
     
     <link rel="shortcut icon" href="{Favicon}">
@@ -21,7 +21,7 @@
     <link href='https://fonts.googleapis.com/css?family=Fira+Mono:400,700|Roboto:400,100,300,500,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="http://static.tumblr.com/5ck1zlp/Wemn8pxss/reset.css">
     <link rel="stylesheet" type="text/css" href="http://static.tumblr.com/5ck1zlp/U3Rn8rl0t/reboot.css">
-    <link rel="stylesheet" type="text/css" href="http://static.tumblr.com/5ck1zlp/mywn8rl0p/template.css">
+    <link rel="stylesheet" type="text/css" href="http://static.tumblr.com/5ck1zlp/QZtn8rmqr/template.css">
     
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="http://static.tumblr.com/5ck1zlp/UANn8rhsl/simple-left-sidebar-plugin.min.js"></script>
@@ -63,12 +63,13 @@ abbr,acronym,blockquote,.input-text{border-color:{color:Accent};}
 #top-section{background-color:{color:Header Background};color:{color:Header Font}}
 .menu-button:before{border-color: {color:Menu Button}}
 #sidebar-header{background-image:url('{HeaderImage}');}
-#sidebar-header,.search-box-submit{color: {color:Header Font};background-color:{color:Header Background};}
-.input-text,.post a,.post a:active,.post a:focus,.post a:hover,.post a:link,.post a:visited,.audio-art:before.quote:before{color: {color:Accent};}
+#sidebar-header,.search-box-submit{color:{color:Header Font};background-color:{color:Header Background};}
+.input-text,.post a,.post a:active,.post a:focus,.post a:hover,.post a:link,.post a:visited,.audio-art:before.quote:before{color:{color:Accent};}
 .link{background-color:{color:Accent};}
 .link a,.link a:active,.link a:focus,.link a:hover,.link a:link,.link a:visited{color: {color:Header Font};}
 .icon-next:before,.icon-next:after,.icon-previous:before,.icon-previous:after{background-color: {color:Icon Arrows}}
 @media all and max-width479px {h1{font-size:2em}h2{font-size:1.6em}h3,h4,h5,h6{font-size:1.2em}.audio-art{float:none}.audio-id3{margin:0 auto;text-align:center}}
+@media all and (max-width:400px){.article-content img{width:100%;float:none;margin:0}}
 </style>
 <body {block:IfCards}class="cards-enabled"{/block:IfCards}>
     <section id="top-section">
@@ -103,13 +104,15 @@ abbr,acronym,blockquote,.input-text{border-color:{color:Accent};}
         	</form>
         </div>
         
-        <hr/>
+        <hr />
         
         <nav class="sidebar-nav">
             {block:HasPages}
             <ul>
                 {block:Pages}
-                <li class="page sidebar-nav-el"><a href="{URL}">{Label}</a></li>
+                <li class="page sidebar-nav-el">
+                    <a href="{URL}">{Label}</a>
+                </li>
                 {/block:Pages}
             </ul>
             {/block:HasPages}
@@ -247,7 +250,7 @@ abbr,acronym,blockquote,.input-text{border-color:{color:Accent};}
             <div>
                 <div class="audio-art">
                     {block:AlbumArt}
-                    <img src="{AlbumArtURL}"/>
+                    <img class="album-art" src="{AlbumArtURL}"/>
                     {/block:AlbumArt}
                 </div>
                 <div class="audio-id3">
@@ -390,7 +393,7 @@ abbr,acronym,blockquote,.input-text{border-color:{color:Accent};}
         <ul>
             {block:PreviousDayPage}
             <li>
-                <a href="{PregiousDayPage}" class="prev">
+                <a href="{PreviousDayPage}" class="prev">
                     <span class="icon-previous"></span>
                 </a>
             </li>
@@ -399,7 +402,7 @@ abbr,acronym,blockquote,.input-text{border-color:{color:Accent};}
             {block:NextDayPage}
             <li>
                 <a href="{NextDayPage}" class="next">
-                    <span class="icon-previous"></span>
+                    <span class="icon-next"></span>
                 </a>
             </li>
             {/block:NextDayPage}
@@ -416,7 +419,7 @@ abbr,acronym,blockquote,.input-text{border-color:{color:Accent};}
                     <span class="icon-previous"></span>
                 </a>
             </li>
-            {/block:Previous}
+            {/block:PreviousPost}
             
             {block:NextPost}
             <li>
