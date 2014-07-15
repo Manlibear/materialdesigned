@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html {block:IfCards}class="cards-enabled"{/block:IfCards}>
+<head>
+    <title>{block:TagPage}{Tag} - {/block:TagPage} {block:SearchPage}{lang:Search results for SearchQuery} - {/block:SearchPage}{block:PostSummary}{PostSummary} - {/block:PostSummary}{Title}</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="{MetaDescription}" >
+    
+    <!--CUSTOMISATION-->
+    <meta name="color:Document Font" content="#2a2a2a">
+    <meta name="color:Header Background" content="#009688">
+    <meta name="color:Accent" content="#4db6ac">
+    <meta name="color:Menu Button" content="#FFF">
+    <meta name="color:Header Font" content="#FFF">
+    <meta name="color:Icon Arrows" content="#4db6ac">
+    <meta name="if:Cards" content="1"
+    <!--END CUSTOMIZATION-->
+    
+    <link rel="shortcut icon" href="{Favicon}">
+    <link rel="alternate" type="application/rss+xml" href="{RSS}">
+    
+    <link href='https://fonts.googleapis.com/css?family=Fira+Mono:400,700|Roboto:400,100,300,500,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="http://static.tumblr.com/5ck1zlp/Wemn8pxss/reset.css">
+    <link rel="stylesheet" type="text/css" href="http://static.tumblr.com/5ck1zlp/U3Rn8rl0t/reboot.css">
+    <link rel="stylesheet" type="text/css" href="http://static.tumblr.com/5ck1zlp/mywn8rl0p/template.css">
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="http://static.tumblr.com/5ck1zlp/UANn8rhsl/simple-left-sidebar-plugin.min.js"></script>
+    <!-- HTML5 Shiv -->
+    <!--[if lt IE 9]>
+        <script src="http://static.tumblr.com/hriofhd/Qj0m8pn7q/html5shiv.js"></script>
+    <![endif]-->
+    <script>
+    (function($){
+        $(document).ready(function(){
+            $.fn.fixHeight = function () {
+                this.each(function () {
+                    var $this = $(this);
+                    $(window).resize(function() {
+                        var $thisW = $this.width();
+                        $this.css('height', $thisW);
+                    });
+                    $(window).resize();
+                });
+            };
+            $('.soundcloud_audio_player, .audio-art').fixHeight();
+            $( '#sidebar' ).simpleLeftSidebar({
+                settings: {
+                    opener: '#sb-opener'
+                },
+                leftSidebar: {
+                    style: {
+                        maxWidth: 300
+                    }
+                }
+            });
+        });
+    })(jQuery);
+    </script>
+</head>
+<style>
+html,body{color:{color:Document Font};}
+abbr,acronym,blockquote,.input-text{border-color:{color:Accent};}
+#top-section{background-color:{color:Header Background};color:{color:Header Font}}
+.menu-button:before{border-color: {color:Menu Button}}
+#sidebar-header{background-image:url('{HeaderImage}');}
+#sidebar-header,.search-box-submit{color: {color:Header Font};background-color:{color:Header Background};}
+.input-text,.post a,.post a:active,.post a:focus,.post a:hover,.post a:link,.post a:visited,.audio-art:before.quote:before{color: {color:Accent};}
+.link{background-color:{color:Accent};}
+.link a,.link a:active,.link a:focus,.link a:hover,.link a:link,.link a:visited{color: {color:Header Font};}
+.icon-next:before,.icon-next:after,.icon-previous:before,.icon-previous:after{background-color: {color:Icon Arrows}}
+@media all and max-width479px {h1{font-size:2em}h2{font-size:1.6em}h3,h4,h5,h6{font-size:1.2em}.audio-art{float:none}.audio-id3{margin:0 auto;text-align:center}}
+</style>
+<body {block:IfCards}class="cards-enabled"{/block:IfCards}>
+    <section id="top-section">
+        <div id="toolbar">
+            <div id="sb-opener" class="menu-button"></div>
+        </div>
+        
+        <header id="main-header">
+                <h1 id="main-title" class="inline">
+                    <a href="{BlogURL}">{Title}</a>
+                </h1>
+            {block:ShowDescription}
+            <h5 id="main-description" class="clear">{Description}</h5>
+            {/block:ShowDescription}
+        </header>
+    </section>
+    
+    <div id="sidebar" class="sidebar sidebar-left">
+        <header id="sidebar-header">
+            <figure>
+                <img class="avatar" src="{PortraitURL-96}" alt="{Title}"/>
+            </figure>
+            <h5 class="sidebar-header-title"><a href="{BlogURL}">{Title}</a></h5>
+        </header>
+        
+        <div id="search-box">
+        	<sub>search</sub>
+        	
+        	<form class="search-form" action="/search" method="get">
+        		<input type="text" name="q" value="{SearchQuery}" class="input-text"/>
+        		<input type="submit" value="&rarr;" class="search-box-submit"/>
+        	</form>
+        </div>
+        
+        <hr/>
+        
+        <nav class="sidebar-nav">
+            {block:HasPages}
+            <ul>
+                {block:Pages}
+                <li class="page sidebar-nav-el"><a href="{URL}">{Label}</a></li>
+                {/block:Pages}
+            </ul>
+            {/block:HasPages}
+            {block:SubmissionsEnabled}
+            <ul>
+                <li class="submit sidebar-nav-el">
+                    <a href="{BlogURL}submit">{SubmitLabel}</a>
+                </li>
+            </ul>
+            {/block:SubmissionsEnabled}
+            {block:AskEnabled}
+            <ul>
+                <li class="ask sidebar-nav-el">
+                    <a href="{BlogURL}ask">{AskLabel}</a>
+                </li>
+            </ul>
+            {/block:AskEnabled}
+        </nav>
+    </div>
+    
+    <main>
+        {block:Posts}
+        <article class="post {block:Text}post-text {/block:Text}{block:Photo}post-photo {/block:Photo}{block:Panorama}post-panorama {/block:Panorama}{block:Photoset}post-photoset {/block:Photoset}{block:Quote}post-quote {/block:Quote}{block:Link}post-link {/block:Link}{block:Chat}post-chat {/block:Chat}{block:Audio}post-audio {/block:Audio}{block:Video}post-video {/block:Video}{block:Answer}post-answer {/block:Answer}{block:IfCards}card{/block:IfCards}">
+        
+            {block:Text}
+            {block:Title}
+            <header class="post-title">
+                <a href="{Permalink}"><h2>{Title}</h2></a>
+            </header>
+            {/block:Title}
+            
+            <div class="article-content">
+                {Body}
+            </div>
+            {/block:Text}
+            
+            {block:Photo}
+            <figure>
+                {LinkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}">{LinkCloseTag}
+                
+                {block:Caption}
+                <figcaption class="article-content">
+                    {block:HighRes}
+                    <div class="photo-high-res">
+                        <a href="{PhotoURL-HighRes}">High Res</a>
+                    </div>
+                    {/block:HighRes}
+                    {Caption}
+                </figcaption>
+                {/block:Caption}
+            </figure>
+            {/block:Photo}
+            
+            {block:Panorama}
+            <figure>
+                {LinkOpenTag}<img src="{PhotoURL-Panorama}" alt="{PhotoAlt}">{LinkCloseTag}
+                
+                {block:Caption}
+                <figcaption class="article-content">
+                    {block:HighRes}
+                        <div class="photo-high-res">
+                            <a href="{PhotoURL-HighRes}">High Res</a>
+                        </div>
+                    {/block:HighRes}
+                    {Caption}
+                </figcaption>
+                {/block:Caption}
+            </figure>
+            {/block:Panorama}
+            
+            {block:Photoset}
+                <figure>
+                {Photoset}
+                {block:Photos}
+                    {block:Caption}
+                    <figcaption class="photoset-caption">
+                        {Caption}
+                    </figcaption>
+                    {/block:Caption}
+                {/block:Photos}
+                </figure>
+                
+                {block:Caption}
+                <div class="article-content">
+                    {Caption}
+                </div>
+                {/block:Caption}
+            {/block:Photoset}
+            
+            {block:Quote}
+            <blockquote class="quote">
+                {quote}
+                
+                {block:Source}
+                <cite class="article-content">
+                    {Source}
+                </cite>
+                {/block:Source}
+            </blockquote>
+            {/block:Quote}
+            
+            {block:Link}
+            <div class="link">
+                <h5><a href="{URL}" {Target}>{Name}</a></h5>
+                <h6>{block:Host}{Host}{/block:Host}</h6>
+            </div>
+            
+            {block:Description}
+            <div class="article-content">
+                {Description}
+            </div>
+            {/block:Description}
+            {/block:Link}
+            
+            {block:Chat}
+            {block:Title}
+            <header class="post-title">
+                <a href="{Permalink}"><h2>{Title}</h2></a>
+            </header>
+            {/block:Title}
+            
+            <table class="chat">
+                {block:Lines}
+                <tr>
+                    <th>
+                    {block:Label}{Label}{/block:Label}
+                    </th>
+                    <td>{Line}</td>
+                </tr>
+                {/block:Lines}
+            </table>
+            {/block:Chat}
+            
+            {block:Audio}
+            <div>
+                <div class="audio-art">
+                    {block:AlbumArt}
+                    <img src="{AlbumArtURL}"/>
+                    {/block:AlbumArt}
+                </div>
+                <div class="audio-id3">
+                    {block:Artist}<h5>{Artist},</h5>{/block:Artist}
+                    {block:TrackName}<h5><strong>{TrackName}</strong></strong>.</h5>{/block:TrackName}
+                    {block:Album}<h4>{Album}</h4>{/block:Album}
+                </div>
+            </div>
+            {block:AudioPlayer}
+            <div class="audio-player">
+                {AudioPlayerGrey}
+            </div>
+            {/block:AudioPlayer}
+            {/block:Audio}
+            
+            {block:Video}
+            <div class="video">
+                {Video-500}
+            </div>
+            
+            {block:Caption}
+            <div class="article-content">
+                {Caption}
+            </div>
+            {/block:Caption}
+            {/block:Video}
+            
+            {block:Answer}
+            <div class="question">
+                <div class="asker asker-portrait">
+                    <img src="{AskerPortraitURL-96}" class="avatar"/>
+                </div>
+                <div class="asker asker-data">
+                <h6><strong>{Asker}</strong>:<br/>{Question}</h6></div>
+            </div>
+            
+            <div class="answer">
+                {block:Answerer}<h6><strong>{Answerer}</strong>:</h6>{/block:Answerer}<h6>{Answer}</h6>
+            </div>
+            {/block:Answer}
+        
+            {block:Date}
+            <aside class="attribuition">
+                {block:HasTags}
+                    <div class="tags">
+                        <ul>
+                        {block:Tags}
+                            <li>
+                                <a href="{TagURL}">#{Tag}</a>
+                            </li>
+                        {/block:Tags}
+                        </ul>
+                    </div>
+                {/block:HasTags}
+                <div class="post-permalink">
+                    <a href="{Permalink}">Permalink</a>
+                </div>
+                {block:ContentSource}
+                <div class="contentsource">
+                    <a href="{SourceURL}">
+                        {lang:Source}:
+                        {block:SourceLogo}
+                            <img src="{BlackLogoURL}" width="{LogoWidth}"
+                            height="{LogoHeight}" alt="{SourceTitle}" />
+                        {/block:SourceLogo}
+                        {block:NoSourceLogo}
+                            {SourceTitle}
+                        {/block:NoSourceLogo}
+                    </a>
+                </div>
+                {/block:ContentSource}
+                {block:Submission}
+                    <div class="submission-attr">
+                        Submitted by <a href"{SubmitterURL}">{Submitter}</a>.
+                    </div>
+                {/block:Submission}
+                <div class="notes-attr">
+                    <a href="{BlogURL}day/{Year}/{MonthNumberWithZero}/{DayOfMonthWithZero}">{Month} {DayOfMonth}, {Year}</a>{block:NoteCount}&nbsp;&nbsp;&ndash;&nbsp;&nbsp;<a href="{Permalink}#notes">{NoteCountWithLabel}</a>{/block:NoteCount}
+                </div>
+                <div class="share-buttons">
+                    <ul>
+                        <li>{LikeButton size="30"}</li>
+                        <li>{ReblogButton size="30"}</li>
+                    </ul>
+                </div>
+            </aside>
+            {/block:Date}
+            
+            {block:PostNotes}
+            <aside class="post-notes">
+                {PostNotes}
+            </aside>
+            {/block:PostNotes}
+        
+        </article>
+        
+        {block:IfNotCards}
+        <hr>
+        {/block:IfNotCards}
+        {/block:Posts}
+    </main>
+    
+    {block:Pagination}
+    <div id="pagination" class="pagination">
+        <ul>
+            {block:PreviousPage}
+            <li>
+                <a href="{PreviousPage}" class="prev">
+                    <span class="icon-previous"></span>
+                </a>
+            </li>
+            {/block:PreviousPage}
+            
+            {block:JumpPagination length="5"}
+            {block:CurrentPage}
+            <li class="current_page">
+                {PageNumber}
+            </li>
+            {/block:CurrentPage}
+            {block:JumpPage}
+            <li class="jump_page">
+                <a href="{URL}">{PageNumber}</a>
+            </li>
+            {/block:JumpPage}
+            {/block:JumpPagination}
+            
+            {block:NextPage}
+            <li>
+                <a href="{NextPage}" class="next">
+                    <span class="icon-next"></span>
+                </a>
+            </li>
+            {/block:NextPage}
+        </ul>
+    </div>
+    {/block:Pagination}
+    
+    {block:DayPagination}
+    <div id="day-pagination" class="pagination">
+        <ul>
+            {block:PreviousDayPage}
+            <li>
+                <a href="{PregiousDayPage}" class="prev">
+                    <span class="icon-previous"></span>
+                </a>
+            </li>
+            {/block:PreviousDayPage}
+            
+            {block:NextDayPage}
+            <li>
+                <a href="{NextDayPage}" class="next">
+                    <span class="icon-previous"></span>
+                </a>
+            </li>
+            {/block:NextDayPage}
+        </ul>
+    </div>
+    {/block:DayPagination}
+    
+    {block:PermalinkPagination}
+    <div id="permalink-pagination" class="pagination">
+        <ul>
+            {block:PreviousPost}
+            <li>
+                <a href="{PreviousPost}" class="prev">
+                    <span class="icon-previous"></span>
+                </a>
+            </li>
+            {/block:Previous}
+            
+            {block:NextPost}
+            <li>
+                <a href="{NextPost}" class="next">
+                    <span class="icon-next"></span>
+                </a>
+            </li>
+            {/block:NextPost}
+        </ul>
+    </div>
+    {/block:PermalinkPagination}
+</body>
