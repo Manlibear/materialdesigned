@@ -1,7 +1,7 @@
 Google-Design
 =============
 
-A Tumblr theme that uses all Google Design principles
+A Tumblr theme that uses all [Google Design](http://www.google.com/design) principles.
 
 ##[DEMO](http://googledesign.tumblr.com)
 
