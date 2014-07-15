@@ -5,8 +5,6 @@ A Tumblr theme that uses all [Google Design](http://www.google.com/design) princ
 
 ##[DEMO](http://googledesign.tumblr.com)
 
-=============
-
 ###Third Party's Plugins:
 
 * [Html5Shiv](https://github.com/aFarkas/html5shiv]);
