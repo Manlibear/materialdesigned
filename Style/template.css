@@ -18,12 +18,12 @@
     background-color:#009688;
     min-height:64px;
     color: white;
-    padding-bottom:1em;
+    padding:0;
 }
 
 #toolbar {
     position: fixed;
-    top: 0;
+    top:0;
     right: 0;
     left: 0;
     height:64px;
@@ -31,6 +31,7 @@
     background-color:inherit;
     color:inherit;
     z-index: 21;
+    padding-top:26px;
 }
 
 .menu-button {

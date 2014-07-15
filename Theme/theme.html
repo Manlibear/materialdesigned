@@ -61,6 +61,7 @@
     html,body{color:{color:Document Font};}
     abbr,acronym,blockquote,.input-text{border-color:{color:Accent};}
     #top-section{background-color:{color:Header Background};color:{color:Header Font}}
+    {block:IndexPage}#top-section{padding-bottom:1em}{/block:IndexPage}
     .menu-button:before{border-color: {color:Menu Button}}
     #sidebar-header{background-image:url('{HeaderImage}');}
     #sidebar-header,.search-box-submit{color:{color:Header Font};background-color:{color:Header Background};}
@@ -77,7 +78,7 @@
         <div id="toolbar">
             <div id="sb-opener" class="menu-button"></div>
         </div>
-        
+        {block:IndexPage}
         <header id="main-header">
                 <h1 id="main-title" class="inline">
                     <a href="{BlogURL}">{Title}</a>
@@ -86,6 +87,7 @@
             <h5 id="main-description" class="clear">{Description}</h5>
             {/block:ShowDescription}
         </header>
+        {/block:IndexPage}
     </section>
     
     <div id="sidebar" class="sidebar sidebar-left">
