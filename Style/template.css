@@ -1,11 +1,8 @@
-.inline{
-    display:inline-block;
-}
-
 #tumblr_controls {
     position: fixed;
     top: 0;
     right: 0;
+    margin: 0 auto;
 }
 
 .cards-enabled {
@@ -31,21 +28,19 @@
     top: 0;
     right: 0;
     left: 0;
-    min-height: 64px;
-    line-height: 64px;
+    height: 64px;
     background-color: inherit;
     color: inherit;
     z-index: 21;
-    padding-top: 26px;
+    padding-top: 30px;
 }
 
 .menu-button {
-    position: relative;
-    top: 0px;
     margin: 0 1em;
     height: 32px;
     width: 32px;
     cursor: pointer;
+    z-index:inherit;
 }
 
 .menu-button:before {
@@ -57,25 +52,24 @@
     height: 5px;
 }
 
+.header-toolbar{
+    position: fixed;
+    top:11px;
+    left:80px;
+    right:20px;
+    height: 64px;
+    line-height: 64px;
+    z-index:inherit;
+}
+
 .header-secondary{
-    position:relative;
-    top:-12px;
-    height:32px;
-    font-size:16px;
-    font-weight:300;
-}
-.header-secondary * {
-    font-size: inherit;
-    font-weight: inherit;
-}
-
-.header-secondary li {
-    margin-right:1em;
-    text-align: center;
-}
-
-.header-secondary strong {
-    font-weight: 400;
+    position: fixed;
+    top:26px;
+    right:16px;
+    left:80px;
+    height:64px;
+    line-height: 34px;
+    z-index:inherit;
 }
 
 #main-header {
@@ -142,12 +136,16 @@
     border-radius: .3em;
 }
 
-.sidebar-nav {
+.sidebar-element {
     margin: 1em;
 }
 
 .sidebar-nav-el {
     margin-bottom: 1em;
+}
+
+.following-widget ul li{
+    display: inline;
 }
 
 .card {
@@ -370,7 +368,7 @@
 
 .pagination ul {
     margin: 0 auto;
-    padding: 5em;
+    padding: 5em 1em;
     text-align: center;
 }
 

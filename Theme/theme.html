@@ -1,75 +1,107 @@
 <!DOCTYPE html>
 <html {block:IfCards}class="cards-enabled"{/block:IfCards}>
 <head>
-    <title>{block:TagPage}{Tag} - {/block:TagPage} {block:SearchPage}{lang:Search results for SearchQuery} - {/block:SearchPage}{block:PostSummary}{PostSummary} - {/block:PostSummary}{Title}</title>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
     <meta name="description" content="{MetaDescription}">
     
     <!--CUSTOMISATION-->
     <meta name="color:Document Font" content="#2a2a2a">
-    <meta name="color:Header Background" content="#009688">
+    <meta name="color:Main Color" content="#009688">
     <meta name="color:Accent" content="#4db6ac">
-    <meta name="color:Menu Button" content="#FFF">
     <meta name="color:Header Font" content="#FFF">
-    <meta name="color:Icon Arrows" content="#4db6ac">
     <meta name="if:Cards" content="1">
+    <meta name="if:Home Link" content="0">
+    <meta name="if:Following Widget" content="1">
+    <meta name="if:Likes Widget" content="1">
     <!--END CUSTOMIZATION-->
+    
+    <title>{block:TagPage}{Tag} - {/block:TagPage} {block:SearchPage}{lang:Search results for SearchQuery} - {/block:SearchPage}{block:PostSummary}{PostSummary} - {/block:PostSummary}{Title}</title>
     
     <link rel="shortcut icon" href="{Favicon}">
     <link rel="alternate" type="application/rss+xml" href="{RSS}">
     
     <link href='https://fonts.googleapis.com/css?family=Fira+Mono:400,700|Roboto:400,100,300,500,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="http://static.tumblr.com/5ck1zlp/Wemn8pxss/reset.css">
-    <link rel="stylesheet" type="text/css" href="http://static.tumblr.com/5ck1zlp/U3Rn8rl0t/reboot.css">
-    <link rel="stylesheet" type="text/css" href="http://static.tumblr.com/5ck1zlp/6Nhn8rojr/template.css">
+    <link rel="stylesheet" type="text/css" href="http://static.tumblr.com/5ck1zlp/643n8rwxt/reboot.css">
+    <link rel="stylesheet" type="text/css" href="http://static.tumblr.com/5ck1zlp/J8in8s54j/template.css">
     
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="http://static.tumblr.com/5ck1zlp/pDxn8rroq/jquery.simple-left-sidebar.min.js"></script>
+    <script src="http://static.tumblr.com/iwtk77u/Yhym2yygt/jquery.imagesloaded.min.js"></script>
+<script src="http://static.tumblr.com/wgijwsy/Ebfm2v4gy/jquery.masonry.min.js"></script>
+<script src="http://static.tumblr.com/wgijwsy/u2vm2hxv6/jquery.infinitescroll.min.js"></script>
     <!-- HTML5 Shiv -->
     <!--[if lt IE 9]>
         <script src="http://static.tumblr.com/hriofhd/Qj0m8pn7q/html5shiv.js"></script>
     <![endif]-->
     <script>
-    (function($){
-        $(document).ready(function(){
-            $.fn.fixHeight = function () {
-                this.each(function () {
-                    var $this = $(this);
-                    $(window).resize(function() {
-                        var $thisW = $this.width();
-                        $this.css('height', $thisW);
-                    });
-                    $(window).resize();
-                });
-            };
-            $('.soundcloud_audio_player, .audio-art').fixHeight();
-            $( '#sidebar' ).simpleLeftSidebar({
-                settings: {
-                    opener: '#sb-opener',
-                    ignore: '#ga_target, #tumblr_controls'
-                },
-                leftSidebar: {
-                    style: {
-                        maxWidth: 300
-                    }
-                }
-            });
-        });
-    })(jQuery);
+	(function($){
+		$(document).ready(function(){
+			$.fn.fixHeight = function () {
+				this.each(function () {
+					var $this = $(this);
+					$(window).resize(function() {
+						var $thisW = $this.width();
+						$this.css('height', $thisW);
+					});
+					$(window).resize();
+				});
+			};
+			$('.soundcloud_audio_player, .audio-art').fixHeight();
+			$( '#sidebar' ).simpleLeftSidebar({
+				settings: {
+					opener: '#sb-opener',
+					ignore: '#ga_target, #tumblr_controls'
+				},
+				leftSidebar: {
+					style: {
+						maxWidth: 300
+					}
+				}
+			});
+			
+			$.fn.showHeader = function() {
+				var headerTool = this,
+					mainHeader = $('#main-header');
+				$(window).resize(function() {
+					headerTool.hide();
+					$(document).scroll(function() {
+						var docTop     = $(this).scrollTop(),
+							mhTop      = mainHeader.offset().top,
+							mhHeight   = mainHeader.height(),
+							mhBottom   = mhTop + mhHeight,
+							mhPosition = mhBottom - docTop;
+							
+							if ( mhPosition <= 88 ) {
+								headerTool.show();
+							} else {
+								headerTool.hide();
+							}
+					});
+					$(document).scroll();
+				});
+				$(window).resize();
+				
+				return this;
+			};
+			$('.header-toolbar').showHeader();
+		});
+	})(jQuery);
     </script>
     <style>
-    html,body{color:{color:Document Font};}
-    abbr,acronym,blockquote,.input-text{border-color:{color:Accent};}
-    #top-section{background-color:{color:Header Background};color:{color:Header Font}}
-    {block:IndexPage}#top-section{padding-bottom:1em}{/block:IndexPage}
-    .menu-button:before{border-color: {color:Menu Button}}
-    #sidebar-header{background-image:url('{HeaderImage}');}
-    #sidebar-header,.search-box-submit{color:{color:Header Font};background-color:{color:Header Background};}
-    .input-text,.post a,.post a:active,.post a:focus,.post a:hover,.post a:link,.post a:visited,.audio-art:before.quote:before{color:{color:Accent};}
-    .link{background-color:{color:Accent};}
-    .link a,.link a:active,.link a:focus,.link a:hover,.link a:link,.link a:visited{color: {color:Header Font};}
-    .icon-next:before,.icon-next:after,.icon-previous:before,.icon-previous:after{background-color: {color:Icon Arrows}}
-    @media all and max-width479px {h1{font-size:2em}h2{font-size:1.6em}h3,h4,h5,h6{font-size:1.2em}.audio-art{float:none}.audio-id3{margin:0 auto;text-align:center}}
+    html,body{color:{color:Document Font}}
+    abbr,acronym,blockquote,.input-text{border-color:{color:Accent}}
+    #top-section{background-color:{color:Main Color};color:{color:Header Font}}
+    #top-section{padding-bottom:1em}
+    .menu-button:before{border-color:{color:Header Font}}
+    #sidebar-header{background-image:url('{HeaderImage}')}
+    #sidebar-header,.search-box-submit{color:{color:Header Font};background-color:{color:Main Color}}
+    .input-text,.post a,.post a:active,.post a:focus,.post a:hover,.post a:link,.post a:visited,.audio-art:before,.quote:before{color:{color:Accent}}
+    .link{background-color:{color:Accent}}
+    .link a,.link a:active,.link a:focus,.link a:hover,.link a:link,.link a:visited{color:{color:Header Font}}
+    .icon-next:before,.icon-next:after,.icon-previous:before,.icon-previous:after{background-color:{color:Accent}}
+    @media all and (max-width:479px){h1{font-size:2em}h2{font-size:1.6em}h3,h4,h5,h6{font-size:1.2em}.audio-art{float:none}.audio-id3{margin:0 auto;text-align:center}}
     @media all and (max-width:400px){.article-content img{width:100%;float:none;margin:0}}
     </style>
 </head>
@@ -77,12 +109,36 @@
     <section id="top-section">
         <div id="toolbar">
             <div id="sb-opener" class="menu-button"></div>
+            {block:IndexPage}
+            <div class="header-toolbar">
+                <strong><a href="{BlogURL}">{Title}</a></strong>
+            </div>
+            {/block:IndexPage}
+            {block:PermalinkPage}
+            <div class="header-secondary">
+                <strong><a href="{BlogURL}">{Title}</a></strong>
+                <p>{block:PostSummary}{PostSummary}{/block:PostSummary}</p>
+            </div>
+            {/block:PermalinkPage}
+            {block:TagPage}
+            <div class="header-secondary">
+                <strong><a href="{BlogURL}">{Title}</a></strong>
+                <p>#{Tag}</p>
+            </div>
+            {/block:TagPage}
+            
+            {block:DayPage}
+            <div class="header-secondary">
+                <strong><a href="{BlogURL}">{Title}</a></strong>
+                <p>{Month} {DayOfMonth}, {Year}</p>
+            </div>
+            {/block:DayPage}
         </div>
         {block:IndexPage}
         <header id="main-header">
-                <h1 id="main-title" class="inline">
-                    <a href="{BlogURL}">{Title}</a>
-                </h1>
+            <h1 id="main-title">
+                <a href="{BlogURL}">{Title}</a>
+            </h1>
             {block:ShowDescription}
             <h5 id="main-description" class="clear">{Description}</h5>
             {/block:ShowDescription}
@@ -109,7 +165,14 @@
         
         <hr />
         
-        <nav class="sidebar-nav">
+        <nav class="sidebar-nav sidebar-element">
+            {block:IfHomeLink}
+            <ul>
+                <li>
+                    <a href="{BlogURL}">Home</a>
+                </li>
+            </ul>
+            {/block:IfHomeLink}
             {block:HasPages}
             <ul>
                 {block:Pages}
@@ -134,9 +197,38 @@
             </ul>
             {/block:AskEnabled}
         </nav>
+        
+        {block:Likes}
+        {block:IfLikesWidget}
+        <hr />
+        <div class="likes-widget sidebar-element">
+            <h6>Liked:</h6>
+            {Likes limit="1" summarize="100"}
+        </div>
+        {/block:IfLikesWidget}
+        {/block:Likes}
+        
+        {block:IfFollowingWidget}
+        {block:Following}
+        <hr />
+        <div class="following-widget sidebar-element">
+            <h6>Following:</h6>
+            <ul>
+                {block:Followed}
+                <li><a href="{FollowedURL}"><img class="avatar" src="{FollowedPortraitURL-24}"/></a></li>
+                {/block:Followed}
+            </ul>
+        </div>
+        {/block:Following}
+        {/block:IfFollowingWidget}
     </div>
     
     <main>
+        {block:NoSearchResults}
+        <article style="text-align:center">
+            <h3>No Results Found.</h3>
+        </article>
+        {/block:NoSearchResults}
         {block:Posts}
         <article class="post {block:Text}post-text {/block:Text}{block:Photo}post-photo {/block:Photo}{block:Panorama}post-panorama {/block:Panorama}{block:Photoset}post-photoset {/block:Photoset}{block:Quote}post-quote {/block:Quote}{block:Link}post-link {/block:Link}{block:Chat}post-chat {/block:Chat}{block:Audio}post-audio {/block:Audio}{block:Video}post-video {/block:Video}{block:Answer}post-answer {/block:Answer}{block:IfCards}card{/block:IfCards}">
         
