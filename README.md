@@ -8,4 +8,10 @@ A Tumblr theme that uses all [Google Design](http://www.google.com/design) princ
 ###Third Party's Plugins:
 
 * [Html5Shiv](https://github.com/aFarkas/html5shiv]);
-* [Simple-Left-Sidebar](https://github.com/dcdeiv/Simple-Left-Sidebar);
+* [Simple-Sidebar](https://github.com/dcdeiv/simple-sidebar);
+
+####Bower
+* All plug-ins/components are installed via Bower. `bower install html5shiv simple-sidebar`;
+* The `components` dir holds all plug-ins;
+* See [`.bowerrc`](.bowerrc) file;
+* To update components run `bower update`.
