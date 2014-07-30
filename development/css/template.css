@@ -1,11 +1,15 @@
 /* 
 ** Google Design Template
 **
-** Main Color  = #009688;
-** Accent      = #4db6ac;
+** Main Color  = #03a9f4; 
+** Accent      = #4fc3f7;
 ** Font        = #2e2e2e;
 ** Font 2      = #FFF;
 */
+
+blockquote {
+    border-color: #4fc3f7;
+}
 
 .cards-enabled {
     background-color: #f3f3f3;
@@ -17,38 +21,38 @@
     border-radius: 10em;
 }
 
-.top-section{
-    background-color: #009688;
-    font-weight:300;
-    color:#FFF;
+.top-section {
+    background-color: #03a9f4;
+    font-weight: 300;
+    color: #FFF;
 }
 .top-section strong {
-    font-weight:400;
+    font-weight: 400;
 }
 
-.toolbar{
+.toolbar {
     position: fixed;
     top: 0;
     right: 0;
     left: 0;
-    padding:30px 1em;
+    padding: 30px 1em;
     z-index: 20;
 }
 
-.toolbar ul{
-    margin-left:64px;
-    margin-top:-28px;
+.toolbar ul {
+    margin-left: 64px;
+    margin-top: -28px;
 }
 
 .toolbar ul li {
     display: inline;
 }
 
-.container{
-    margin-top:76px;
+.container {
+    margin-top: 76px;
 }
 
-.main-header{
+.main-header {
     padding: 0 1em 1em 64px;
 }
 
@@ -56,7 +60,7 @@
     height: 32px;
     width: 32px;
     cursor: pointer;
-    z-index:inherit;
+    z-index: inherit;
 }
 
 .menu-button:before {
@@ -70,11 +74,11 @@
 
 main {
     position: relative;
-	padding-top:2em;
-    background-color:inherit;
+    padding-top: 2em;
+    background-color: inherit;
 }
 
-section{
+section {
     padding: 1em;
 }
 
@@ -88,29 +92,29 @@ section{
 .post {
     max-width: 500px;
     margin: 2em auto;
-    padding:1em;
-    color:inherit;
+    padding: 1em;
+    color: inherit;
 }
 
 .post header {
-    font-size:80%;
-    font-weight:300;
+    font-size: 80%;
+    font-weight: 300;
 }
 
 /*Text Post*/
-.text-post{
+.text-post {
     padding: 1em;
 }
 
 /*Quote Post*/
-.quote{
+.quote {
     border: 0;
     font-family: georgia,serif;
     font-size: 20px;
     font-style: italic;
     padding-left: 60px;
     position: relative;
-    color:inherit;
+    color: inherit;
 }
 
 .quote:before {
@@ -118,7 +122,7 @@ section{
     display: block;
     font-family: sans-serif;
     font-size: 170px;
-    color: #4db6ac;
+    color: #4fc3f7;
     left: -20px;
     position: absolute;
     top: -28px;
@@ -143,7 +147,7 @@ section{
 .link {
     padding: 2em;
     text-align: center;
-    background-color: #4db6ac;
+    background-color: #4fc3f7;
     font-weight: 300;
     margin-bottom: 1em;
 }
@@ -153,13 +157,13 @@ section{
 }
 
 /*Chat Post*/
-.chat{
-    margin-bottom:1em;
+.chat {
+    margin-bottom: 1em;
 }
 
 .chat th {
-    text-align:right;
-    padding-right:1em;
+    text-align: right;
+    padding-right: 1em;
 }
 
 /*Audio Post*/
@@ -178,12 +182,12 @@ section{
     content: '\266c';
     display: block;
     position: relative;
-    height:200px;
-    width:200px;
+    height: 200px;
+    width: 200px;
     font-family: georgia,serif;
     font-size: 128px;
     text-align: center;
-    color: #4db6ac;
+    color: #4fc3f7;
 }
 
 .art img {
@@ -237,72 +241,72 @@ section{
 }
 
 /*Captions and content*/
-.caption, .content{
-    word-wrap:break-word;
+.caption, .content {
+    word-wrap: break-word;
 }
 .caption {
-    margin-top:1em;
-    margin-bottom:1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 .photo-post .content,
-.panorama-post .content{
-    margin-top:1em;
+.panorama-post .content {
+    margin-top: 1em;
 }
 
 /*Pagination*/
-.pagination{
-    text-align:center;
-    margin-top:6em;
-    margin-bottom:3em;
+.pagination {
+    text-align: center;
+    margin-top: 6em;
+    margin-bottom: 3em;
 }
 
 /*NOTES*/
-.tags li{
-    display:inline;
-    margin-right:.5em;
+.tags li {
+    display: inline;
+    margin-right: .5em;
 }
-.share-buttons{
-    text-align:right;
+.share-buttons {
+    text-align: right;
 }
-.share-buttons li{
-    display:inline;
+.share-buttons li {
+    display: inline;
 }
 
 /*SIDEBAR*/
-.sidebar{
-    width:300px;
+.sidebar {
+    width: 300px;
     padding: 0;
-    background-color:#fff;
-    z-index:22;
+    background-color: #fff;
+    z-index: 22;
     -webkit-box-shadow: -1px 0px 5px 0px rgba(0, 0, 0, 0.5) inset;
     -moz-box-shadow: -1px 0px 5px 0px rgba(0, 0, 0, 0.5) inset;
     box-shadow: -1px 0px 5px 0px rgba(0, 0, 0, 0.5) inset;
 }
 
-.sidebar-header{
+.sidebar-header {
     padding: 1em;
-    background-image:url('http://assets.tumblr.com/images/default_header/optica_pattern_11.png?_v=4275fa0865b78225d79970023dde05a1');
-    background-size:cover;
-    background-position:center;
+    background-image: url('http://assets.tumblr.com/images/default_header/optica_pattern_11.png?_v=4275fa0865b78225d79970023dde05a1');
+    background-size: cover;
+    background-position: center;
 }
 
-.sidebar-avatar{
-    width:64px;
-    margin-bottom:4em;
+.sidebar-avatar {
+    width: 64px;
+    margin-bottom: 4em;
 }
 
-.sidebar-element{
+.sidebar-element {
     padding: 1em;
 }
 
-.sidebar-nav-el{
+.sidebar-nav-el {
     padding-bottom: .5em;
 }
 
 
 /*MEDIAQUERIES*/
-@media all and (max-width: 564px){
-    .post{
+@media all and (max-width: 564px) {
+    .post {
         margin:2em .5em;
     }
 }

@@ -2,6 +2,7 @@ html,body{
     background-color:#fff;
     font-size:16px;
     font-family:'roboto', helvetica, arial, sans-serif;
+    font-weight: 300;
     color:#2a2a2a;
 	/*word-break:keep-all;*/
     word-wrap:normal;
@@ -23,7 +24,7 @@ abbr,acronym{
 }
 
 blockquote{
-    border-left:2px solid #4db6ac;
+    border-left:2px solid;
     margin-bottom:1em;
     padding-left:1em;
 }
