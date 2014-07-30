@@ -57,17 +57,17 @@
 		};
 		$('.header-secondary').toggleHeader();
 		
-		$( '.sidebar' ).simpleLeftSidebar({
+		$( '.sidebar' ).simpleSidebar({
 			settings: {
 				opener: '.open-sb',
-				container: '.container',
+				wrapper: '.container',
 				ignore: '#ga_target, #tumblr_controls',
 				animation: {
-					duration: 1000,
+					duration: 500,
 					easing: 'easeOutQuint'
 				}
 			},
-			leftSidebar: {
+			sidebar: {
 				style: {
 					maxWidth: 400,
 				}
