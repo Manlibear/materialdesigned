@@ -6,7 +6,11 @@ A Tumblr theme that uses all [Google Design](http://www.google.com/design)'s pri
 ###DEMO
 * [googledesign.tumblr.com](http://googledesign.tumblr.com);
 
-This theme has not been accepted by the Tumblr Team yet.
+###INSTALL
+You have two options:
+
+1. Copy the [theme.html](theme/theme.html) file and paste it in the customisation area of your tumblog. `www.tumblr.com/customize/LINK`;
+2. Install it via the [Theme Garden](https://www.tumblr.com/theme/39128) but this theme has not been accepted by the Tumblr Team yet.
 
 ###COMPONENTS:
 
