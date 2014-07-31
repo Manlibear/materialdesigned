@@ -20,4 +20,4 @@ The other components are installed via Bower. `bower install html5shiv simple-si
 To update them run `bower update`.
 
 ###LICENSE:
-Read the license [license](LICENSE).
+Read the [license](LICENSE).
