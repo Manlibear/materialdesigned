@@ -22,7 +22,7 @@
 	
 	<link rel="stylesheet" type="text/css" href="http://static.tumblr.com/5ck1zlp/HkFn9jr8i/fonts.css"/>
 	<link rel="stylesheet" type="text/css" href="http://static.tumblr.com/5ck1zlp/E63n9iitd/reset.css"/>
-	<link rel="stylesheet" type="text/css" href="http://static.tumblr.com/5ck1zlp/IlPn9k3te/style.min.css"/>
+	<link rel="stylesheet" type="text/css" href="http://static.tumblr.com/5ck1zlp/m6cn9kcqe/style.min.css"/>
 	
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/jquery-ui.min.js"></script>
@@ -514,7 +514,7 @@
 </div>
 
 <script>
-!function(a){a.fn.iFrameFixHeight=function(){this.each(function(){var b=a(this),c=b.parent();a(window).resize(function(){var a=parseInt(b.attr("width")),d=parseInt(b.attr("height")),e=a/d,f=c.width(),g=f/e;b.css("height",g)}),a(window).resize()})},a(".video iframe").iFrameFixHeight()}(jQuery),function(a){a.fn.toggleHeader=function(){var b=this,c=a(".main-header");a(window).resize(function(){var d=c.height();a(document).scroll(function(){var e=a(document).scrollTop(),f=c.offset().top,g=f+d;g>=e?b.fadeOut(100):b.fadeIn(100)}),a(document).scroll()}),a(window).resize()},a(".header-secondary").toggleHeader()}(jQuery),function(a){a(".sidebar").simpleSidebar({settings:{opener:".open-sb",wrapper:".container",ignore:"#ga_target, #tumblr_controls",animation:{duration:600,easing:"easeOutExpo"}},sidebar:{align:"left",width:250,closingLinks:"a"}})}(jQuery);
+!function(a){a.fn.iFrameFixHeight=function(){this.each(function(){var b=a(this),c=b.parent();a(window).resize(function(){var a=parseInt(b.attr("width")),d=parseInt(b.attr("height")),e=a/d,f=c.width(),g=f/e;b.css("height",g)}),a(window).resize()})},a(".video iframe").iFrameFixHeight(),a.fn.toolbarFunctions=function(){var b=this,c=a(".header-secondary"),d=a(".main-header");a(window).resize(function(){var e=d.height();a(document).scroll(function(){var f=a(document).scrollTop(),g=d.offset().top,h=g+e;console.log(f),h>=f?(c.fadeOut(100),b.removeClass("has-shadow")):(c.fadeIn(100),b.addClass("has-shadow"))}),a(document).scroll()}),a(window).resize()},a(".toolbar").toolbarFunctions(),a(".sidebar").simpleSidebar({settings:{opener:".open-sb",wrapper:".container",ignore:"#ga_target, #tumblr_controls",animation:{duration:600,easing:"easeOutExpo"}},sidebar:{align:"left",width:250,closingLinks:"a"}})}(jQuery);
 {block:IfCards}
 !function(a){a(".content-wrapper").gridalicious({selector:".post",animate:!0,animationOptions:{speed:200,duration:300},width:500})}(jQuery);
 {/block:IfCards}
