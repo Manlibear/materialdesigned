@@ -1,0 +1,3 @@
+[submodule "components/grid-a-licious"]
+	path = components/grid-a-licious
+	url = https://github.com/dcdeiv/Grid-A-Licious
