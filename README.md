@@ -14,7 +14,7 @@ This theme has not been accepted by the Tumblr Team yet.
 * [Simple-Sidebar](https://github.com/dcdeiv/simple-sidebar);
 * [Grid-A-Licious](https://github.com/suprb/Grid-A-Licious).
 
-The [Grid-A-Licious](https://github.com/suprb/Grid-A-Licious) plugin was modified by me (see the repository I forked)[https://github.com/dcdeiv/Grid-A-Licious]. This component is added as a submodule.
+The [Grid-A-Licious](https://github.com/suprb/Grid-A-Licious) plugin was modified by me [see the repository I forked](https://github.com/dcdeiv/Grid-A-Licious). This component is added as a submodule.
 
 The other components are installed via Bower. `bower install html5shiv simple-sidebar`. See [`.bowerrc`](.bowerrc) file.
 To update them run `bower update`.
