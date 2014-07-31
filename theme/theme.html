@@ -514,77 +514,9 @@
 </div>
 
 <script>
-(function($) {
-	$.fn.iFrameFixHeight = function(options) {
-		this.each(function() {
-			var $this   = $(this),
-				container = $this.parent(); 
-			$(window).resize(function(){
-				var w  = parseInt( $this.attr( 'width' ) ),
-					h  = parseInt( $this.attr( 'height' ) ),
-					ar = w/h,
-					wC = container.width(),
-					nH = wC/ar;
-				$this.css( 'height', nH );
-			});
-			$(window).resize();
-		});
-	};
-	$('.video iframe').iFrameFixHeight();
-})(jQuery);
-(function($) {
-    $.fn.toggleHeader = function() {
-		var h2 = this,
-			h1 = $( '.main-header' );
-		$(window).resize(function() {
-			var h1H = h1.height();
-			$(document).scroll(function(){
-				var offset = $(document).scrollTop(),
-					h1Top  = h1.offset().top,
-					h1Bttm = h1Top + h1H;
-
-					if( offset <= h1Bttm ) {
-						h2.fadeOut( 100 );
-					} else {
-						h2.fadeIn( 100 );
-					}
-			});
-			$(document).scroll();
-		});
-		$(window).resize();
-	};
-	$('.header-secondary').toggleHeader();
-})(jQuery);
-(function($) {
-    $( '.sidebar' ).simpleSidebar({
-		settings: {
-			opener: '.open-sb',
-			wrapper: '.container',
-			ignore: '#ga_target, #tumblr_controls',
-			animation: {
-				duration: 600,
-				easing: 'easeOutExpo'
-			}
-		},
-		sidebar: {
-			align: 'left',
-			width: 250,
-			closingLinks: 'a'
-		}
-	});
-})(jQuery);
+!function(a){a.fn.iFrameFixHeight=function(){this.each(function(){var b=a(this),c=b.parent();a(window).resize(function(){var a=parseInt(b.attr("width")),d=parseInt(b.attr("height")),e=a/d,f=c.width(),g=f/e;b.css("height",g)}),a(window).resize()})},a(".video iframe").iFrameFixHeight()}(jQuery),function(a){a.fn.toggleHeader=function(){var b=this,c=a(".main-header");a(window).resize(function(){var d=c.height();a(document).scroll(function(){var e=a(document).scrollTop(),f=c.offset().top,g=f+d;g>=e?b.fadeOut(100):b.fadeIn(100)}),a(document).scroll()}),a(window).resize()},a(".header-secondary").toggleHeader()}(jQuery),function(a){a(".sidebar").simpleSidebar({settings:{opener:".open-sb",wrapper:".container",ignore:"#ga_target, #tumblr_controls",animation:{duration:600,easing:"easeOutExpo"}},sidebar:{align:"left",width:250,closingLinks:"a"}})}(jQuery);
 {block:IfCards}
-(function($){
-    $( '.content-wrapper' ).gridalicious({
-		selector: '.post',
-		animate: true,
-		animationOptions: {
-			speed: 200,
-			duration: 300
-		},
-		width: 500,
-	});
-})(jQuery);
+!function(a){a(".content-wrapper").gridalicious({selector:".post",animate:!0,animationOptions:{speed:200,duration:300},width:500})}(jQuery);
 {/block:IfCards}
 </script>
 
