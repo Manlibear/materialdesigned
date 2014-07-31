@@ -3,7 +3,7 @@ Google-Design
 
 A Tumblr theme that uses all [Google Design](http://www.google.com/design)'s principles.
 
-##DEMO
+###DEMO
 * [googledesign.tumblr.com](http://googledesign.tumblr.com);
 
 This theme has not been accepted by the Tumblr Team yet.
