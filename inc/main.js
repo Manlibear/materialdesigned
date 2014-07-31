@@ -27,8 +27,6 @@
 					h1Top  = h1.offset().top,
 					h1Bttm = h1Top + h1H;
 					
-					console.log( offset );
-					
 					if( offset <= h1Bttm ) {
 						h2.fadeOut( 100 );
 						tb.removeClass( 'has-shadow' );
