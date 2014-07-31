@@ -16,8 +16,9 @@
 	};
 	$('.video iframe').iFrameFixHeight();
 	
-	$.fn.toggleHeader = function() {
-		var h2 = this,
+	$.fn.toolbarFunctions = function() {
+		var tb = this,
+		    h2 = $( '.header-secondary' ),
 			h1 = $( '.main-header' );
 		$(window).resize(function() {
 			var h1H = h1.height();
@@ -26,17 +27,21 @@
 					h1Top  = h1.offset().top,
 					h1Bttm = h1Top + h1H;
 					
+					console.log( offset );
+					
 					if( offset <= h1Bttm ) {
 						h2.fadeOut( 100 );
+						tb.removeClass( 'has-shadow' );
 					} else {
 						h2.fadeIn( 100 );
+						tb.addClass( 'has-shadow' );
 					}
 			});
 			$(document).scroll();
 		});
 		$(window).resize();
 	};
-	$('.header-secondary').toggleHeader();
+	$('.toolbar').toolbarFunctions();
 	
 	$( '.sidebar' ).simpleSidebar({
 		settings: {
