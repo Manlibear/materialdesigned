@@ -1,10 +1,10 @@
-Google-Design
+Material Designed
 =============
 
-A Tumblr theme that uses all [Google Design](http://www.google.com/design)'s principles.
+Material Designed is a multi-column Tumblr theme built to look like a web app accordint to [Google Design](http://www.google.com/design)'s principles.
 
 ###DEMO
-* [googledesign.tumblr.com](http://googledesign.tumblr.com);
+* [materialdesigned.tumblr.com](http://googledesign.tumblr.com);
 
 ###INSTALL
 You have two options:
