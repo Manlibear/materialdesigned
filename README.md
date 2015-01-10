@@ -1,7 +1,7 @@
 Material Designed
 =============
 
-Material Designed is a multi-column Tumblr theme built to look like a web app accordint to [Google Design](http://www.google.com/design)'s principles.
+Material Designed is a single-column Tumblr theme built to look like a web app accordint to [Google Design](http://www.google.com/design)'s principles.
 
 ###DEMO
 * [materialdesigned.tumblr.com](http://googledesign.tumblr.com);
@@ -15,8 +15,6 @@ You have two options:
 ###COMPONENTS:
 
 * [Html5Shiv](https://github.com/aFarkas/html5shiv]);
-* [Simple-Sidebar](https://github.com/dcdeiv/simple-sidebar);
-* [Grid-A-Licious](https://github.com/suprb/Grid-A-Licious).
 
 The [Grid-A-Licious](https://github.com/suprb/Grid-A-Licious) plugin was modified by me [see the repository I forked](https://github.com/dcdeiv/Grid-A-Licious). This component is added as a submodule.
 
