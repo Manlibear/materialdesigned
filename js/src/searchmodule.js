@@ -2,11 +2,11 @@
     $.fn.searchModule = function() {
         var $searchModule = $(this),
             showSearchModule = function() {
-                $('#navbar-main-module').fadeOut();
+                $('#navbar-nb-module').fadeOut();
                 $('#search-module').fadeIn();
             },
             hideSearchModule = function() {
-                $('#navbar-main-module').fadeIn();
+                $('#navbar-nb-module').fadeIn();
                 $('#search-module').fadeOut();
             };
 
@@ -14,7 +14,7 @@
             showSearchModule();
         });
 
-        $('#search-module-hide').click(function(){
+        $('#close-search-module').click(function(){
             hideSearchModule();
         });
     };

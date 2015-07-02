@@ -4,7 +4,7 @@
 
         $('#main').fixMainWrapper('#main-navbar');
 
-        $('#toggle-search').searchModule();
+        $('#open-search-module').searchModule();
 
         $('#main-sidebar').simplerSidebar({
             opener: '#toggle-sidebar',
