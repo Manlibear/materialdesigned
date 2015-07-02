@@ -1,4 +1,4 @@
-/*! material-designed v2.0.0 (http://materialdesigned.tumblr.com)
+/*! material-designed v3.0.0 (http://materialdesigned.tumblr.com)
 ** Davide Di Criscito <davide.dicriscito@gmail.com> (http://github.com/dcdeiv)
 ** (c) 2014-2015 Licensed under GPLv2
 */
@@ -26,17 +26,36 @@
 })(jQuery);
 
 (function($) {
+    $.fn.fixMainWrapper = function(navbar) {
+        var $mainWrapper = $(this),
+            $mainNavbar = $(navbar);
+
+        $(window).resize(function() {
+            nbHeight = $mainNavbar.outerHeight();
+
+            $mainWrapper.css('margin-top', nbHeight + 16);
+        });
+        $(window).resize();
+    };
+})(jQuery);
+
+(function($) {
     $('document').ready(function() {
         $('.video iframe').iFrameFixHeight();
 
-        $('#sidebar').simplerSidebar({
+        $('#main').fixMainWrapper('#main-navbar');
+
+        $('#main-sidebar').simplerSidebar({
             opener: '#toggle-sidebar',
             animation: {
                 easing: 'easeOutQuint'
             },
             sidebar: {
                 align: 'left',
-                width: 300
+                width: 300,
+                css: {
+                    zIndex: 3000
+                }
             }
         });
     });
