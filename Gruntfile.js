@@ -21,8 +21,8 @@ module.exports = function(grunt) {
             gruntfile: {
                 src: 'Gruntfile.js'
             },
-            src: {
-                src: ['src/**/*.js']
+            js: {
+                src: ['js/src/*.js']
             }
         },
 
@@ -32,10 +32,7 @@ module.exports = function(grunt) {
                     style: 'compressed'
                 },
                 files: {
-                    'css/main.css': 'css/src/main.scss',
-
-                    //themes
-                    'css/themes/indigo.css': 'css/themes/src/indigo.scss'
+                    'css/materialdesigned-style.css': 'css/sass/main.scss',
                 }
             }
         },
@@ -46,18 +43,22 @@ module.exports = function(grunt) {
                 stripBanners: true
             },
             dist: {
-                src: ['src/simple-sidebar.js'],
-                dest: 'dist/jquery.<%= pkg.name %>.js'
+                src: [
+                    'bower_components/simpler-sidebar/dist/jquery.simpler-sidebar.min.js',
+                    'js/src/iframeheightfix.js',
+                    'js/src/documentready.js'
+                ],
+                dest: 'js/materialdesigned-template.js'
             }
         },
 
         uglify: {
             options: {
-                banner: '<%= banner %>\n'
+                preserveComments: 'some'
             },
             dist: {
                 src: '<%= concat.dist.dest %>',
-                dest: 'dist/jquery.<%= pkg.name %>.min.js'
+                dest: 'js/materialdesigned-template.min.js'
             }
         },
 
@@ -77,7 +78,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-sass');
 
     // Default task.
-    grunt.registerTask('default', ['jshint', 'concat', 'uglify']);
+    grunt.registerTask('default', ['sass', 'jshint', 'concat', 'uglify']);
 };
