@@ -47,6 +47,7 @@ module.exports = function(grunt) {
                     'bower_components/simpler-sidebar/dist/jquery.simpler-sidebar.min.js',
                     'js/src/iframeheightfix.js',
                     'js/src/fixmainwrapper.js',
+                    'js/src/searchmodule.js',
                     'js/src/documentready.js'
                 ],
                 dest: 'js/materialdesigned-template.js'

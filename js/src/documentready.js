@@ -4,6 +4,8 @@
 
         $('#main').fixMainWrapper('#main-navbar');
 
+        $('#toggle-search').searchModule();
+
         $('#main-sidebar').simplerSidebar({
             opener: '#toggle-sidebar',
             animation: {
