@@ -46,33 +46,25 @@
 
     <div id="main-navbar">
         <div class="navbar-wrapper">
-            <ul>
-                <li class="navbar-row-main">
-                    <ul id="navbar-main-module" class="list-inline">
-                        <li id="toggle-sidebar" class="icon clickable">
-                            <i class="mdi mdi-menu"></i>
-                        </li>
-                        <li>
-                            <h1 class="title-blog">Material Design</h1>
-                        </li>
-                        <li id="toggle-search" class="icon clickable">
-                            <i class="mdi mdi-magnify"></i>
-                        </li>
-                    </ul>
-
-                    <ul id="search-module" class="list-inline" data-search-module="show">
-                        <li id="search-module-hide" class="icon clickable" data-search-module="back">
-                            <i class="mdi mdi-arrow-left"></i>
-                        </li>
-                        <li id="search-input">
-                            <input type="text" value="Search"></input>
-                        </li>
-                    </ul>
-                </li>
-                <li class="navbar-row-sub">
-                    <h2>Subtitle</h2>
-                </li>
-            </ul>
+            <div id="main-nb-module" class="row">
+                <div class="cell icon clickable">
+                    <i class="mdi mdi-menu"></i>
+                </div>
+                <div class="cell">
+                    <h1>Titolo</h1>
+                </div>
+                <div class="cell icon clickable">
+                    <i id="open-search-module" class="mdi mdi-arrow-left"></i>
+                </div>
+            </div>
+            <div id="search-module" class="row">
+                <div class="cell icon clickable">
+                    <i id="close-search-module" class="mdi mdi-arrow-left"></i>
+                </div>
+                <div class="cell">
+                    <input type="text" value="Search" />
+                </div>
+            </div>
         </div>
     </div>
 
