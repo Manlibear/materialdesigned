@@ -34,21 +34,35 @@
 }
 
 .navbar-row-main {
+    position: relative;
     height: 66px;
     line-height: 66px;
 }
 
 .navbar-row-sub {
+    position: relative;
     height: 40px;
     line-height: 40px;
 }
 
-#toggle-sidebar {
+#toggle-sidebar, #search-module-hide {
     margin-right: 1em;
 }
 
 #toggle-search {
     float: right;
+}
+
+#search-input {
+    position: relative;
+}
+
+#search-module {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: none;
 }
 
 @media all and (max-width: 360px) {
