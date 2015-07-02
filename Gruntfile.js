@@ -46,6 +46,7 @@ module.exports = function(grunt) {
                 src: [
                     'bower_components/simpler-sidebar/dist/jquery.simpler-sidebar.min.js',
                     'js/src/iframeheightfix.js',
+                    'js/src/fixmainwrapper.js',
                     'js/src/documentready.js'
                 ],
                 dest: 'js/materialdesigned-template.js'
@@ -64,7 +65,7 @@ module.exports = function(grunt) {
 
         watch: {
             js: {
-                files: ['src/simple-sidebar.js'],
+                files: ['js/src/*.js'],
                 tasks: ['jshint', 'concat', 'uglify']
             },
             css: {
