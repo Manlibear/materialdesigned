@@ -1,10 +1,9 @@
 Material Designed
 =============
 
-Material Designed is a single-column Tumblr theme built to look like a web app accordint to [Google Design](http://www.google.com/design)'s principles.
+A single-column Tumblr theme built to look like a web-app according to the Google's [Material Design](http://www.google.com/design) principles.
 
-###DEMO
-* [materialdesigned.tumblr.com](http://googledesign.tumblr.com);
+[materialdesigned.tumblr.com](http://materialdesigned.tumblr.com);
 
 ###INSTALL
 You have two options:
