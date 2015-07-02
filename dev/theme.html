@@ -1,0 +1,471 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"/>
+	<meta name="description" content="{MetaDescription}"/>
+	
+	<!--CUSTOMISATION-->
+	<meta name="color:Primary" content="#03A9F4"/>
+	<meta name="color:Secondary" content="#4fc3f7"/>
+	<meta name="color:Font Secondary" content="#fff"/>
+	<meta name="if:Home Link" content="0"/>
+	<!--END-CUSTOMISATION-->
+	
+	<title>{block:TagPage}{Tag} - {/block:TagPage} {block:SearchPage}{lang:Search results for SearchQuery} - {/block:SearchPage}{block:PostSummary}{PostSummary} - {/block:PostSummary}{Title}</title>
+	
+	<link rel="shortcut icon" href="{Favicon}"/>
+	<link rel="alternate" type="application/rss+xml" href="{RSS}"/>
+	
+	<link rel="stylesheet" type="text/css" href="http://static.tumblr.com/5ck1zlp/HkFn9jr8i/fonts.css"/>
+	<link rel="stylesheet" type="text/css" href="http://static.tumblr.com/5ck1zlp/5oEn9ld8o/reset.min.css"/>
+	<link rel="stylesheet" type="text/css" href="http://static.tumblr.com/5ck1zlp/Rqlnhz2dr/themestyle.min.css"/>
+	
+	<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script src="http://static.tumblr.com/5ck1zlp/irVnhz2ib/jquery.materialsidebar.min.js"></script>
+	
+	<!-- HTML5 Shiv -->
+	<!--[if lt IE 9]>
+	<script src="http://static.tumblr.com/5ck1zlp/6yrn9ij90/html5shiv.min.js"></script>
+	<![endif]-->
+	
+	<style>
+    	.top-section,.sidebar-header{background-color:{color:Primary}}
+    	.menu-button:before{border-color:{color:Font Secondary}}
+    	.main-header{color:{color:Font Secondary}}
+    	blockquote{border-color:{color:Secondary}}
+    	.quote:before{color:{color:Secondary}}
+    	.link{background-color:{color:Secondary}}
+		{CustomCSS}
+		.sidebar-header,.link a,.link a:active,.link a:focus,.link a:hover,.link a:link,.link a:visited{color:{color:Font Secondary}}
+		.sidebar-header{background-color:{color:Primary}}
+		
+		{block:ShowHeaderImage}
+		.sidebar-header{background-image:url('{HeaderImage}');background-size:cover;background-position:center;}
+		{/block:ShowHeaderImage}
+		
+		@media all and (max-width: 564px) {
+		    .question,.answer,.replies{font-size:90%}.post{margin:2em .5em}.art,.art:before,.art img{width:100px;height:100px;font-size:80px;}}
+	</style>
+</head>
+
+<body>
+
+<div class="tnav"></div>
+
+<div class="container">
+    
+    <div class="top-section">
+        <div class="icon-sb">
+            <div class="open-sb menu-button"></div>
+        </div>
+        
+        <header class="main-header">
+            {block:IndexPage}
+    		<h1 class="blog-title">
+    			<a href="{BlogURL}">{Title}</a>
+    		</h1>
+    		{/block:IndexPage}
+    		
+    		{block:PermalinkPage}
+    		{block:PostSummary}
+    		<h3 class="blog-title-secondary">{PostSummary}</h3>
+    		{/block:PostSummary}
+    		{/block:PermalinkPage}
+    		
+    		{block:TagPage}
+    		<h3 class="blog-title-secondary">#{Tag}</h3>
+    		{/block:TagPage}
+    		
+    		{block:DayPage}
+    		<h3 class="blog-title-secondary">{Month} {DayOfMonth}, {Year}</h3>
+    		{/block:DayPage}
+    		
+    		{block:ShowDescription}
+    		<h5 class="blog-description">{Description}</h5>
+    		{/block:ShowDescription}
+        </header>
+    </div>
+    
+    <div class="content-wrapper">
+        
+        {block:NoSearchResults}
+		<h3>No Result Found</h3>
+		{/block:NoSearchResults}
+        
+        {block:Posts}
+        <article class="post {block:Text}text-post {/block:Text}{block:Photo}photo-post {/block:Photo}{block:Panorama}panorama-post {/block:Panorama}{block:Photoset}photoset-post {/block:Photoset}{block:Quote}quote-post {/block:Quote}{block:Link}link-post {/block:Link}{block:Chat}chat-post {/block:Chat}{block:Audio}audio-post {/block:Audio}{block:Video}video-post {/block:Video}{block:Answer}answer-post {/block:Answer}">
+        
+            {block:Text}
+			<header>
+				<h2>{Title}</h2>
+			</header>
+			
+			<div class="content">
+				{Body}
+			</div>
+			{/block:Text}
+            
+            {block:Photo}
+			<figure>
+				{LinkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}"/>{LinkCloseTag}
+				{block:Caption}
+				<figcaption class="content">
+					{Caption}
+				</figcaption>
+				{/block:Caption}
+			</figure>
+			{/block:Photo}
+			
+        {block:Panorama}
+			 <figure>
+				{LinkOpenTag}<img src="{PhotoURL-Panorama}" alt="{PhotoAlt}"/>{LinkCloseTag}
+				{block:Caption}
+				<figcaption class="content">
+					{Caption}
+				</figcaption>
+				{/block:Caption}
+			</figure>
+			{/block:Panorama}
+			
+			{block:Photoset}
+			<div class="photoset-layout">
+				{Photoset}
+			</div>
+			
+			{block:Caption}
+			<div class="caption">
+				{Caption}
+			</div>
+			{/block:Caption}
+			{/block:Photoset}
+			
+			{block:Quote}
+			<blockquote class="quote">
+				{Quote}
+				
+				{block:Source}
+				<cite class="content">
+					{Source}
+				 </cite>
+				{/block:Source}
+			</blockquote>
+			{/block:Quote}
+			
+			{block:Link}
+			<div class="link">
+				<h5><a href="{URL}" {Target}>{Name}</a></h5>
+				{block:Host}<h6>{Host}</h6>{/block:Host}
+			</div>
+			
+			{block:Description}
+			<div class="content">
+				{Description}
+			</div>
+			{/block:Description}
+			{/block:Link}
+			
+			{block:Chat}
+			<header>
+				<h2>{Title}</h2>
+			</header>
+			
+			<table class="chat">
+				{block:Lines}
+				<tr>
+					<th>
+					{block:Label}{Label}{/block:Label}
+					</th>
+					<td>{Line}</td>
+				</tr>
+				{/block:Lines}
+			</table>
+			{/block:Chat}
+			
+			{block:Audio}
+			<div>
+				<div class="art">
+					{block:AlbumArt}<img src="{AlbumArtURL}" alt="Art"/>{/block:AlbumArt}
+				</div>
+				<div class="id3">
+					{block:Artist}
+					<h5>{Artist}</h5>
+					{/block:Artist}
+					{block:TrackName}
+					<h5><strong>{TrackName}</strong></h5>
+					{/block:TrackName}
+					{block:Album}
+					<h5>{Album}</h5>
+					{/block:Album}
+				</div>
+			</div>
+			
+			{block:AudioPlayer}
+			<div class="player">
+				{AudioPlayerGrey}
+			</div>
+			{/block:AudioPlayer}
+			
+			{block:Caption}
+			<div class="content">
+				{Caption}
+			</div>
+			{/block:Caption}
+			{/block:Audio}
+			
+			{block:Video}
+			<div class="video">
+				{Video-500}
+			</div>
+			
+			{block:Caption}
+			<div class="content">
+				{Caption}
+			</div>
+			{/block:Caption}
+			{/block:Video}
+			
+			{block:Answer}
+			<div class="question">
+				<div class="portrait">
+					<img class="avatar" src="{AskerPortraitURL-96}" alt="Asker"/>
+				</div>
+				
+				<div class="asker-data">
+				<h5><strong>{Asker}</strong>:</h5>
+					<h6>{Question}</h6>
+				</div>
+			</div>
+			
+			{block:Answerer}
+			<div class="answer">
+				<h5><strong>{Answerer}</strong>:</h5>
+				<h6>{Answer}</h6>
+			</div>
+			{/block:Answerer}
+			
+			<div class="replies">
+				{Replies}
+			</div>
+			{/block:Answer}
+			
+			{block:Date}
+			<aside>
+				
+				{block:Photo}
+				{block:HighRes}
+				<div class="highres">
+					<a href="{PhotoURL-HighRes}">View in High-Res</a>
+				</div>
+				{/block:HighRes}
+				
+				{block:Exif}
+				<ul class="exif">
+					<li><strong>Details:</strong></li>
+					{block:Camera}<li><b>Camera:</b> {Camera}</li>{/block:Camera}
+					{block:Aperture}<li><b>Aperture:</b> {Aperture}</li>{/block:Aperture}
+					{block:Exposure}<li><b>Exposure:</b> {Exposure}</li>{/block:Exposure}
+					{block:FocalLength}<li><b>Focal Length:</b> {FocalLength}</li>{/block:FocalLength}
+				</ul>
+				{/block:Exif}
+				{/block:Photo}
+				
+				{block:Panorama}
+				{block:HighRes}
+				<div class="highres">
+					<a href="{PhotoURL-HighRes}">View in High-Res</a>
+				</div>
+				{/block:HighRes}
+				
+				{block:Exif}
+				<ul class="exif">
+					<li><strong>Details:</strong></li>
+					{block:Camera}<li><b>Camera:</b> {Camera}</li>{/block:Camera}
+					{block:Aperture}<li><b>Aperture:</b> {Aperture}</li>{/block:Aperture}
+					{block:Exposure}<li><b>Exposure:</b> {Exposure}</li>{/block:Exposure}
+					{block:FocalLength}<li><b>Focal Length:</b> {FocalLength}</li>{/block:FocalLength}
+				</ul>
+				{/block:Exif}
+				{/block:Panorama}
+				
+				<div class="notes-post">
+					<a href="{BlogURL}day/{Year}/{MonthNumberWithZero}/{DayofMonthWithZero}">{Month}, {DayOfMonth}, {Year}</a>{block:NoteCount}&nbsp;&nbsp;&ndash;&nbsp;&nbsp;<a href="{Permalink}#notes">{NoteCountWithLabel}</a>{/block:NoteCount}
+				</div>
+				
+				{block:Submission}
+				<div class="submitter">
+					Submitted by <a href="{SubmitterURL}">{Submitter}</a>
+				</div>
+				{/block:Submission}
+				
+				{block:ContentSource}
+				<div class="source-post">
+					<a href="{SourceURL}">
+						{lang:Source}:
+						{block:SourceLogo}
+						<img src="{BlackLogoURL}" width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}"/>
+						{/block:SourceLogo}
+						{block:NoSourceLogo}
+						{SourceTitle}
+						{/block:NoSourceLogo}
+					</a>
+				</div>
+				{/block:ContentSource}
+				
+				{block:HasTags}
+				<div class="tags">
+					<ul>
+					{block:Tags}
+						<li><a href="{TagURL}">#{Tag}</a></li>
+						{/block:Tags}
+					</ul>
+				</div>
+				{/block:HasTags}
+				
+				<div class="share-buttons">
+					<ul>
+						<li><a href="{Permalink}"><img width="34" class="permalink-icon" src="http://static.tumblr.com/5ck1zlp/FXHn9jq1o/extract.png" alt="export"/></a></li><!--permalink-->
+						<li>{ReblogButton size="30"}</li><!--reblog-->
+						<li>{LikeButton size="30"}</li><!--like-->
+				</div>
+			</aside>
+			{/block:Date}
+			
+			{block:PostNotes}
+			<aside class="post-notes">
+				{PostNotes}
+			</aside>
+			{/block:PostNotes}
+		
+		</article>
+		{/block:Posts}
+    </div>
+    
+    {block:Pagination}
+	<section class="pagination">
+		<ul>
+			
+			{block:PreviousPage}
+			<li>
+				<a class="prev" href="{PreviousPage}">&lt;</a>
+			</li>
+			{/block:PreviousPage}
+			
+			{block:JumpPagination lenght="5"}
+			{block:CurrentPage}
+			<li class="current_page">{PageNumber}</li>
+			{/block:CurrentPage}
+			{block:JumpPage}
+			<li class="jump_page">
+				<a href="{URL}">{PageNumber}</a>
+			</li>
+			{/block:JumpPage}
+			{/block:JumpPagination}
+			
+			{block:NextPage}
+			<li>
+				<a class="next" href="{NextPage}">&gt;</a>
+			</li>
+			{/block:NextPage}
+		
+		</ul>
+	</section>
+	{/block:Pagination}
+	
+	{block:DayPagination}
+	<section class="day-pagination pagination">
+		<ul>
+			{block:PreviousDayPage}
+			<li>
+				<a href="{PreviousDayPage}" class="prev">&lt;</a>
+			</li>
+			{/block:PreviousDayPage}
+			
+			{block:NextDayPage}
+			<li>
+				<a href="{NextDayPage}" class="next">&gt;</a>
+			</li>
+			{/block:NextDayPage}
+		</ul>
+	</section>
+	{/block:DayPagination}
+	
+	{block:PermalinkPagination}
+	<section class="permalink-pagination pagination">
+		<ul>
+			{block:PreviousPost}
+			<li>
+				<a href="{PreviousPost}" class="prev">&lt;</a>
+			</li>
+			{/block:PreviousPost}
+			
+			{block:NextPost}
+			<li>
+				<a href="{NextPost}" class="next">&gt;</a>
+			</li>
+			{/block:NextPost}
+		</ul>
+	</section>
+	{/block:PermalinkPagination}
+    
+</div>
+
+<div class="sidebar">
+	<div class="sidebar-header">
+		<figure>
+			<img width="64" height="64" class="avatar sidebar-avatar" src="{PortraitURL-96}"/>
+		</figure>
+		<h5><a href="{BlogUrl}">{Title}</a></h5>
+	</div>
+	
+	<div class="search-box sidebar-element">
+		<sub>search</sub>
+		
+		<form class="search-form" action="/search" method="get">
+			<input type="text" name="q" value="{SearchQuery}" class="input-text" style="width:75%"/>
+			<input type="submit" value="&crarr;" class="search-box-submit"/>
+		</form>
+	</div>
+	
+	<hr />
+	
+	<nav class="sidebar-nav sidebar-element">
+		{block:IfHomeLink}
+		<ul>
+			<li class="sidebar-nav-el">
+				<a href="{BlogURL}">Home</a>
+			</li>
+		</ul>
+		{/block:IfHomeLink}
+		{block:HasPages}
+		<ul>
+			{block:Pages}
+			<li class="page sidebar-nav-el">
+				<a href="{URL}">{Label}</a>
+			</li>
+			{/block:Pages}
+		</ul>
+		{/block:HasPages}
+		{block:SubmissionsEnabled}
+		<ul>
+			<li class="submit sidebar-nav-el">
+				<a href="{BlogURL}submit">{SubmitLabel}</a>
+			</li>
+		</ul>
+		{/block:SubmissionsEnabled}
+		{block:AskEnabled}
+		<ul>
+			<li class="ask sidebar-nav-el">
+				<a href="{BlogURL}ask">{AskLabel}</a>
+			</li>
+		</ul>
+		{/block:AskEnabled}
+	</nav>
+</div>
+
+<script>
+!function(a){a.fn.iFrameFixHeight=function(){this.each(function(){var b=a(this),c=b.parent();a(window).resize(function(){var a=parseInt(b.attr("width")),d=parseInt(b.attr("height")),e=a/d,f=c.width(),g=f/e;b.css("height",g)}),a(window).resize()})},a(".video iframe").iFrameFixHeight(),a.fn.sectionAdjust=function(){this.each(function(){var b=a(this),c=a(".top-section");a(window).resize(function(){var a=parseInt(c.outerHeight());b.css({paddingTop:a+16})}),a(window).resize()})},a(".content-wrapper").sectionAdjust(),a(".sidebar").materialSidebar({settings:{opener:".open-sb"}})}(jQuery);
+</script>
+    
+</body>    
+</html>
