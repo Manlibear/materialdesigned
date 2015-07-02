@@ -1,0 +1,19 @@
+// Template
+
+@import 'common';
+
+#tumblr-navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 27px;
+    background-color: black;
+    opacity: 0.3;
+    filter: Alpha(opacity=30);
+    z-index: 4000;
+}
+
+@import 'navbar';
+@import 'sidebar';
+@import 'article';
