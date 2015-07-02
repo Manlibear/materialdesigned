@@ -21,7 +21,7 @@
     <link rel="stylesheet" type="text/css" href="http://cdn.materialdesignicons.com/1.1.34/css/materialdesignicons.min.css"/>
     <link rel="stylesheet" type="text/css" href="../bower_components/normalize.css/normalize.css"/>
     <link rel="stylesheet" type="text/css"
-    href="../css/fonts.css"/>
+    href="../css/roboto.css"/>
     <link rel="stylesheet" type="text/css" href="../css/materialdesigned-style.css"/>
 
     <!--[if lt IE 9]>
@@ -36,7 +36,7 @@
 </head>
 
 <body>
-    <div id="main">
+    <div id="main" class="container">
         <h2>Some Content</h2>
     </div>
     <!-- main-content -->
@@ -46,26 +46,53 @@
 
     <div id="main-navbar">
         <div class="navbar-wrapper">
-            <div class="row">
-                <ul>
-                    <li>
-                        menu
-                    </li>
-                    <li>Material Designed</li>
-                </ul>
-            </div>
-            <div class="row">
-            </div>
+            <ul>
+                <li class="navbar-row-main">
+                    <ul class="list-inline" data-toggle-search="hide">
+                        <li id="toggle-sidebar" class="icon clickable">
+                            <i class="mdi mdi-menu"></i>
+                        </li>
+                        <li>
+                            <h1 class="title-blog">Material Design</h1>
+                        </li>
+                        <li id="toggle-search" class="icon clickable">
+                            <i class="mdi mdi-magnify"></i>
+                        </li>
+                    </ul>
 
-            <div class="title-article">
-                Post title
-            </div>
+                    <ul class="list-inline" data-toggle-search="show">
+                        <li class="icon clickable" data-toggle-search="back">
+                            <i class="mdi mdi-arrow-left"></i>
+                        </li>
+                        <li>
+                            <input type="text" value="Search"></input>
+                        </li>
+                    </ul>
+                </li>
+                <li class="navbar-row-sub">
+                    <h2>Subtitle</h2>
+                </li>
+            </ul>
         </div>
     </div>
 
     <div id="main-sidebar">
         <div class="sidebar-wrapper">
-            <p>Some Content</p>
+            <div class="sidebar-header">
+                <div class="black-opacity">
+                    <ul>
+                        <li class="avatar">
+                            <img alt="avatar" src="../pictures/avatar.jpg"/>
+                        </li>
+                        <li>
+                            <h1>Material Designed</h1>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sidebar-content">
+                <p>Some Content</p>
+            </div>
         </div>
     </div>
 
