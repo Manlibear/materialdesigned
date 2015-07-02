@@ -32,9 +32,5 @@
     "grunt-contrib-sass": "^0.9.2",
     "grunt-contrib-uglify": "~0.2.0",
     "grunt-contrib-watch": "^0.6.1"
-  },
-  "dependencies": {
-    "jquery": "^1.11.3",
-    "jquery-ui": "^1.10.5"
   }
 }
