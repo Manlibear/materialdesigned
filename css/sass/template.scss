@@ -1,0 +1,38 @@
+// Template
+
+#tumblr-navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 27px;
+    background-color: black;
+    opacity: 0.5;
+    filter: Alpha(opacity=50);
+    z-index: 5000;
+}
+
+#main-navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 3000;
+    padding-top: 27px;
+    
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+        
+        li {
+            display: inline-block;
+            margin-right: 1.5em;
+        }
+    }
+}
+
+.navbar-wrapper {
+    position: relative;
+    padding: 0 1em;
+}
