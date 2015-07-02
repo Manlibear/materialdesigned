@@ -48,7 +48,7 @@
         <div class="navbar-wrapper">
             <ul>
                 <li class="navbar-row-main">
-                    <ul class="list-inline" data-toggle-search="hide">
+                    <ul id="navbar-main-module" class="list-inline">
                         <li id="toggle-sidebar" class="icon clickable">
                             <i class="mdi mdi-menu"></i>
                         </li>
@@ -60,11 +60,11 @@
                         </li>
                     </ul>
 
-                    <ul class="list-inline" data-toggle-search="show">
-                        <li class="icon clickable" data-toggle-search="back">
+                    <ul id="search-module" class="list-inline" data-search-module="show">
+                        <li id="search-module-hide" class="icon clickable" data-search-module="back">
                             <i class="mdi mdi-arrow-left"></i>
                         </li>
-                        <li>
+                        <li id="search-input">
                             <input type="text" value="Search"></input>
                         </li>
                     </ul>
