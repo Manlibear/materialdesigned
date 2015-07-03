@@ -35,8 +35,9 @@ module.exports = function(grunt) {
                     'css/materialdesigned-style.css': 'css/sass/main.scss',
 
                     // Tests
+                    'css/test/common.css': 'css/test/sass/common.scss',
                     'css/test/toolbars.css': 'css/test/sass/toolbars.scss',
-                    'css/test/common.css': 'css/test/sass/common.scss'
+                    'css/test/sidenav.css': 'css/test/sass/sidenav.scss'
                 }
             }
         },

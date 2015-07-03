@@ -1,4 +1,8 @@
 // Common rules
+.clickable, .close-sidebar {
+    cursor: pointer;
+}
+
 .icon {
     width: 48px;
     vertical-align: top !important;
