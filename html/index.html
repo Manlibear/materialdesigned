@@ -40,7 +40,7 @@
 </head>
 
 <body>
-    <div id="main" class="container">
+    <div id="main-content" class="main-content container">
         <div class="post">
             <div class="post-text">
                 <header>
@@ -55,96 +55,113 @@
     </div>
     <!-- main-content -->
 
-    <div id="tumblr-navbar"></div>
+    <div class="toolbar-tumblr"></div>
     <!-- Tumblr navigation bar -->
 
-    <div id="main-navbar">
-        <div class="navbar-wrapper">
-            <div id="nb-main-module" class="navbar-module">
-                <div class="row">
-                    <div class="cell icon clickable">
-                        <i id="toggle-sidebar" class="mdi mdi-menu"></i>
-                    </div>
-                    <div class="cell">
-                        <h1>Titolo Lunghissimo che non ci starà mai nella navbar</h1>
-                    </div>
-                    <div class="cell icon clickable">
-                        <i id="open-search-module" class="mdi mdi-magnify"></i>
-                    </div>
+    <div id="toolbar" class="toolbar-top">
+        <div class="toolbar-wrapper">
+            <div id="toolbar-main" class="row">
+                <div id="toggle-sidebar" class="cell icon clickable">
+                    <i class="mdi mdi-menu"></i>
+                </div>
+                <div class="cell cell-next-icon-left">
+                    <h1>Aliens Tests for my motherfucking themes</h1>
+                </div>
+                <div id="show-toolbar-search" class="cell icon clickable">
+                    <i class="mdi mdi-magnify"></i>
                 </div>
             </div>
-            <div id="nb-search-module" class="navbar-module">
-                <div class="row">
-                    <div class="cell icon clickable">
-                        <i id="close-search-module" class="mdi mdi-arrow-left"></i>
-                    </div>
-                    <div class="cell">
-                        <input type="text" value="Search" />
-                    </div>
-                    <div class="cell icon clickable">
-                        <i class="mdi mdi-magnify"></i>
-                    </div>
+
+            <div id="toolbar-search" class="row">
+                <div id="hide-toolbar-search" class="cell icon clickable">
+                    <i class="mdi mdi-arrow-left"></i>
+                </div>
+                <div class="cell cell-next-icon-right">
+                    <input type="text" placeholder="Search" />
+                </div>
+                <div class="cell icon clickable">
+                    <i class="mdi mdi-magnify"></i>
                 </div>
             </div>
         </div>
     </div>
 
-    <div id="main-sidebar">
-        <div class="sidebar-wrapper">
-            <div class="sidebar-header">
-                <div class="black-opacity">
-                    <ul>
-                        <li class="avatar">
-                            <img alt="avatar" src="../pictures/avatar.jpg"/>
-                        </li>
-                        <li>
-                            <h1>Material Designed</h1>
-                        </li>
-                    </ul>
+    <div id="sidenav" class="sidenav">
+        <div class="sidenav-wrapper">
+            <div class="sidenav-header">
+                <div class="opacity">
+                    <div class="sidenav-avatar">
+                        <img alt="avatar" src="../../pictures/avatar.jpg" width="56px">
+                    </div>
+                    <div class="sidenav-title">
+                        <h1>Aliens Tests for my motherfucking themes</h1>
+                    </div>
                 </div>
             </div>
-            <div class="sidebar-content">
-                <div id="tumblr-nav-main" class="sidebar-nav">
-                    <div class="row clickable close-sidebar">
-                        <div class="cell icon">
-                            <i class="mdi mdi-home"></i>
-                        </div>
-                        <div class="cell">
-                            Home
-                        </div>
+            <div class="sidenav-nav">
+                <div class="row clickable close-sidebar">
+                    <div class="cell icon">
+                        <i class="mdi mdi-home"></i>
                     </div>
-                    <div class="row clickable close-sidebar">
-                        <div class="cell icon">
-                            <i class="mdi mdi-email"></i>
-                        </div>
-                        <div class="cell">
-                            Ask
-                        </div>
+                    <div class="cell cell-next-icon-left">Home</div>
+                </div>
+                <div class="row clickable close-sidebar">
+                    <div class="cell icon">
+                        <i class="mdi mdi-email"></i>
                     </div>
-                    <div class="row clickable close-sidebar">
-                        <div class="cell icon">
-                            <i class="mdi mdi-library-plus"></i>
-                        </div>
-                        <div class="cell">
-                            Submit
-                        </div>
+                    <div class="cell cell-next-icon-left">Ask</div>
+                </div>
+                <div class="row clickable close-sidebar">
+                    <div class="cell icon">
+                        <i class="mdi mdi-upload"></i>
+                    </div>
+                    <div class="cell cell-next-icon-left">Submit</div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="sidenav-nav">
+                <div class="row sidenav-nav-header">
+                    <div class="cell">
+                        <h2>Pages</h2>
                     </div>
                 </div>
-                <div id="tumblr-nav-pages" class="sidebar-nav">
-                    <div class="row sb-nav-header">
-                        <div class="cell">
-                            <h2>Pages</h2>
-                        </div>
+                <div class="row clickable close-sidebar">
+                    <div class="cell icon">
+                        <i class="mdi mdi-file"></i>
                     </div>
-
-                    <div class="row clickable close-sidebar">
-                        <div class="cell icon">
-                            <i class="mdi mdi-file"></i>
-                        </div>
-                        <div class="cell">
-                            Page
-                        </div>
+                    <div class="cell cell-next-icon-left">Page</div>
+                </div>
+                <div class="row clickable close-sidebar">
+                    <div class="cell icon">
+                        <i class="mdi mdi-file"></i>
                     </div>
+                    <div class="cell cell-next-icon-left">Page two</div>
+                </div>
+                <div class="row clickable close-sidebar">
+                    <div class="cell icon">
+                        <i class="mdi mdi-file"></i>
+                    </div>
+                    <div class="cell cell-next-icon-left">Page with a very long annoying title because I like long titles!</div>
+                </div>
+                <div class="row clickable close-sidebar">
+                    <div class="cell icon">
+                        <i class="mdi mdi-file"></i>
+                    </div>
+                    <div class="cell cell-next-icon-left">Page threeeee</div>
+                </div>
+                <div class="row clickable close-sidebar">
+                    <div class="cell icon">
+                        <i class="mdi mdi-file"></i>
+                    </div>
+                    <div class="cell cell-next-icon-left">Page four</div>
+                </div>
+                <div class="row clickable close-sidebar">
+                    <div class="cell icon">
+                        <i class="mdi mdi-file"></i>
+                    </div>
+                    <div class="cell cell-next-icon-left">Another mega long title for a non existing page that is already pissing everybody off with this very rather long title.</div>
                 </div>
             </div>
         </div>

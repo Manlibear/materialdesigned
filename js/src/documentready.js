@@ -1,19 +1,17 @@
 (function($) {
     $('document').ready(function() {
         $('.video iframe').iFrameFixHeight();
+        $('#main-content').fixMainWrapper('#toolbar');
+        $('#show-toolbar-search').searchModule();
 
-        $('#main').fixMainWrapper('#main-navbar');
-
-        $('#open-search-module').searchModule();
-
-        $('#main-sidebar').simplerSidebar({
+        $('#sidenav').simplerSidebar({
             opener: '#toggle-sidebar',
             animation: {
                 easing: 'easeOutQuint'
             },
             sidebar: {
                 align: 'left',
-                width: 300,
+                width: 320,
                 closingLinks: '.close-sidebar',
                 css: {
                     zIndex: 3000
