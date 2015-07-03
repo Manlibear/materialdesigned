@@ -1,0 +1,17 @@
+// Common rules
+.icon {
+    width: 48px;
+    vertical-align: top !important;
+
+    i {
+        padding: 12px;
+        font-size: 24px;
+    }
+}
+
+.cell {
+    display: table-cell;
+    vertical-align: middle;
+    min-width: 48px;
+    word-wrap: break-word;
+}
