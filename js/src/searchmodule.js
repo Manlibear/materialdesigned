@@ -2,12 +2,12 @@
     $.fn.searchModule = function() {
         var $searchModule = $(this),
             showSearchModule = function() {
-                $('#navbar-nb-module').fadeOut();
-                $('#search-module').fadeIn();
+                $('#nb-main-module').hide();
+                $('#nb-search-module').fadeIn('fast');
             },
             hideSearchModule = function() {
-                $('#navbar-nb-module').fadeIn();
-                $('#search-module').fadeOut();
+                $('#nb-main-module').fadeIn('fast');
+                $('#nb-search-module').hide();
             };
 
         $searchModule.click(function(){

@@ -14,6 +14,7 @@
             sidebar: {
                 align: 'left',
                 width: 300,
+                closingLinks: '.close-sidebar',
                 css: {
                     zIndex: 3000
                 }
