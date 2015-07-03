@@ -37,7 +37,8 @@ module.exports = function(grunt) {
                     // Tests
                     'css/test/common.css': 'css/test/sass/common.scss',
                     'css/test/toolbars.css': 'css/test/sass/toolbars.scss',
-                    'css/test/sidenav.css': 'css/test/sass/sidenav.scss'
+                    'css/test/sidenav.css': 'css/test/sass/sidenav.scss',
+                    'css/test/article.css': 'css/test/sass/article.scss'
                 }
             }
         },
