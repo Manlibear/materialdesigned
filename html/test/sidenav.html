@@ -41,7 +41,7 @@
 </head>
 
 <body>
-    <div id="main" class="container">
+    <div id="main-content" class="main-content container">
         <div class="post">
             <div class="post-text">
                 <header>
@@ -59,7 +59,7 @@
     <div class="toolbar-tumblr"></div>
     <!-- Tumblr navigation bar -->
 
-    <div class="toolbar-top">
+    <div id="toolbar" class="toolbar-top">
         <div class="toolbar-wrapper">
             <div id="toggle-sidebar" class="cell icon clickable">
                 <i class="mdi mdi-menu"></i>
@@ -73,7 +73,7 @@
         </div>
     </div>
 
-    <div class="sidenav">
+    <div id="sidenav" class="sidenav">
         <div class="sidenav-wrapper">
             <div class="sidenav-header">
                 <div class="opacity">
@@ -162,7 +162,7 @@
 <script>
 (function($) {
     $('document').ready(function() {
-        $('.sidenav').simplerSidebar({
+        $('#sidenav').simplerSidebar({
             opener: '#toggle-sidebar',
             animation: {
                 easing: 'easeOutQuint'
