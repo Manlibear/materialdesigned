@@ -41,14 +41,21 @@
 
 (function($) {
     $.fn.searchModule = function() {
-        var $searchModule = $(this),
+        var options = $.extend({
+            callback: function() {}
+        }, arguments[0] || {}),
+            $searchModule = $(this),
             showSearchModule = function() {
                 $('#toolbar-main').css('display', 'none');
                 $('#toolbar-search').css('display', 'table-row');
+
+                options.callback.call(this);
             },
             hideSearchModule = function() {
                 $('#toolbar-main').css('display', 'table-row');
                 $('#toolbar-search').css('display', 'none');
+
+                options.callback.call(this);
             };
 
         $searchModule.click(function(){
@@ -65,7 +72,12 @@
     $('document').ready(function() {
         $('.video iframe').iFrameFixHeight();
         $('#main-content').fixMainWrapper('#toolbar');
-        $('#show-toolbar-search').searchModule();
+
+        $('#show-toolbar-search').searchModule({
+            callback: function() {
+                $('#main-content').fixMainWrapper('#toolbar');
+            }
+        });
 
         $('#sidenav').simplerSidebar({
             opener: '#toggle-sidebar',
@@ -74,6 +86,7 @@
             },
             sidebar: {
                 align: 'left',
+                gap: 48,
                 width: 320,
                 closingLinks: '.close-sidebar',
                 css: {

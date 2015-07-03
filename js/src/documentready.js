@@ -2,7 +2,12 @@
     $('document').ready(function() {
         $('.video iframe').iFrameFixHeight();
         $('#main-content').fixMainWrapper('#toolbar');
-        $('#show-toolbar-search').searchModule();
+
+        $('#show-toolbar-search').searchModule({
+            callback: function() {
+                $('#main-content').fixMainWrapper('#toolbar');
+            }
+        });
 
         $('#sidenav').simplerSidebar({
             opener: '#toggle-sidebar',
@@ -11,6 +16,7 @@
             },
             sidebar: {
                 align: 'left',
+                gap: 48,
                 width: 320,
                 closingLinks: '.close-sidebar',
                 css: {
