@@ -73,16 +73,16 @@
                 <div class="cell cell-next-icon-left">
                     <h1>Aliens Tests for my motherfucking themes</h1>
                 </div>
-                <div id="show-search-module" class="cell icon clickable">
+                <div id="show-toolbar-search" class="cell icon clickable">
                     <i class="mdi mdi-magnify"></i>
                 </div>
             </div>
 
             <div id="toolbar-search" class="row">
-                <div id="hide-search-module" class="cell icon clickable">
+                <div id="hide-toolbar-search" class="cell icon clickable">
                     <i class="mdi mdi-arrow-left"></i>
                 </div>
-                <div class="cell cell-next-icon-left">
+                <div class="cell cell-next-icon-right">
                     <input type="text" placeholder="Search" />
                 </div>
                 <div class="cell icon clickable">
@@ -179,10 +179,13 @@
 <!-- Material Designed template -->
 <script src="../../bower_components/simpler-sidebar/dist/jquery.simpler-sidebar.min.js"></script>
 <script src="../../js/src/fixmainwrapper.js"></script>
+<script src="../../js/test/searchmodule.js"></script>
 <script>
 (function($) {
     $('document').ready(function() {
         $('#main-content').fixMainWrapper('#toolbar');
+
+        $('#show-toolbar-search').searchModule();
 
         $('#sidenav').simplerSidebar({
             opener: '#toggle-sidebar',
