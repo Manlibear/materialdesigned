@@ -32,7 +32,7 @@
         background: rgba(0,0,0,0.2);
     }
     
-    background-image: url('../../pictures/fuji.png');
+    background-image: url('../pictures/fuji.png');
     background-size: cover;
     
     h1, h2, h3, h4, h5, h6 {
@@ -47,12 +47,9 @@
     padding-top: 54px !important;
     padding: 16px;
     
-    /*
-    ** Add border radius
     img {
         @include borderRadius(20em);
     }
-    */
 }
 
 .sidenav-title {
@@ -90,4 +87,8 @@
 
 .sidenav-link {
     padding-left: 20px;
+}
+
+[data-simplersidebar="active"] {
+    @include boxShadow(2px 0px 5px 0px rgba(50, 50, 50, 0.5));
 }

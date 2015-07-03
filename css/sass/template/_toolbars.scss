@@ -28,12 +28,9 @@
     h1, h2, h3, h4, h5, h6 {
         font-size: 20px;
         font-weight: 500;
-    }
+    };
     
-    /*
-    ** Add box-shadow
-    @import boxShadow(0px 1px 5px 0px rgba(50, 50, 50, 0.5));
-    */
+    @include boxShadow(0px 1px 5px 0px rgba(50, 50, 50, 0.5));
 }
 
 .toolbar-wrapper {
