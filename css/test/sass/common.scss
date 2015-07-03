@@ -13,11 +13,23 @@
     }
 }
 
+.row {
+	display: table-row;
+}
+
 .cell {
     display: table-cell;
     vertical-align: middle;
     min-width: 48px;
     word-wrap: break-word;
+}
+
+.cell-next-icon-left {
+	  padding-left: 20px;
+}
+
+.cell-next-icon-right {
+	  padding-right: 20px;
 }
 
 //Container

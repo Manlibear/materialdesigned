@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAEA,OAAQ,CACJ,QAAQ,CAAE,QAAQ",
+"sources": ["sass/search.scss"],
+"names": [],
+"file": "search.css"
+}
