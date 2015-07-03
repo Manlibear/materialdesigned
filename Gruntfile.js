@@ -33,6 +33,7 @@ module.exports = function(grunt) {
                 },
                 files: {
                     'css/materialdesigned-style.css': 'css/sass/main.scss',
+                    'css/test/toolbars.css': 'css/test/sass/toolbars.scss'
                 }
             }
         },
