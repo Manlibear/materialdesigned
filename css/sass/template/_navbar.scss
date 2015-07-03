@@ -30,7 +30,31 @@
 
 .navbar-wrapper {
     position: relative;
-    padding: 0 1em;
+}
+
+.navbar-module {
+    height: 42px;
+    line-height: 42px;
+    margin: 8px 0;
+}
+
+#nb-search-module {
+    display: none;
+    top: 0;
+    right: 1em;
+    left: 1em;
+    
+    text-align: right;
+    
+    input {
+        padding: 0 8px !important;
+        margin: 0 !important;
+        text-align: right;
+        height: 100%;
+        background-color: transparent;
+        border: 0;
+        border-bottom: 2px solid white;
+    }
 }
 
 @media all and (max-width: 360px) {

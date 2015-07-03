@@ -58,6 +58,40 @@
     }
 }
 
+.sidebar-content {
+    margin-top: 1em;
+    font-weight: 500;
+    font-size: 14px;
+    color: #212121;
+    
+    .icon {
+        text-align: left;
+        width: 24px;
+    }
+    
+    .row {
+        padding: 4px 0;
+        margin-bottom: 4px;
+        border-spacing: 16px 0;
+    }
+    
+    .clickable:hover {
+        background-color: #d3d3d3;
+    }
+}
+
+.sidebar-nav {
+    border-bottom: 1px solid #aaa;
+    padding: 4px 0;
+    
+    .sb-nav-header {
+        h1, h2, h3, h4, h5, h6 {
+            font-size: 16px;
+            color: #474747;
+        }
+    }
+}
+
 [data-simplersidebar="active"] {
     @include boxShadow(3px 0px 5px 0px rgba(50, 50, 50, 0.75));
 }

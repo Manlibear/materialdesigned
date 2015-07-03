@@ -46,23 +46,30 @@
 
     <div id="main-navbar">
         <div class="navbar-wrapper">
-            <div id="main-nb-module" class="row">
-                <div class="cell icon clickable">
-                    <i class="mdi mdi-menu"></i>
-                </div>
-                <div class="cell">
-                    <h1>Titolo</h1>
-                </div>
-                <div class="cell icon clickable">
-                    <i id="open-search-module" class="mdi mdi-arrow-left"></i>
+            <div id="nb-main-module" class="navbar-module">
+                <div class="row">
+                    <div class="cell icon clickable">
+                        <i id="toggle-sidebar" class="mdi mdi-menu"></i>
+                    </div>
+                    <div class="cell">
+                        <h1>Titolo</h1>
+                    </div>
+                    <div class="cell icon clickable">
+                        <i id="open-search-module" class="mdi mdi-magnify"></i>
+                    </div>
                 </div>
             </div>
-            <div id="search-module" class="row">
-                <div class="cell icon clickable">
-                    <i id="close-search-module" class="mdi mdi-arrow-left"></i>
-                </div>
-                <div class="cell">
-                    <input type="text" value="Search" />
+            <div id="nb-search-module" class="navbar-module">
+                <div class="row">
+                    <div class="cell icon clickable">
+                        <i id="close-search-module" class="mdi mdi-arrow-left"></i>
+                    </div>
+                    <div class="cell">
+                        <input type="text" value="Search" />
+                    </div>
+                    <div class="cell icon clickable">
+                        <i class="mdi mdi-magnify"></i>
+                    </div>
                 </div>
             </div>
         </div>
@@ -83,7 +90,48 @@
                 </div>
             </div>
             <div class="sidebar-content">
-                <p>Some Content</p>
+                <div id="tumblr-nav-main" class="sidebar-nav">
+                    <div class="row clickable close-sidebar">
+                        <div class="cell icon">
+                            <i class="mdi mdi-home"></i>
+                        </div>
+                        <div class="cell">
+                            Home
+                        </div>
+                    </div>
+                    <div class="row clickable close-sidebar">
+                        <div class="cell icon">
+                            <i class="mdi mdi-email"></i>
+                        </div>
+                        <div class="cell">
+                            Ask
+                        </div>
+                    </div>
+                    <div class="row clickable close-sidebar">
+                        <div class="cell icon">
+                            <i class="mdi mdi-library-plus"></i>
+                        </div>
+                        <div class="cell">
+                            Submit
+                        </div>
+                    </div>
+                </div>
+                <div id="tumblr-nav-pages" class="sidebar-nav">
+                    <div class="row sb-nav-header">
+                        <div class="cell">
+                            <h2>Pages</h2>
+                        </div>
+                    </div>
+                    
+                    <div class="row clickable close-sidebar">
+                        <div class="cell icon">
+                            <i class="mdi mdi-file"></i>
+                        </div>
+                        <div class="cell">
+                            Page
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

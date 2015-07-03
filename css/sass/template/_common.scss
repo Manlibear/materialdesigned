@@ -2,14 +2,15 @@
 
 .row {
   display: table;
-  width: 100%;
-  border-collapse: separate;
+	width: 100%;
+	border-collapse: separate;
   border-spacing: 8px 0;
 }
 
 .cell {
   display: table-cell;
   position: relative;
+	vertical-align: middle;
 }
 
 .icon {
