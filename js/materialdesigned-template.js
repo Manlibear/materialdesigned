@@ -43,19 +43,19 @@
     $.fn.searchModule = function() {
         var $searchModule = $(this),
             showSearchModule = function() {
-                $('#nb-main-module').hide();
-                $('#nb-search-module').fadeIn('fast');
+                $('#toolbar-main').css('display', 'none');
+                $('#toolbar-search').css('display', 'table-row');
             },
             hideSearchModule = function() {
-                $('#nb-main-module').fadeIn('fast');
-                $('#nb-search-module').hide();
+                $('#toolbar-main').css('display', 'table-row');
+                $('#toolbar-search').css('display', 'none');
             };
 
         $searchModule.click(function(){
             showSearchModule();
         });
 
-        $('#close-search-module').click(function(){
+        $('#hide-toolbar-search').click(function(){
             hideSearchModule();
         });
     };
@@ -64,19 +64,17 @@
 (function($) {
     $('document').ready(function() {
         $('.video iframe').iFrameFixHeight();
+        $('#main-content').fixMainWrapper('#toolbar');
+        $('#show-toolbar-search').searchModule();
 
-        $('#main').fixMainWrapper('#main-navbar');
-
-        $('#open-search-module').searchModule();
-
-        $('#main-sidebar').simplerSidebar({
+        $('#sidenav').simplerSidebar({
             opener: '#toggle-sidebar',
             animation: {
                 easing: 'easeOutQuint'
             },
             sidebar: {
                 align: 'left',
-                width: 300,
+                width: 320,
                 closingLinks: '.close-sidebar',
                 css: {
                     zIndex: 3000
