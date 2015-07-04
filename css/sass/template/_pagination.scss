@@ -1,0 +1,26 @@
+// pagination
+
+.pagination{
+	display:table;
+	margin-top:3em !important;
+	margin-bottom:2em !important;
+	margin:auto;
+	text-align:center;
+	border-collapse: separate;
+	border-spacing: 8px;
+	font-size: 20px;
+
+	a {
+    &:link, &:visited, &:active {
+      color: #666;
+    }
+    &:hover {
+      color: black;
+    }
+	}
+
+	.cell {
+		width: 45px;
+		height: 45px;
+	}
+}
