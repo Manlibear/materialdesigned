@@ -29,10 +29,12 @@ module.exports = function(grunt) {
         sass: {
             dist: {
                 options: {
-                    style: 'compressed'
+                    style: 'compressed',
+                    sourcemap: 'none'
                 },
                 files: {
                     'css/materialdesigned-style.css': 'css/sass/main.scss',
+                    'css/test-article.css': 'css/sass/template/article.scss'
                 }
             }
         },
