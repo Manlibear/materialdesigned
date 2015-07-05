@@ -350,10 +350,6 @@ textarea {
   display: none;
 }
 
-#search-form form {
-  padding-right: 12px;
-  text-align: right;
-}
 #search-form ::-webkit-input-placeholder {
   /* WebKit browsers */
   color: inherit;
