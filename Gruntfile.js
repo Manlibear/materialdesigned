@@ -29,8 +29,8 @@ module.exports = function(grunt) {
         sass: {
             dist: {
                 options: {
-                    style: 'expanded',
-                    sourcemap: 'none'
+                    style: 'expanded'//,
+                    //sourcemap: 'none'
                 },
                 files: {
                     'css/materialdesigned-style.css': 'css/sass/main.scss',
@@ -47,6 +47,7 @@ module.exports = function(grunt) {
             dist: {
                 src: [
                     'bower_components/simpler-sidebar/dist/jquery.simpler-sidebar.min.js',
+                    'js/src/fixtoolbars.js',
                     'js/src/iframeheightfix.js',
                     'js/src/fixmainwrapper.js',
                     'js/src/searchmodule.js',

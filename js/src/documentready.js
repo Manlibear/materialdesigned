@@ -1,7 +1,8 @@
 (function($) {
     $('document').ready(function() {
-        $('.video iframe').iFrameFixHeight();
         $('#main-content').fixMainWrapper('#toolbar');
+
+        $('.video iframe').iFrameFixHeight();
 
         $('#show-toolbar-search').searchModule({
             callback: function() {
@@ -22,6 +23,15 @@
                 css: {
                     zIndex: 3000
                 }
+            }
+        });
+    });
+
+    $(window).load(function() {
+        $('#tumblr_controls').fixToolbars({
+            toolbar: {
+                tumblr: '#toolbar-tumblr',
+                main: '#toolbar'
             }
         });
     });
