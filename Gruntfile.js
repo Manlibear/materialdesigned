@@ -47,7 +47,7 @@ module.exports = function(grunt) {
             dist: {
                 src: [
                     'bower_components/simpler-sidebar/dist/jquery.simpler-sidebar.min.js',
-                    'js/src/fixtoolbars.js',
+                    'js/src/tmblrtoolbar.js',
                     'js/src/iframeheightfix.js',
                     'js/src/fixmainwrapper.js',
                     'js/src/searchmodule.js',

@@ -4,3 +4,4 @@ dwsync.xml
 bower_components/jquery/
 bower_components/jquery-ui/
 .sass-cache
+npm-debug.log

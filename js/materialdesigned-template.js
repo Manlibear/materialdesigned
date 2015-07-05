@@ -8,30 +8,37 @@
 */
 !function(a){a.fn.simplerSidebar=function(b){var c=a.extend(!0,a.fn.simplerSidebar.settings,b);return this.each(function(){var b,d,e,f,g,h,i=c.attr,j=a(this),k=a(c.opener),l=c.sidebar.closingLinks,m=c.animation.duration,n=c.sidebar.width,o=c.sidebar.gap,p=n+o,q=a(window).width(),r={},s={},t=function(){a("body, html").css("overflow","hidden")},u=function(){a("body, html").css("overflow","auto")},v={duration:m,easing:c.animation.easing,complete:t},w={duration:m,easing:c.animation.easing,complete:u},x=function(){j.animate(r,v).attr("data-"+i,"active"),A.fadeIn(m)},y=function(){j.animate(s,w).attr("data-"+i,"disabled"),A.fadeOut(m)},z=function(){var a=j.attr("data-"+i),c=j.width();s[b]=-c,"active"===a&&y()},A=a("<div>").attr("data-"+i,"mask");void 0===c.sidebar.align||"right"===c.sidebar.align?b="right":"left"===c.sidebar.align&&(b="left"),d=p>q?q-o:n,e={position:"fixed",top:c.top,bottom:0,width:d},e[b]=-d,r[b]=0,f=a.extend(!0,e,c.sidebar.css),j.css(f).attr("data-"+i,"disabled"),g={position:"fixed",top:c.top,right:0,bottom:0,left:0,zIndex:c.sidebar.css.zIndex-1,display:"none"},h=a.extend(!0,g,c.mask.css),!0===c.mask.display&&A.appendTo("body").css(h),k.click(function(){var a=j.attr("data-"+i),c=j.width();s[b]=-c,"disabled"===a?x():"active"===a&&y()}),A.click(z),j.on("click",l,z),a(window).resize(function(){var c,d,e=a(window).width();c=p>e?e-o:n,d={width:c},d[b]=-c,j.attr("data-"+i,"disabled").css(d),A.fadeOut(m),a("body, html").css({overflow:"auto"})})})},a.fn.simplerSidebar.settings={attr:"simplersidebar",top:0,animation:{duration:500,easing:"swing"},sidebar:{width:300,gap:64,closingLinks:"a",css:{zIndex:3e3}},mask:{display:!0,css:{backgroundColor:"black",opacity:.5,filter:"Alpha(opacity=50)"}}}}(jQuery);
 (function($) {
-    $.fn.fixToolbars = function(options) {
-        var defaults = {},
+    $.fn.tmblrToolbar = function(options) {
+        var toolbarTmblr, fixHeight,
+            defaults = {
+                toolbar: undefined,
+                callback: function() {}
+            },
             cfg = $.extend(true, defaults, options),
             tmblr = $(this),
-            toolMain = $(cfg.toolbar.main),
-            toolTmblr = $(cfg.toolbar.tumblr);
+            toolbar = $(cfg.toolbar);
 
-            heightControls = tmblr.css('height');
-            console.log(heightControls);
+        tmblr.wrap('<div id="toolbar-tumblr" class="toolbar-tumblr">');
 
-/*
-        //fix toolbar-tumblr height
-        toolTmblr.css({
-            height: heightControls + 6,
-            minHeight: heightControls + 6
+        toolbarTmblr = $('#toolbar-tumblr');
+
+        fixHeight = function() {
+            tHeight = parseInt(tmblr.attr('height'));
+
+            toolbarTmblr.css('height', tHeight + 2);
+
+            var ttHeight = toolbarTmblr.height();
+
+            toolbar.css('padding-top', ttHeight + 4);
+
+            cfg.callback.call(this);
+        };
+
+
+        $(window).load(function(){
+            fixHeight();
+            setTimeout(fixHeight, 100);
         });
-
-        var heightToolTumblr = toolTmblr.height();
-
-        //fix toolbar padding-top
-        toolMain.css({
-            paddingTop: heightToolTumblr + 4
-        });
-        */
     };
 })(jQuery);
 
@@ -108,6 +115,13 @@
             }
         });
 
+        $('#tumblr_controls').tmblrToolbar({
+            toolbar: '#toolbar',
+            callback: function() {
+                $('#main-content').fixMainWrapper('#toolbar');
+            }
+        });
+
         $('#sidenav').simplerSidebar({
             opener: '#toggle-sidebar',
             animation: {
@@ -121,15 +135,6 @@
                 css: {
                     zIndex: 3000
                 }
-            }
-        });
-    });
-
-    $(window).load(function() {
-        $('#tumblr_controls').fixToolbars({
-            toolbar: {
-                tumblr: '#toolbar-tumblr',
-                main: '#toolbar'
             }
         });
     });

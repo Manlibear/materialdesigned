@@ -1,27 +1,25 @@
 (function($) {
     $.fn.fixToolbars = function(options) {
-        var defaults = {},
+        var heightToolTumblr,
+            defaults = {},
             cfg = $.extend(true, defaults, options),
             tmblr = $(this),
             toolMain = $(cfg.toolbar.main),
-            toolTmblr = $(cfg.toolbar.tumblr);
+            toolTmblr = $(cfg.toolbar.tumblr),
 
-            heightControls = tmblr.css('height');
+            heightControls= parseInt(tmblr.height());
             console.log(heightControls);
 
-/*
-        //fix toolbar-tumblr height
-        toolTmblr.css({
-            height: heightControls + 6,
-            minHeight: heightControls + 6
-        });
+            toolTmblr.css({
+              height: heightControls + 6,
+              minHeight: 28
+            });
 
-        var heightToolTumblr = toolTmblr.height();
+            heightToolTmblr = parseInt(toolTmblr.height());
+            console.log(heightToolTmblr);
 
-        //fix toolbar padding-top
-        toolMain.css({
-            paddingTop: heightToolTumblr + 4
-        });
-        */
+            toolMain.css({
+                paddingTop: heightToolTmblr + 4
+            });
     };
 })(jQuery);

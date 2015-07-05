@@ -10,6 +10,13 @@
             }
         });
 
+        $('#tumblr_controls').tmblrToolbar({
+            toolbar: '#toolbar',
+            callback: function() {
+                $('#main-content').fixMainWrapper('#toolbar');
+            }
+        });
+
         $('#sidenav').simplerSidebar({
             opener: '#toggle-sidebar',
             animation: {
@@ -23,15 +30,6 @@
                 css: {
                     zIndex: 3000
                 }
-            }
-        });
-    });
-
-    $(window).load(function() {
-        $('#tumblr_controls').fixToolbars({
-            toolbar: {
-                tumblr: '#toolbar-tumblr',
-                main: '#toolbar'
             }
         });
     });

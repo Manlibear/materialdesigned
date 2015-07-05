@@ -5,9 +5,6 @@
     top: 0;
     right: 0;
     left: 0;
-    height: 38px;
-    opacity: 0.2;
-    filter: Alpha(opacity=20);
     z-index: 4000;
 }
 
@@ -17,7 +14,7 @@
     right: 0;
     left: 0;
     z-index: 2998;
-    padding: 42px 4px 4px 4px;
+    padding: 4px 4px 4px 4px;
     font-size: 20px;
     font-weight: 500;
 
@@ -25,7 +22,7 @@
         font-size: 20px;
         font-weight: 500;
     };
-    
+
     @include boxShadow(0px 1px 5px 0px rgba(50, 50, 50, 0.5));
 }
 
