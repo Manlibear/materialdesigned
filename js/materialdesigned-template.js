@@ -25,7 +25,10 @@
         fixHeight = function() {
             tHeight = parseInt(tmblr.attr('height'));
 
-            toolbarTmblr.css('height', tHeight + 2);
+            toolbarTmblr.css({
+                height: tHeight + 2,
+                minHeight: 28
+            });
 
             var ttHeight = toolbarTmblr.height();
 

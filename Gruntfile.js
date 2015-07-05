@@ -29,8 +29,8 @@ module.exports = function(grunt) {
         sass: {
             dist: {
                 options: {
-                    style: 'expanded'//,
-                    //sourcemap: 'none'
+                    style: 'expanded',
+                    sourcemap: 'none'
                 },
                 files: {
                     'css/materialdesigned-style.css': 'css/sass/main.scss',
