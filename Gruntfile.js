@@ -29,7 +29,7 @@ module.exports = function(grunt) {
         sass: {
             dist: {
                 options: {
-                    style: 'nested',
+                    style: 'expanded',
                     sourcemap: 'none'
                 },
                 files: {
