@@ -14,10 +14,18 @@
 
     @include boxShadow(1px 1px 2px 0px rgba(50, 50, 50, 0.2));
     @include borderRadius(2px);
+
+    hr {
+    	border: 0;
+    	height: 1px;
+    	width: 100%;
+    	background-color: #666;
+    	margin: 1.5em 0 !important;
+    }
 }
 
 .content {
-  margin-top: 1em;
+    margin-top: 1em;
 }
 
 //TEXT-CHAT
@@ -32,17 +40,17 @@
 }
 
 .content-chat {
-  display: table;
-  border-collapse: separate;
-  border-spacing: 16px 4px;
+    display: table;
+    border-collapse: separate;
+    border-spacing: 16px 4px;
 }
 //TEXT-CHAT
 
 //AUDIO
 .audio-tag {
-  display: table;
-  width: 100%;
-  margin-bottom: .5em;
+    display: table;
+    width: 100%;
+    margin-bottom: .5em;
 }
 .audio-player {
     iframe {
@@ -64,9 +72,9 @@
 //PHOTO
 
 //NOTES
-.exif, .highres, .post-date, .submitter, .post-share,
-.post-source, .post-tags, .post-notes {
-  margin-top: .5em;
+.exif, .highres, .post-date, .submitter,
+.post-source, .post-tags, .post-notes, .post-permalink {
+    margin-top: 1em;
 }
 
 .post-tags {
@@ -76,18 +84,58 @@
 		list-style-type: none;
 
 		li {
-		  margin-right: .5em;
+            display: inline-block;
+             margin-right: .5em;
 		}
 	}
 }
 
-.post-date, .post-tags, .post-source {
-  a {
-    &:link, &:visited, &:active {
-      color: #666;
+.post-date, .post-tags, .post-source, .post-permalink {
+    a {
+        &:link, &:visited, &:active {
+            color: #666;
+        }
+        &:hover {
+            color: black;
+        }
     }
-    &:hover {
-      color: black;
+}
+
+.post-permalink {
+    .cell {
+        min-width: inherit;
     }
-  }
+}
+
+.post-share {
+    text-align: right;
+
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+
+        li {
+            display: inline-block;
+            padding: 12px;
+        }
+    }
+
+    .share-like {
+        iframe {
+            max-width: 30px;
+        }
+    }
+}
+
+
+.post-notes {
+    ol {
+        list-style-position: inside;
+        padding: 0;
+
+        li {
+            margin-bottom: .5em;
+        }
+    }
 }
