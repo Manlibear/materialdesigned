@@ -36,30 +36,10 @@
 //Container
 .container {
     margin: 0 auto;
+    max-width: 532px;
 }
-@media all and (max-width: 320px) {
-	.container {
-		margin: 0 .5em;
-	}
-}
-@media all and (max-width: 480px) {
-	.container {
-		margin: 0 1em;
-	}
-}
-@media all and (min-width: 480px) {
-	.container {
-		margin: 0 1.5em;
-	}
-}
-@media all and (min-width: 768px) {
-	.container {
-		margin: 0 2.5em;
-	}
-}
-@media all and (min-width: 992px) {
-	.container {
-		margin: 0 auto;
-		max-width: 532px;
-	}
+@media all and (max-width: 548px) {
+    .container {
+        margin: 0 .5em;
+    }
 }
