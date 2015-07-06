@@ -1,0 +1,108 @@
+<!--Post details and notes-->
+<div class="post-details">
+    {block:Date}
+    <div class="row post-date">
+        <div class="cell icon-xs">
+            <i class="mdi mdi-clock"></i>
+        </div>
+        <div class="cell cell-text">
+            <a href="{BlogURL}day/{Year}/{MonthNumberWithZero}/{DayOfMonthWithZero}">{Year}-{Month}-{DayOfMonth}</a>
+        </div>
+    </div>
+    {/block:Date}
+
+    {block:NoteCount}
+    <div class="row post-notes-count">
+        <div class="cell icon-xs">
+            <i class="mdi mdi-file-document-box"></i>
+        </div>
+        <div class="cell cell-text">
+            <a href="{Permalink}#notes" target="_blank">{NoteCountWithLabel}</a>
+        </div>
+    </div>
+    {/block:NoteCount}
+
+    <div class="row post-permalink">
+        <div class="cell icon-xs">
+            <i class="mdi mdi-launch"></i>
+        </div>
+        <div class="cell cell-text">
+            <a href="{Permalink}" target="_blank">Permalink</a>
+        </div>
+    </div>
+
+    {block:HasTags}
+    <div class="row post-tags">
+        <div class="cell icon-xs">
+            <i class="mdi mdi-tags"></i>
+        </div>
+        <div class="cell cell-text">
+            <ul>
+                {block:Tags}
+                <li><a target="_blank" href="{TagURLChrono}">#{Tag}</a></li>
+                {/block:Tags}
+            </ul>
+        </div>
+    </div>
+    {/block:HasTags}
+
+    {block:ContentSource}
+    <div class="row post-source">
+        <div class="cell">
+            <b>{lang:Source}:</b>
+        </div>
+        <div class="cell source">
+            {block:SourceLogo}
+            <a href="{SourceURL}" target="_blank">
+                <img src="{BlackLogoURL}" width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}"/>
+            </a>
+            {/block:SourceLogo}
+
+            {block:NoSourceLogo}
+            <a href="{SourceURL}" target="_blank">
+                {SourceTitle}
+            </a>
+            {/block:NoSourceLogo}
+        </div>
+    </div>
+    {/block:ContentSource}
+
+    {block:Submission}
+    <div class="row post-submission">
+        <div class="cell">
+            <b>Submitter:</b>
+        </div>
+        <div class="cell submitter">
+            <a href="{SubmitterURL}" target="_blank">
+                <ul>
+                    <li class="submitter-avatar">
+                        <img src="{SubmitterPortraitURL-16}" alt="{Submitter}"/>
+                    </li>
+                    <li class="submitter-name">
+                        {Submitter}
+                    </li>
+                </ul>
+            </a>
+        </div>
+    </div>
+    {/block:Submission}
+
+    <div class="post-share">
+        <ul>
+            <li class="share-reblog">
+                {ReblogButton size="30"}
+            </li>
+            <li class="share-like">
+                {LikeButton size="30"}
+            </li>
+        </ul>
+    </div>
+
+    {block:PostNotes}
+    <hr />
+
+    <div class="post-notes">
+        {PostNotes}
+    </div>
+    {/block:PostNotes}
+</div>

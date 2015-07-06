@@ -1,0 +1,79 @@
+<!--Notes to post-->
+            <div class="post-details">
+                {block:Date}
+                <div class="post-date">
+                    <a href="{BlogURL}day/{Year}/{MonthNumberWithZero}/{DayOfMonthWithZero}">{Month}, {DayOfMonth}, {Year}</a>{block:NoteCount}&nbsp;&nbsp;&ndash;&nbsp;&nbsp;<a href="{Permalink}#notes">{NoteCountWithLabel}</a>{/block:NoteCount}
+                </div>
+                {/block:Date}
+
+                {block:Submission}
+                <div class="submitter">
+                    Submitted by <a href="{SubmitterURL}">{Submitter}</a>
+                </div>
+                {/block:Submission}
+
+                {block:ContentSource}
+                <div class="post-source">
+                    <div class="row">
+                        <div class="cell">
+                            <i>{lang:Source}</i>
+                        </div>
+                        <div clas="cell source">
+                            {block:SourceLogo}
+                            <a href="{SourceURL}" target="_blank">
+                                <img src="{BlackLogoURL}" width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}"/>
+                            </a>
+                            {/block:SourceLogo}
+
+                            {block:NoSourceLogo}
+                            <a href="{SourceURL}" target="_blank">
+                                {SourceTitle}
+                            </a>
+                            {/block:NoSourceLogo}
+                        </div>
+                    </div>
+                </div>
+                {/block:ContentSource}
+
+                {block:HasTags}
+                <div class="post-tags">
+                    <ul>
+                        {block:Tags}
+                        <li><a href="{TagURLChrono}">#{Tag}</a></li>
+                        {/block:Tags}
+                    </ul>
+                </div>
+                {/block:HasTags}
+
+                <div class="post-permalink">
+                    <div class="row">
+                        <a href="{Permalink}" target="_blank">
+                            <div class="cell">
+                                <i class="mdi mdi-launch"></i>
+                            </div>
+                            <div class="cell">
+                                Permalink
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="post-share">
+                    <ul>
+                        <li class="share-reblog">
+                            {ReblogButton size="30"}
+                        </li>
+                        <li class="share-like">
+                            {LikeButton size="30"}
+                        </li>
+                    </ul>
+                </div>
+
+                {block:PostNotes}
+                <hr />
+
+                <div class="post-notes">
+                    {PostNotes}
+                </div>
+                {/block:PostNotes}
+            </div>

@@ -34,7 +34,8 @@ module.exports = function(grunt) {
                 },
                 files: {
                     'css/materialdesigned-style.css': 'css/sass/main.scss',
-                    'css/test-article.css': 'css/sass/template/article.scss'
+                    'css/test-article.css': 'css/sass/template/article.scss',
+                    'css/test-details.css': 'css/sass/template/post-details.scss'
                 }
             }
         },

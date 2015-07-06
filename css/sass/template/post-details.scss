@@ -1,0 +1,102 @@
+//NOTES
+@import '../mixins';
+
+.highres {
+    display: table;
+    width: 100%;
+    text-align: right;
+}
+
+.post-details {
+    margin-top: 2em !important;
+    padding-top: 1em;
+    border-top: 1px solid #666;
+}
+
+.post-details, .exif, .highres {
+  a {
+      &:link, &:visited, &:active {
+          color: #666;
+      }
+      &:hover {
+        color: black;
+      }
+  }
+
+  .cell, .cell-xs {
+    min-width: auto;
+    width: 20px;
+    font-size: 18px;
+    padding: 2px;
+    padding-left: 0;
+    color: #333;
+  }
+
+  .cell-text {
+    width: auto;
+    font-size: 14px;
+  }
+}
+
+.post-source, .post-submission {
+    padding: 4px 0;
+}
+
+.post-source, .post-submission, .post-tags {
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+
+        li {
+            display: inline-block;
+        }
+    }
+}
+
+.post-tags {
+    ul {
+        li {
+            margin-right: .5em;
+        }
+    }
+}
+
+.post-submission {
+    img {
+        @include borderRadius(20em);
+    }
+}
+
+//altro
+.post-share {
+    text-align: right;
+
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+
+        li {
+            display: inline-block;
+            padding: 12px;
+        }
+    }
+
+    .share-like {
+        iframe {
+            max-width: 30px;
+        }
+    }
+}
+
+.post-notes {
+    ol {
+        list-style-position: inside;
+        padding: 0;
+
+        li {
+            margin-bottom: .5em;
+        }
+    }
+}

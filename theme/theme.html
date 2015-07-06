@@ -30,7 +30,8 @@
     <link rel="stylesheet" type="text/css" href="http://static.tumblr.com/5ck1zlp/N8knr2czw/materialdesigned-style.css"/>
 
     <!--test-->
-    <link rel="stylesheet" type="text/css" href="http://static.tumblr.com/5ck1zlp/w1Jnr2d2d/test-article.css" />
+    <link rel="stylesheet" type="text/css" href="http://static.tumblr.com/5ck1zlp/MXunr2n9a/test-article.css" />
+    <link rel="stylesheet" type="text/css" href="http://static.tumblr.com/5ck1zlp/Rsonr2n9d/test-details.css" />
 
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -66,7 +67,7 @@
         color: {color:Content Links Color};
     }
 
-    .link {
+    .link, .exif {
         border-color: {color:Content Links Color};
     }
     .link a:link, .link a:visited, .link a:active {
@@ -108,23 +109,63 @@
                     {LinkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}"/>{LinkCloseTag}
                 </div>
 
-                {block:Exif}
-                <div class="exif">
-                    <ul>
-                        <li><strong>Details:</strong></li>
-                        {block:Camera}<li><b>Camera:</b> {Camera}</li>{/block:Camera}
-                        {block:Aperture}<li><b>Aperture:</b> {Aperture}</li>{/block:Aperture}
-                        {block:Exposure}<li><b>Exposure:</b> {Exposure}</li>{/block:Exposure}
-                        {block:FocalLength}<li><b>Focal Length:</b> {FocalLength}</li>{/block:FocalLength}
-                    </ul>
-                </div>
-                {/block:Exif}
-
                 {block:HighRes}
                 <div class="highres">
-                    <a href="{PhotoURL-HighRes}">View in High-Res</a>
+                    <div class="row">
+                        <div class="cell cell-text">
+                            <a href="{PhotoURL-HighRes}">High-Res</a>
+                        </div>
+                        <div class="cell icon-xs">
+                            <i class="mdi mdi-quality-high"></i>
+                        </div>
+                    </div>
                 </div>
                 {/block:HighRes}
+
+                {block:Exif}
+                <div class="exif">
+                    {block:Camera}
+                    <div class="row">
+                        <div class="cell icon-xs">
+                            <i class="mdi mdi-camera"></i>
+                        </div>
+                        <div class="cell cell-text">
+                            {Camera}
+                        </div>
+                    </div>
+                    {/block:Camera}
+                    {block:Aperture}
+                    <div class="row">
+                        <div class="cell icon-xs">
+                            <i class="mdi mdi-camera-iris"></i>
+                        </div>
+                        <div class="cell cell-text">
+                            {Aperture}
+                        </div>
+                    </div>
+                    {/block:Aperture}
+                    {block:Exposure}
+                    <div class="row">
+                        <div class="cell icon-xs">
+                            <i class="mdi mdi-contrast-box"></i>
+                        </div>
+                        <div class="cell cell-text">
+                            {Exposure}
+                        </div>
+                    </div>
+                    {/block:Exposure}
+                    {block:FocalLength}
+                    <div class="row">
+                        <div class="cell icon-xs">
+                            <i class="mdi mdi-ruler"></i>
+                        </div>
+                        <div class="cell cell-text">
+                            {FocalLength}
+                        </div>
+                    </div>
+                    {/block:FocalLength}
+                </div>
+                {/block:Exif}
 
                 {block:Caption}
                 <div class="content">
@@ -140,23 +181,63 @@
                     {LinkOpenTag}<img src="{PhotoURL-Panorama}" alt="{PhotoAlt}"/>{LinkCloseTag}
                 </div>
 
-                {block:Exif}
-                <div class="exif">
-                    <ul>
-                        <li><strong>Details:</strong></li>
-                        {block:Camera}<li><b>Camera:</b> {Camera}</li>{/block:Camera}
-                        {block:Aperture}<li><b>Aperture:</b> {Aperture}</li>{/block:Aperture}
-                        {block:Exposure}<li><b>Exposure:</b> {Exposure}</li>{/block:Exposure}
-                        {block:FocalLength}<li><b>Focal Length:</b> {FocalLength}</li>{/block:FocalLength}
-                    </ul>
-                </div>
-                {/block:Exif}
-
                 {block:HighRes}
                 <div class="highres">
-                    <a href="{PhotoURL-HighRes}">View in High-Res</a>
+                    <div class="row">
+                        <div class="cell cell-text">
+                            <a href="{PhotoURL-HighRes}">High-Res</a>
+                        </div>
+                        <div class="cell icon-xs">
+                            <i class="mdi mdi-quality-high"></i>
+                        </div>
+                    </div>
                 </div>
                 {/block:HighRes}
+
+                {block:Exif}
+                <div class="exif">
+                    {block:Camera}
+                    <div class="row">
+                        <div class="cell icon-xs">
+                            <i class="mdi mdi-camera"></i>
+                        </div>
+                        <div class="cell cell-text">
+                            {Camera}
+                        </div>
+                    </div>
+                    {/block:Camera}
+                    {block:Aperture}
+                    <div class="row">
+                        <div class="cell icon-xs">
+                            <i class="mdi mdi-camera-iris"></i>
+                        </div>
+                        <div class="cell cell-text">
+                            {Aperture}
+                        </div>
+                    </div>
+                    {/block:Aperture}
+                    {block:Exposure}
+                    <div class="row">
+                        <div class="cell icon-xs">
+                            <i class="mdi mdi-contrast-box"></i>
+                        </div>
+                        <div class="cell cell-text">
+                            {Exposure}
+                        </div>
+                    </div>
+                    {/block:Exposure}
+                    {block:FocalLength}
+                    <div class="row">
+                        <div class="cell icon-xs">
+                            <i class="mdi mdi-ruler"></i>
+                        </div>
+                        <div class="cell cell-text">
+                            {FocalLength}
+                        </div>
+                    </div>
+                    {/block:FocalLength}
+                </div>
+                {/block:Exif}
 
                 {block:Caption}
                 <div class="content">
@@ -312,86 +393,111 @@
             </div>
             {/block:Answer}
 
-            <!--Notes to post-->
-            <hr />
-
+            <!--Post details and notes-->
             {block:Date}
-            <div class="post-date">
-                <a href="{BlogURL}day/{Year}/{MonthNumberWithZero}/{DayOfMonthWithZero}">{Month}, {DayOfMonth}, {Year}</a>{block:NoteCount}&nbsp;&nbsp;&ndash;&nbsp;&nbsp;<a href="{Permalink}#notes">{NoteCountWithLabel}</a>{/block:NoteCount}
+            <div class="post-details">
+                <div class="row post-date">
+                    <div class="cell icon-xs">
+                        <i class="mdi mdi-clock"></i>
+                    </div>
+                    <div class="cell cell-text">
+                        <a href="{BlogURL}day/{Year}/{MonthNumberWithZero}/{DayOfMonthWithZero}">{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}</a>
+                    </div>
+                </div>
+
+                {block:NoteCount}
+                <div class="row post-notes-count">
+                    <div class="cell icon-xs">
+                        <i class="mdi mdi-file-document-box"></i>
+                    </div>
+                    <div class="cell cell-text">
+                        <a href="{Permalink}#notes" target="_blank">{NoteCountWithLabel}</a>
+                    </div>
+                </div>
+                {/block:NoteCount}
+
+                <div class="row post-permalink">
+                    <div class="cell icon-xs">
+                        <i class="mdi mdi-launch"></i>
+                    </div>
+                    <div class="cell cell-text">
+                        <a href="{Permalink}" target="_blank">Permalink</a>
+                    </div>
+                </div>
+
+                {block:HasTags}
+                <div class="row post-tags">
+                    <div class="cell icon-xs">
+                        <i class="mdi mdi-tag"></i>
+                    </div>
+                    <div class="cell cell-text">
+                        <ul>
+                            {block:Tags}
+                            <li><a target="_blank" href="{TagURL}">#{Tag}</a></li>
+                            {/block:Tags}
+                        </ul>
+                    </div>
+                </div>
+                {/block:HasTags}
+
+                {block:ContentSource}
+                <div class="post-source">
+                    <ul>
+                        <li><b>{lang:Source}:</b></li>
+                        <li class="source">
+                            <a href="{SourceURL}" target="_blank">
+                                {block:SourceLogo}
+                                    <img src="{BlackLogoURL}" width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}"/>
+                                {/block:SourceLogo}
+                                {block:NoSourceLogo}
+                                    {SourceTitle}
+                                {/block:NoSourceLogo}
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                {/block:ContentSource}
+
+                {block:Submission}
+                <div class="post-submission">
+                    <ul>
+                        <li><b>Submitter:</b></li>
+                        <li>
+                            <a href="{SubmitterURL}" target="_blank">
+                                <ul>
+                                    <li class="submitter-avatar">
+                                        <img src="{SubmitterPortraitURL-16}" alt="{Submitter}"/>
+                                    </li>
+                                    <li class="submitter-name">
+                                        {Submitter}
+                                    </li>
+                                </ul>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                {/block:Submission}
+
+                <div class="post-share">
+                    <ul>
+                        <li class="share-reblog">
+                            {ReblogButton size="30"}
+                        </li>
+                        <li class="share-like">
+                            {LikeButton size="30"}
+                        </li>
+                    </ul>
+                </div>
+
+                {block:PostNotes}
+                <hr />
+
+                <div class="post-notes">
+                    {PostNotes}
+                </div>
+                {/block:PostNotes}
             </div>
             {/block:Date}
-
-            {block:Submission}
-            <div class="submitter">
-                Submitted by <a href="{SubmitterURL}">{Submitter}</a>
-            </div>
-            {/block:Submission}
-
-            {block:ContentSource}
-            <div class="post-source">
-                <div class="row">
-                    <div class="cell">
-                        <i>{lang:Source}</i>
-                    </div>
-                    <div clas="cell source">
-                        {block:SourceLogo}
-                        <a href="{SourceURL}" target="_blank">
-                            <img src="{BlackLogoURL}" width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}"/>
-                        </a>
-                        {/block:SourceLogo}
-
-                        {block:NoSourceLogo}
-                        <a href="{SourceURL}" target="_blank">
-                            {SourceTitle}
-                        </a>
-                        {/block:NoSourceLogo}
-                    </div>
-                </div>
-            </div>
-            {/block:ContentSource}
-
-            {block:HasTags}
-            <div class="post-tags">
-                <ul>
-                    {block:Tags}
-                    <li><a href="{TagURLChrono}">#{Tag}</a></li>
-                    {/block:Tags}
-                </ul>
-            </div>
-            {/block:HasTags}
-
-            <div class="post-permalink">
-                <div class="row">
-                    <a href="{Permalink}" target="_blank">
-                        <div class="cell">
-                            <i class="mdi mdi-launch"></i>
-                        </div>
-                        <div class="cell">
-                            Permalink
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            <div class="post-share">
-                <ul>
-                    <li class="share-reblog">
-                        {ReblogButton size="30"}
-                    </li>
-                    <li class="share-like">
-                        {LikeButton size="30"}
-                    </li>
-                </ul>
-            </div>
-
-            {block:PostNotes}
-            <hr />
-
-            <div class="post-notes">
-                {PostNotes}
-            </div>
-            {/block:PostNotes}
-
         </div>
         {/block:Posts}
         <!-- post -->

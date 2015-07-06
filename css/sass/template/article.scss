@@ -2,10 +2,6 @@
 
 @import '../mixins';
 
-.tmblr-attribution {
-    margin-top: 1em;
-}
-
 .main-content {
     position: relative;
 }
@@ -31,15 +27,34 @@
         margin: .5em;
         border-left: 1px solid black;
         padding-left: .5em;
+
+        figure {
+            margin-bottom: .5em;
+        }
+    }
+
+    figure {
+        p {
+            line-height: 16px;
+        }
     }
 }
 
 .content {
-    margin-top: 1em;
+    padding-top: .5em;
 
     a:hover{
         color: #666 !important;
     }
+}
+
+.tmblr-attribution {
+    margin-top: 1em;
+    line-height: 16px;
+}
+
+.photo, .exif, .highres, .content, .photoset {
+    margin-bottom: .5em
 }
 
 //TEXT-CHAT
@@ -57,10 +72,21 @@
     display: table;
     border-collapse: separate;
     border-spacing: 16px 4px;
+    margin-bottom: 1em;
 }
 //TEXT-CHAT
 
 //AUDIO
+.post-audio, .post-link {
+    margin-bottom: 1em;
+}
+
+.post-link {
+    .content {
+        margin-top: 0;
+    }
+}
+
 .audio-tag {
     display: table;
     width: 100%;
@@ -110,9 +136,10 @@
 //PHOTO
 
 //LINK
-.link {
+.link, .exif {
 	padding: .5em;
 	border: 1px solid #aaa;
+    @include borderRadius(2px);
 
 	a:hover {
         color: black #666;
@@ -120,71 +147,9 @@
 }
 //LINK
 
-//NOTES
-.exif, .highres, .post-date, .submitter,
-.post-source, .post-tags, .post-notes, .post-permalink {
-    margin-top: 1em;
-}
-
-.post-tags {
-	ul {
-		margin: 0;
-		padding: 0;
-		list-style-type: none;
-
-		li {
-            display: inline-block;
-             margin-right: .5em;
-		}
-	}
-}
-
-.post-date, .post-tags, .post-source, .post-permalink {
-    a {
-        &:link, &:visited, &:active {
-            color: #666;
-        }
-        &:hover {
-            color: black;
-        }
-    }
-}
-
-.post-permalink {
-    .cell {
-        min-width: inherit;
-    }
-}
-
-.post-share {
-    text-align: right;
-
-    ul {
-        padding: 0;
-        margin: 0;
-        list-style-type: none;
-
-        li {
-            display: inline-block;
-            padding: 12px;
-        }
-    }
-
-    .share-like {
-        iframe {
-            max-width: 30px;
-        }
-    }
-}
-
-
-.post-notes {
-    ol {
-        list-style-position: inside;
-        padding: 0;
-
-        li {
-            margin-bottom: .5em;
-        }
+//VIDEO
+.video {
+    iframe {
+        min-height:120px;
     }
 }
