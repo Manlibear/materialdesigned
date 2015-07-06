@@ -2,6 +2,10 @@
 
 @import '../mixins';
 
+.tmblr-attribution {
+    margin-top: 1em;
+}
+
 .main-content {
     position: relative;
 }
@@ -22,10 +26,20 @@
     	background-color: #666;
     	margin: 1.5em 0 !important;
     }
+
+    blockquote {
+        margin: .5em;
+        border-left: 1px solid black;
+        padding-left: .5em;
+    }
 }
 
 .content {
     margin-top: 1em;
+
+    a:hover{
+        color: #666 !important;
+    }
 }
 
 //TEXT-CHAT
@@ -58,8 +72,32 @@
     }
 }
 .audio-art {
-	width: 200px;
+	width: 100px;
+    height: 100px;
+    position: relative;
 }
+.audio-art-missing {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    width: 100px;
+    height: 100px;
+    font-size: 80px;
+    color: #aaa;
+    text-align: center;
+}
+.audio-art-available {
+    position: absolute;
+    top:0;
+    z-index: 2;
+    width: inherit;
+
+    img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
 .audio-id3 {
 	padding-left: 1em;
 }
@@ -70,6 +108,17 @@
     text-align: center;
 }
 //PHOTO
+
+//LINK
+.link {
+	padding: .5em;
+	border: 1px solid #aaa;
+
+	a:hover {
+        color: black #666;
+    }
+}
+//LINK
 
 //NOTES
 .exif, .highres, .post-date, .submitter,
