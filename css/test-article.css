@@ -46,7 +46,7 @@
   line-height: 16px;
 }
 
-.photo, .exif, .highres, .content, .photoset {
+.photo, .exif, .highres, .content, .photoset, .link, .video, .audio, .content-chat {
   margin-bottom: 0.5em;
 }
 
@@ -61,15 +61,6 @@
   display: table;
   border-collapse: separate;
   border-spacing: 16px 4px;
-  margin-bottom: 1em;
-}
-
-.post-audio, .post-link {
-  margin-bottom: 1em;
-}
-
-.post-link .content {
-  margin-top: 0;
 }
 
 .audio-tag {
