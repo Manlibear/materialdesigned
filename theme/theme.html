@@ -30,7 +30,7 @@
     <link rel="stylesheet" type="text/css" href="http://static.tumblr.com/5ck1zlp/N8knr2czw/materialdesigned-style.css"/>
 
     <!--test-->
-    <link rel="stylesheet" type="text/css" href="http://static.tumblr.com/5ck1zlp/AKrnr2nkc/test-article.css" />
+    <link rel="stylesheet" type="text/css" href="http://static.tumblr.com/5ck1zlp/Hjbnr2rp8/test-article.css" />
     <link rel="stylesheet" type="text/css" href="http://static.tumblr.com/5ck1zlp/WXdnr2nkf/test-details.css" />
 
     <!--[if lt IE 9]>
@@ -263,14 +263,16 @@
             {block:Quote}
             <div class="post-quote">
                 <div class="quote">
-                    <blockquote>
+                    <div class="quote-icon">
+                        <i class="mdi mdi-format-quote"></i>
+                    </div>
+                    <div class="blockquote">
                         {Quote}
-                    </blockquote>
-
+                    </div>
                     {block:Source}
-                    <cite>
+                    <div class="quote-source">
                         {Source}
-                    </cite>
+                    </div>
                     {/block:Source}
                 </div>
             </div>

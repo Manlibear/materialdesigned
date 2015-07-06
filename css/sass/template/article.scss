@@ -75,6 +75,23 @@
 }
 //TEXT-CHAT
 
+//QUOTE
+.quote-icon {
+	font-size: 46px;
+	text-align: center;
+	color: #666;
+}
+.blockquote {
+	font-size: 18px;
+	color: #666;
+	padding-left: 8px;
+	margin-bottom: 1em;
+}
+.quote-source:before {
+	content: '\2014'
+}
+//QUOTE
+
 .audio-tag {
     display: table;
     width: 100%;

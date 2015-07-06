@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .main-content {
   position: relative;
 }
@@ -61,6 +62,23 @@
   display: table;
   border-collapse: separate;
   border-spacing: 16px 4px;
+}
+
+.quote-icon {
+  font-size: 46px;
+  text-align: center;
+  color: #666;
+}
+
+.blockquote {
+  font-size: 18px;
+  color: #666;
+  padding-left: 8px;
+  margin-bottom: 1em;
+}
+
+.quote-source:before {
+  content: "—";
 }
 
 .audio-tag {
