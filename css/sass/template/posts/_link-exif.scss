@@ -2,7 +2,7 @@
 	padding: 1em .5em !important;
 }
 
-.link, .exif {
+.link, .exif, .answer {
 	padding: .5em;
 	border: 1px solid #aaa;
     @include borderRadius(2px);
@@ -10,4 +10,12 @@
 	a:hover {
         color: black #666;
     }
+}
+
+.asker-portrait {
+    width: 48px;
+}
+
+.asker-data {
+    padding-left: 1em;
 }

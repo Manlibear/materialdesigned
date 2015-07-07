@@ -513,7 +513,7 @@ textarea {
   padding: 1em .5em !important;
 }
 
-.link, .exif {
+.link, .exif, .answer {
   padding: .5em;
   border: 1px solid #aaa;
   -webkit-border-radius: 2px;
@@ -521,7 +521,7 @@ textarea {
   -ms-border-radius: 2px;
   border-radius: 2px;
 }
-.link a:hover, .exif a:hover {
+.link a:hover, .exif a:hover, .answer a:hover {
   color: black #666;
 }
 
@@ -531,11 +531,6 @@ textarea {
 
 .asker-data {
   padding-left: 1em;
-}
-
-.replies {
-  padding-left: .5em;
-  border-left: 1px solid #666;
 }
 
 .quote-icon {
