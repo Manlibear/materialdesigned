@@ -4,7 +4,7 @@
 }
 
 .avatar_frame {
-    @@include borderRadius(20em);
+    @include borderRadius(20em);
 }
 
 .note {

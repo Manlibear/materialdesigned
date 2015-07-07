@@ -1,13 +1,9 @@
 @import 'common';
 
+@import 'toolbars';
+@import 'search';
 @import 'post';
-@import 'audio';
-@import 'video';
-@import 'photo';
-@import 'link-exif';
-@import 'question';
-@import 'quote';
-@import 'text-chat';
-@import 'details';
+@import 'sidenav';
+@import 'pagination';
 
 @import 'tmblr-fix';
