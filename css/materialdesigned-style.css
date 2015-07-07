@@ -439,6 +439,9 @@ textarea {
 .asker-data {
   padding-left: 1em; }
 
+.replies {
+  margin-top: .5em; }
+
 .quote-icon {
   font-size: 46px;
   text-align: center;
