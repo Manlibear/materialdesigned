@@ -2,7 +2,7 @@
 
 .sidenav {
     background-color: white;
-    
+
     position: fixed;
     top: 0;
     bottom: 0;
@@ -10,7 +10,7 @@
     z-index: 3000;
     width: 320px;
     color: #212121;
-    
+
     hr {
         border: 0;
         width: 100%;
@@ -25,9 +25,9 @@
     overflow-y: auto;
 }
 
-.sidenav-header {    
+.sidenav-header {
     background-size: cover;
-    
+
     h1, h2, h3, h4, h5, h6 {
         font-size: 18px;
         font-weight: 500;
@@ -39,10 +39,6 @@
 .sidenav-avatar {
     padding-top: 54px !important;
     padding: 16px;
-    
-    img {
-        @include borderRadius(20em);
-    }
 }
 
 .sidenav-title {
@@ -55,17 +51,17 @@
     border-collapse: separate;
     border-spacing: 4px;
     width: 100%;
-    
+
     .cell-next-icon-left {
         font-size: 16px;
     }
-    
+
     a {
         &:link, &:visited, &:hover, &:active {
             color: #212121;
             display: block;
         }
-        
+
         &:hover {
             background-color: #CCCCCC;
         }
@@ -76,7 +72,7 @@
     display: table-caption;
     padding: 8px 16px;
     border-top: 1px solid #aaa;
-    
+
     h1, h2, h3, h4, h5, h6 {
         font-size: 16px;
         color: #474747;

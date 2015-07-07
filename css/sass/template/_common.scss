@@ -1,39 +1,72 @@
-// Common rules
+.main-content {
+    position: relative;
+}
+
+.no-padding {
+    padding: 0;
+}
+.no-margin {
+    margin: 0;
+}
+
+.avatar {
+    img {
+        width: inherit;
+        @include borderRadius(20em);
+    }
+}
+.avatar-xs {
+    width: 24px;
+}
+.avatar-s {
+    width: 48px;
+}
+.avatar-m {
+    width: 96px;
+}
+
 .clickable, .close-sidebar {
     cursor: pointer;
 }
 
 .icon {
-    width: 48px;
     vertical-align: top !important;
+}
+.icon-xs {
+    width: 20px;
+    padding: 2px;
+    font-size: 18px;
+}
+.icon-s {
+    width: 48px;
+    padding: 12px;
+    font-size: 24px;
+}
 
-    i {
-        padding: 12px;
-        font-size: 24px;
-    }
+.table {
+    display: table;
+    width: 100%;
 }
 
 .row {
-	display: table-row;
-	width: 100%;
+    display: table-row;
+    width: 100%;
 }
 
 .cell {
     display: table-cell;
     vertical-align: middle;
-    min-width: 48px;
-    word-wrap: break-word;
+}
+.cell-text {
+    padding: 0 .5em;
+}
+.cell-text-pleft {
+    padding-left: 20px
+}
+.cell-text-pright {
+    padding-right: 20px;
 }
 
-.cell-next-icon-left {
-	  padding-left: 20px;
-}
-
-.cell-next-icon-right {
-	  padding-right: 20px;
-}
-
-//Container
 .container {
     margin: 0 auto;
     max-width: 532px;

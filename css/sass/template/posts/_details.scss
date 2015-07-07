@@ -1,45 +1,7 @@
-//NOTES
-@import '../mixins';
-
-.highres {
-    display: table;
-    width: 100%;
-    text-align: right;
-}
-
 .post-details {
-    margin-top: 1em !important;
+    margin-top: 1em;
     padding-top: 1em;
     border-top: 1px solid #666;
-}
-
-.post-details, .exif, .highres {
-  a {
-      &:link, &:visited, &:active {
-          color: #666;
-      }
-      &:hover {
-        color: black;
-      }
-  }
-
-  .cell, .cell-xs {
-    min-width: auto;
-    width: 20px;
-    font-size: 18px;
-    padding: 2px;
-    padding-left: 0;
-    color: #333;
-  }
-
-  .cell-text {
-    width: auto;
-    font-size: 14px;
-  }
-}
-
-.post-source, .post-submission {
-    padding: 4px 0;
 }
 
 .post-source, .post-submission, .post-tags {
@@ -62,13 +24,6 @@
     }
 }
 
-.post-submission {
-    img {
-        @include borderRadius(20em);
-    }
-}
-
-//altro
 .post-share {
     text-align: right;
 
@@ -87,6 +42,12 @@
         iframe {
             max-width: 30px;
         }
+    }
+}
+
+.post-submission {
+    img {
+        @include borderRadius(20em);
     }
 }
 

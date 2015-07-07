@@ -1,0 +1,17 @@
+.asker-portrait {
+    width: 50px;
+
+    img {
+        width: 50px;
+        @include borderRadius(20em);
+    }
+}
+
+.asker-data {
+    padding-left: 1em;
+}
+
+.replies {
+    padding-left: .5em;
+    border-left: 1px solid #666;
+}

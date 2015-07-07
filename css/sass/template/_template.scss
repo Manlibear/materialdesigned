@@ -1,8 +1,13 @@
-// Template
-
 @import 'common';
-@import 'toolbars';
-@import 'search';
-@import 'sidenav';
-//@import 'article';
-@import 'pagination';
+
+@import 'post';
+@import 'audio';
+@import 'video';
+@import 'photo';
+@import 'link-exif';
+@import 'question';
+@import 'quote';
+@import 'text-chat';
+@import 'details';
+
+@import 'tmblr-fix';

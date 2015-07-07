@@ -1,0 +1,9 @@
+.link, .exif {
+	padding: .5em;
+	border: 1px solid #aaa;
+    @include borderRadius(2px);
+
+	a:hover {
+        color: black #666;
+    }
+}
