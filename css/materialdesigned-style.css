@@ -239,13 +239,15 @@ textarea {
 
 .icon-xs {
   width: 20px;
-  padding: 2px;
   font-size: 18px; }
+.icon-xs .mdi {
+  margin: 2px; }
 
 .icon-s {
   width: 48px;
-  padding: 12px;
   font-size: 24px; }
+.icon-s .mdi {
+  margin: 12px; }
 
 .table {
   display: table;
@@ -270,11 +272,11 @@ textarea {
 
 .container {
   margin: 0 auto;
-  max-width: 532px; }
+  max-width: 500px; }
 
-@media all and (max-width: 548px) {
+@media all and (max-width: 510px) {
   .container {
-    margin: 0 .5em; } }
+    margin: 0 5px; } }
 .toolbar-tumblr {
   position: fixed;
   top: 0;
@@ -344,7 +346,7 @@ textarea {
 
 .post {
   margin-bottom: 1em;
-  padding: 1em;
+  padding: .7em;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   -ms-border-radius: 2px;
@@ -375,8 +377,8 @@ textarea {
 .post figure p {
   line-height: 16px; }
 
-.photo, .exif, .highres, .content, .photoset, .link, .video, .audio, .content-chat, .question {
-  margin-bottom: 0.5em; }
+.photo, .exif, .highres, .content, .photoset, .link, .video, .audio, .content-chat, .question, .answer, .replies {
+  margin-bottom: .5em !important; }
 
 .audio-tag {
   margin-bottom: .5em; }
@@ -439,9 +441,6 @@ textarea {
 .asker-data {
   padding-left: 1em; }
 
-.replies {
-  margin-top: .5em; }
-
 .quote-icon {
   font-size: 46px;
   text-align: center;
@@ -470,7 +469,7 @@ textarea {
 .post-details {
   margin-top: 1em;
   padding-top: 1em;
-  border-top: 1px solid #666; }
+  border-top: 1px solid #AAA; }
 
 .post-source ul, .post-submission ul, .post-tags ul {
   margin: 0;
@@ -500,6 +499,8 @@ textarea {
   -ms-border-radius: 20em;
   border-radius: 20em; }
 
+.post-notes {
+  border-top: 1px solid #AAA; }
 .post-notes ol {
   list-style-position: inside;
   padding: 0; }
@@ -509,6 +510,9 @@ textarea {
 .post-details .icon, .exif .icon, .highres .icon {
   color: #333; }
 
+@media all and (max-width: 320px) {
+  .post {
+    padding: .3em; } }
 .sidenav {
   background-color: white;
   position: fixed;

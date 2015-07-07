@@ -1,7 +1,7 @@
 .post-details {
     margin-top: 1em;
     padding-top: 1em;
-    border-top: 1px solid #666;
+    border-top: 1px solid #AAA;
 }
 
 .post-source, .post-submission, .post-tags {
@@ -52,6 +52,8 @@
 }
 
 .post-notes {
+    border-top: 1px solid #AAA;
+    
     ol {
         list-style-position: inside;
         padding: 0;

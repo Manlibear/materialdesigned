@@ -34,13 +34,19 @@
 }
 .icon-xs {
     width: 20px;
-    padding: 2px;
     font-size: 18px;
+
+    .mdi {
+        margin: 2px;
+    }
 }
 .icon-s {
     width: 48px;
-    padding: 12px;
     font-size: 24px;
+
+    .mdi {
+        margin: 12px;
+    }
 }
 
 .table {
@@ -69,10 +75,10 @@
 
 .container {
     margin: 0 auto;
-    max-width: 532px;
+    max-width: 500px;
 }
-@media all and (max-width: 548px) {
+@media all and (max-width: 510px) {
     .container {
-        margin: 0 .5em;
+        margin: 0 5px;
     }
 }
