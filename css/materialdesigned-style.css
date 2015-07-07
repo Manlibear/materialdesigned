@@ -510,7 +510,7 @@ textarea {
 }
 
 .link {
-  padding: 1em .5em;
+  padding: 1em .5em !important;
 }
 
 .link, .exif {
