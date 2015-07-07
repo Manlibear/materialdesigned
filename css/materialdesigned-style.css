@@ -393,7 +393,7 @@ textarea {
   padding: 0 8px;
   margin: 0;
   margin-right: 1em;
-  text-align: right;
+  text-align: left;
   height: 100%;
   background-color: transparent;
   border: 0;
@@ -453,13 +453,11 @@ textarea {
   line-height: 16px;
 }
 
-.photo, .exif, .highres, .content, .photoset, .link, .video, .audio, .content-chat {
+.photo, .exif, .highres, .content, .photoset, .link, .video, .audio, .content-chat, .question {
   margin-bottom: 0.5em;
 }
 
 .audio-tag {
-  display: table;
-  width: 100%;
   margin-bottom: .5em;
 }
 
@@ -524,14 +522,7 @@ textarea {
 }
 
 .asker-portrait {
-  width: 50px;
-}
-.asker-portrait img {
-  width: 50px;
-  -webkit-border-radius: 20em;
-  -moz-border-radius: 20em;
-  -ms-border-radius: 20em;
-  border-radius: 20em;
+  width: 48px;
 }
 
 .asker-data {
@@ -564,6 +555,7 @@ textarea {
   margin-bottom: 1em;
 }
 .post-text header h1, .post-text header h2, .post-text header h3, .post-text header h4, .post-text header h5, .post-text header h6, .post-chat header h1, .post-chat header h2, .post-chat header h3, .post-chat header h4, .post-chat header h5, .post-chat header h6 {
+  font-size: 24px;
   margin: 0;
 }
 
@@ -577,6 +569,9 @@ textarea {
   margin-top: 1em;
   padding-top: 1em;
   border-top: 1px solid #666;
+}
+.post-details .icon {
+  color: #333;
 }
 
 .post-source ul, .post-submission ul, .post-tags ul {
