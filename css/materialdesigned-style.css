@@ -509,6 +509,10 @@ textarea {
   text-align: right;
 }
 
+.link {
+  padding: 1em .5em;
+}
+
 .link, .exif {
   padding: .5em;
   border: 1px solid #aaa;
