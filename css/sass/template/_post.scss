@@ -56,3 +56,9 @@
 @import 'posts/quote';
 @import 'posts/text-chat';
 @import 'posts/details';
+
+.post-details, .exif, .highres {
+    .icon {
+        color: #333;
+    }
+}

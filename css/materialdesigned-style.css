@@ -555,7 +555,7 @@ textarea {
   margin-bottom: 1em;
 }
 .post-text header h1, .post-text header h2, .post-text header h3, .post-text header h4, .post-text header h5, .post-text header h6, .post-chat header h1, .post-chat header h2, .post-chat header h3, .post-chat header h4, .post-chat header h5, .post-chat header h6 {
-  font-size: 24px;
+  font-size: 24px !important;
   margin: 0;
 }
 
@@ -569,9 +569,6 @@ textarea {
   margin-top: 1em;
   padding-top: 1em;
   border-top: 1px solid #666;
-}
-.post-details .icon {
-  color: #333;
 }
 
 .post-source ul, .post-submission ul, .post-tags ul {
@@ -616,6 +613,10 @@ textarea {
 }
 .post-notes ol li {
   margin-bottom: .5em;
+}
+
+.post-details .icon, .exif .icon, .highres .icon {
+  color: #333;
 }
 
 .sidenav {
