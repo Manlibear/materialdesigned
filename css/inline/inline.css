@@ -11,9 +11,25 @@ body {
     color: {color:Toolbar Text Color};
 }
 
+.toolbar-top a {
+  color: inherit !important;
+}
+
+.toolbar-top a:link, .toolbar-top a:visited, .toolbar-top a:active, .toolbar-top a:hover {
+  color: inherit !important;
+}
+
 .sidenav-header {
     color: {color:Sidenav Title Color};
     background-color: {AccentColor};
+}
+
+.sidenav-header a {
+  color: inherit !important;
+}
+
+.sidenav-header a:link, .sidenav-header a:visited, .sidenav-header a:active, .sidenav-header a:hover {
+  color: inherit !important;
 }
 
 {block:ShowHeaderImage}

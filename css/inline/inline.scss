@@ -9,11 +9,27 @@ body {
 .toolbar-top {
     background-color: {AccentColor};
     color: {color:Toolbar Text Color};
+
+    a {
+        color: inherit !important;
+
+        &:link, &:visited, &:active, &:hover {
+            color: inherit !important;
+        }
+    }
 }
 
 .sidenav-header {
     color: {color:Sidenav Title Color};
     background-color: {AccentColor};
+
+    a {
+        color: inherit !important;
+
+        &:link, &:visited, &:active, &:hover {
+            color: inherit !important;
+        }
+    }
 }
 
 {block:ShowHeaderImage}
