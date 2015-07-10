@@ -18,7 +18,7 @@
 
     <!-- Tumblr Customisation -->
     <meta name="if:Home Link" content="1"/>
-    <meta name="color:Content Links Color" content="#1976d2" />
+    <meta name="if:Exif" content="1"/>
     <meta name="color:Toolbar Text Color" content="#FFF" />
     <meta name="color:Sidenav Title Color" content="#FFF" />
     <!---->
@@ -93,6 +93,7 @@
                 </div>
                 {/block:HighRes}
 
+                {block:IfExif}
                 {block:Exif}
                 <div class="exif">
                     {block:Camera}
@@ -137,6 +138,7 @@
                     {/block:FocalLength}
                 </div>
                 {/block:Exif}
+                {/block:IfExif}
 
                 {block:Caption}
                 <div class="content">
@@ -165,6 +167,7 @@
                 </div>
                 {/block:HighRes}
 
+                {block:IfExif}
                 {block:Exif}
                 <div class="exif">
                     {block:Camera}
@@ -209,6 +212,7 @@
                     {/block:FocalLength}
                 </div>
                 {/block:Exif}
+                {/block:IfExif}
 
                 {block:Caption}
                 <div class="content">
