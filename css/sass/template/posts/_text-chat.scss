@@ -10,7 +10,15 @@
 }
 
 .content-chat {
-    display: table;
-    border-collapse: separate;
-    border-spacing: 16px 4px;
+    .cell {
+        vertical-align: top;
+        padding: 0;
+    }
+
+    .chat-header {
+        font-weight: 600;
+    }
+    .chat-line {
+        padding-left: .5em;
+    }
 }
