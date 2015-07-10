@@ -2,7 +2,7 @@
 ** Davide Di Criscito <davide.dicriscito@gmail.com> (http://github.com/dcdeiv)
 ** (c) 2014-2015 Licensed under GPLv2
 */
-/*! simpler-sidebar v1.3.3 (https://dcdeiv.github.io/simpler-sidebar)
+/*! simpler-sidebar v1.3.4 (https://dcdeiv.github.io/simpler-sidebar)
 ** Davide Di Criscito <davide.dicriscito@gmail.com> (http://github.com/dcdeiv)
 ** (c) 2015-2015 Licensed under GPLv2
 */
