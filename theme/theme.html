@@ -372,6 +372,18 @@
             <!--Post details and notes-->
             {block:Date}
             <div class="post-details table">
+                {block:GroupMembers}
+                <div class="row post-group-author">
+                    <div class="cell icon icon-xs">
+                        <i class="mdi mdi-account"></i>
+                    </div>
+                    <div class="cell cell-text">
+                        <a href="{PostAuthorURL}">{PostAuthorName}</a>
+                    </div>
+                </div>
+                {/block:GroupMembers}
+
+
                 <div class="row post-date">
                     <div class="cell icon icon-xs">
                         <i class="mdi mdi-clock"></i>
