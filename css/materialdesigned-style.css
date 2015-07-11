@@ -506,7 +506,8 @@ textarea {
 .post-notes {
   border-top: 1px solid #AAA; }
 .post-notes h3 {
-  margin: 1em; }
+  margin: 1em;
+  margin-left: 4px; }
 .post-notes ol {
   list-style-position: inside;
   padding: 0; }

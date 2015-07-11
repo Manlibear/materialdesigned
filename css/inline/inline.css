@@ -12,11 +12,11 @@ body {
 }
 
 .toolbar-top a {
-  color: inherit !important;
+    color: inherit !important;
 }
 
 .toolbar-top a:link, .toolbar-top a:visited, .toolbar-top a:active, .toolbar-top a:hover {
-  color: inherit !important;
+    color: inherit !important;
 }
 
 .sidenav-header {
@@ -25,11 +25,11 @@ body {
 }
 
 .sidenav-header a {
-  color: inherit !important;
+    color: inherit !important;
 }
 
 .sidenav-header a:link, .sidenav-header a:visited, .sidenav-header a:active, .sidenav-header a:hover {
-  color: inherit !important;
+    color: inherit !important;
 }
 
 {block:ShowHeaderImage}
@@ -52,7 +52,7 @@ body {
 
 {block:IfPostNotes}
 .post-notes {
-    border:0
+    border: 0;
 }
 {/block:IfPostNotes}
 
