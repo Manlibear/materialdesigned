@@ -22,6 +22,8 @@
     <meta name="color:Toolbar Text Color" content="#FFF" />
     <meta name="color:Sidenav Title Color" content="#FFF" />
     <meta name="if:Show Group Members" content="1" />
+    <meta name="if:Post Notes" content="1" />
+    <meta name='text:Disqus Shortname' content='' />
     <meta name="text:Google analytics ID" content=""/>
     <!---->
 
@@ -46,6 +48,7 @@
     .content a:link,.content a:visited,.content a:active,.answer a:link,.answer a:visited,.answer a:active,.link a:link,.link a:visited,.link a:active,.replies a:link,.replies a:visited,.replies a:active {color: {AccentColor};}
     .content a:hover,.answer a:hover,.link a:hover,.replies a:hover {color: #333;}
     .link,.exif,.answer {border-color:{AccentColor};}
+    {block:IfPostNotes}.post-notes{border:0}{/block:IfPostNotes}
     {CustomCSS}
     </style>
 </head>
@@ -481,9 +484,30 @@
             </div>
 
             {block:PostNotes}
+            {block:IfDisqusShortname}
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+                var disqus_shortname = '{text:Disqus Shortname}'; // Required - Enter shortname in Tumblr Theme Options
+                var disqus_url = '{Permalink}';
+
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+            {/block:IfDisqusShortname}
+
+            {block:IfPostNotes}
             <div class="post-notes">
+                <h3>{lang:Notes}</h3>
                 {PostNotes}
             </div>
+            {/block:IfPostNotes}
             {/block:PostNotes}
             {/block:Date}
         </div>
@@ -698,5 +722,6 @@
     <script>
         !function(a,b,c,d,e,f,g){a.GoogleAnalyticsObject=e,a[e]=a[e]||function(){(a[e].q=a[e].q||[]).push(arguments)},a[e].l=1*new Date,f=b.createElement(c),g=b.getElementsByTagName(c)[0],f.async=1,f.src=d,g.parentNode.insertBefore(f,g)}(window,document,"script","//www.google-analytics.com/analytics.js","ga"),ga("create","{text:Google Analytics ID}","auto"),ga("send","pageview");
     </script>
+    {/block:IfGoogleAnalyticsID}
 </body>
 </html>

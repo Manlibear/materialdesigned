@@ -53,7 +53,11 @@
 
 .post-notes {
     border-top: 1px solid #AAA;
-    
+
+    h3 {
+    	margin: 1em;
+    }
+
     ol {
         list-style-position: inside;
         padding: 0;

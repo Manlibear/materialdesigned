@@ -53,4 +53,10 @@ body {
     border-color: {color:Content Links Color};
 }
 
+{block:IfPostNotes}
+.post-notes {
+    border:0
+}
+{/block:IfPostNotes}
+
 {CustomCSS}

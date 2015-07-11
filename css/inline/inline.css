@@ -50,4 +50,10 @@ body {
     border-color: {AccentColor};
 }
 
+{block:IfPostNotes}
+.post-notes {
+    border:0
+}
+{/block:IfPostNotes}
+
 {CustomCSS}
