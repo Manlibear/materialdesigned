@@ -21,6 +21,7 @@
     <meta name="if:Exif" content="1"/>
     <meta name="color:Toolbar Text Color" content="#FFF" />
     <meta name="color:Sidenav Title Color" content="#FFF" />
+    <meta name="text:Google analytics ID" content="">
     <!---->
 
     <!-- stylesheets -->
@@ -659,5 +660,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
     <script src="http://static.tumblr.com/nkvwyy6/4PGnraj5o/materialdesigned-template.min.js"></script>
+    {block:IfGoogleAnalyticsID}
+    <script>
+        !function(a,b,c,d,e,f,g){a.GoogleAnalyticsObject=e,a[e]=a[e]||function(){(a[e].q=a[e].q||[]).push(arguments)},a[e].l=1*new Date,f=b.createElement(c),g=b.getElementsByTagName(c)[0],f.async=1,f.src=d,g.parentNode.insertBefore(f,g)}(window,document,"script","//www.google-analytics.com/analytics.js","ga"),ga("create","{text:Google Analytics ID}","auto"),ga("send","pageview");
+    </script>
 </body>
 </html>
