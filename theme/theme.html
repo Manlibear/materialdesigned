@@ -54,7 +54,7 @@
 
         {block:NoSearchResults}
         <div class="post">
-            <h2>No result found!</h2>
+            <h2>{lang:Sorry no results for SearchQuery}</h2>
         </div>
         {/block:NoSearchResults}
 
@@ -83,7 +83,7 @@
                 <div class="highres table">
                     <div class="row">
                         <div class="cell cell-text">
-                            <a href="{PhotoURL-HighRes}">High-Res</a>
+                            <a href="{PhotoURL-HighRes}">{lang:High-res}</a>
                         </div>
                         <div class="cell icon icon-xs">
                             <i class="mdi mdi-quality-high"></i>
@@ -157,7 +157,7 @@
                 <div class="highres table">
                     <div class="row">
                         <div class="cell cell-text">
-                            <a href="{PhotoURL-HighRes}">High-Res</a>
+                            <a href="{PhotoURL-HighRes}">{lang:High-res}</a>
                         </div>
                         <div class="cell icon icon-xs">
                             <i class="mdi mdi-quality-high"></i>
@@ -387,7 +387,7 @@
                         <i class="mdi mdi-file-document-box"></i>
                     </div>
                     <div class="cell cell-text">
-                        <a href="{Permalink}#notes" target="_blank">{NoteCountWithLabel}</a>
+                        <a href="{Permalink}#notes" target="_blank">{NoteCount} {lang:Notes}</a>
                     </div>
                 </div>
                 {/block:NoteCount}
@@ -397,7 +397,7 @@
                         <i class="mdi mdi-launch"></i>
                     </div>
                     <div class="cell cell-text">
-                        <a href="{Permalink}" target="_blank">Permalink</a>
+                        <a href="{Permalink}" target="_blank">{lang:Permalink}</a>
                     </div>
                 </div>
 
@@ -439,7 +439,7 @@
             {block:Submission}
             <div class="post-submission">
                 <ul>
-                    <li><b>Submitter:</b></li>
+                    <li><b>{lang:Posted by PostAuthorName}</b></li>
                     <li>
                         <a href="{SubmitterURL}" target="_blank">
                             <ul>
@@ -609,7 +609,7 @@
                         <div class="cell icon icon-s">
                             <i class="mdi mdi-home"></i>
                         </div>
-                        <div class="cell cell-text-pleft">Home</div>
+                        <div class="cell cell-text-pleft">{lang:Home}</div>
                     </a>
                 </div>
                 {/block:IfHomeLink}
@@ -638,7 +638,7 @@
             {block:HasPages}
             <div class="sidenav-nav">
                 <div class="sidenav-nav-header">
-                    <h2>Pages</h2>
+                    <h2>{lang:Pages}</h2>
                 </div>
 
                 {block:Pages}
