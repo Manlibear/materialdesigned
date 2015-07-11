@@ -581,6 +581,12 @@ textarea {
   -mox-box-shadow: 2px 0px 5px 0px rgba(50, 50, 50, 0.5);
   box-shadow: 2px 0px 5px 0px rgba(50, 50, 50, 0.5); }
 
+#group-members .cell {
+  padding: 0 8px; }
+#group-members .member {
+  margin: 8px;
+  float: left; }
+
 .pagination {
   display: table;
   margin-top: 3em !important;

@@ -84,3 +84,15 @@
 [data-simplersidebar="active"] {
     @include boxShadow(2px 0px 5px 0px rgba(50, 50, 50, 0.5));
 }
+
+
+#group-members {
+    .cell {
+        padding: 0 8px;
+    }
+
+    .member {
+        margin: 8px;
+        float: left;
+    }
+}
