@@ -1,0 +1,62 @@
+body {
+    background: #F0F0F0;
+}
+
+.toolbar-tumblr, .opacity {
+    background: rgba(0,0,0,0.2);
+}
+
+.toolbar-top {
+    background-color: {AccentColor};
+    color: {color:Toolbar Text Color};
+
+    a {
+        color: inherit !important;
+
+        &:link, &:visited, &:active, &:hover {
+            color: inherit !important;
+        }
+    }
+}
+
+.sidenav-header {
+    color: {color:Sidenav Title Color};
+    background-color: {AccentColor};
+
+    a {
+        color: inherit !important;
+
+        &:link, &:visited, &:active, &:hover {
+            color: inherit !important;
+        }
+    }
+}
+
+{block:ShowHeaderImage}
+.sidenav-header {
+    background-image: url('{HeaderImage}');
+}
+{/block:ShowHeaderImage}
+
+.content, .answer, .link, .replies {
+  a {
+        &:link, &:visited, &:active {
+            color: {color:Content Links Color};
+        }
+        &:hover {
+            color: #333;
+        }
+    }
+}
+
+.link, .exif, .answer {
+    border-color: {color:Content Links Color};
+}
+
+{block:IfPostNotes}
+.post-notes {
+    border: 0;
+}
+{/block:IfPostNotes}
+
+{CustomCSS}

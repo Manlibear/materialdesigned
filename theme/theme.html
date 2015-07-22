@@ -1,471 +1,724 @@
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8"/>
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"/>
-	<meta name="description" content="{MetaDescription}"/>
-	
-	<!--CUSTOMISATION-->
-	<meta name="color:Primary" content="#03A9F4"/>
-	<meta name="color:Secondary" content="#4fc3f7"/>
-	<meta name="color:Font Secondary" content="#fff"/>
-	<meta name="if:Home Link" content="0"/>
-	<!--END-CUSTOMISATION-->
-	
-	<title>{block:TagPage}{Tag} - {/block:TagPage} {block:SearchPage}{lang:Search results for SearchQuery} - {/block:SearchPage}{block:PostSummary}{PostSummary} - {/block:PostSummary}{Title}</title>
-	
-	<link rel="shortcut icon" href="{Favicon}"/>
-	<link rel="alternate" type="application/rss+xml" href="{RSS}"/>
-	
-	<link rel="stylesheet" type="text/css" href="http://static.tumblr.com/5ck1zlp/HkFn9jr8i/fonts.css"/>
-	<link rel="stylesheet" type="text/css" href="http://static.tumblr.com/5ck1zlp/5oEn9ld8o/reset.min.css"/>
-	<link rel="stylesheet" type="text/css" href="http://static.tumblr.com/5ck1zlp/Rqlnhz2dr/themestyle.min.css"/>
-	
-	<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
-	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-	<script src="http://static.tumblr.com/5ck1zlp/irVnhz2ib/jquery.materialsidebar.min.js"></script>
-	
-	<!-- HTML5 Shiv -->
-	<!--[if lt IE 9]>
-	<script src="http://static.tumblr.com/5ck1zlp/6yrn9ij90/html5shiv.min.js"></script>
-	<![endif]-->
-	
-	<style>
-    	.top-section,.sidebar-header{background-color:{color:Primary}}
-    	.menu-button:before{border-color:{color:Font Secondary}}
-    	.main-header{color:{color:Font Secondary}}
-    	blockquote{border-color:{color:Secondary}}
-    	.quote:before{color:{color:Secondary}}
-    	.link{background-color:{color:Secondary}}
-		{CustomCSS}
-		.sidebar-header,.link a,.link a:active,.link a:focus,.link a:hover,.link a:link,.link a:visited{color:{color:Font Secondary}}
-		.sidebar-header{background-color:{color:Primary}}
-		
-		{block:ShowHeaderImage}
-		.sidebar-header{background-image:url('{HeaderImage}');background-size:cover;background-position:center;}
-		{/block:ShowHeaderImage}
-		
-		@media all and (max-width: 564px) {
-		    .question,.answer,.replies{font-size:90%}.post{margin:2em .5em}.art,.art:before,.art img{width:100px;height:100px;font-size:80px;}}
-	</style>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"/>
+
+    <title>{block:TagPage}{Tag} - {/block:TagPage} {block:SearchPage}{lang:Search results for SearchQuery} - {/block:SearchPage}{block:PostSummary}{PostSummary} - {/block:PostSummary}{Title}</title>
+
+    <meta name="description" content="{MetaDescription}"/>
+    <meta name='HandheldFriendly' content='True'/>
+
+    <!-- Android ^5.0 - Chrome Theme -->
+    <link rel="icon" sizes="128x128" type="image/png" href="{PortraitURL-128}"/>
+    <!---->
+
+    <link rel="shortcut icon" type="image/ico" href="{Favicon}"/>
+    <link rel="alternate" type="application/rss+xml" href="{RSS}"/>
+
+    <!-- Tumblr Customisation -->
+    <meta name="if:Home Link" content="1"/>
+    <meta name="if:Exif" content="1"/>
+    <meta name="color:Toolbar Text Color" content="#FFF" />
+    <meta name="color:Sidenav Title Color" content="#FFF" />
+    <meta name="if:Show Group Members" content="0" />
+    <meta name="if:Post Notes" content="1" />
+    <meta name='text:Disqus Shortname' content='' />
+    <meta name="text:Google analytics ID" content=""/>
+    <!---->
+
+    <!-- stylesheets -->
+    <link rel="stylesheet" type="text/css" href="http://cdn.materialdesignicons.com/1.1.34/css/materialdesignicons.min.css"/>
+    <link rel="stylesheet" type="text/css" href="http://static.tumblr.com/nkvwyy6/ebjnrvx8o/normalize.css" type="text/css"
+    href="http://static.tumblr.com/nkvwyy6/Z1Dnrvx8y/roboto.css"/>
+    <link rel="stylesheet" type="text/css" href="http://static.tumblr.com/nkvwyy6/tdvnrvx9l/materialdesigned-style.css"/>
+
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <![endif]-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script src="http://static.tumblr.com/nkvwyy6/ySbnrvxap/materialdesigned-template.min.js"></script>
+    {block:IfGoogleAnalyticsID}
+    <script>
+        !function(a,b,c,d,e,f,g){a.GoogleAnalyticsObject=e,a[e]=a[e]||function(){(a[e].q=a[e].q||[]).push(arguments)},a[e].l=1*new Date,f=b.createElement(c),g=b.getElementsByTagName(c)[0],f.async=1,f.src=d,g.parentNode.insertBefore(f,g)}(window,document,"script","//www.google-analytics.com/analytics.js","ga"),ga("create","{text:Google Analytics ID}","auto"),ga("send","pageview");
+    </script>
+    {/block:IfGoogleAnalyticsID}
+
+    <!-- Colors -->
+    <style>
+    body {background:#F0F0F0;}
+    .toolbar-tumblr,.opacity {background: rgba(0,0,0,0.2);}
+    .toolbar-top {background-color: {AccentColor};color: {color:Toolbar Text Color};}
+    .sidenav-header {color:{color:Sidenav Title Color};background-color:{AccentColor};}
+    .sidenav-header a,.toolbar-top a,.sidenav-header a:link,.toolbar-top a:link,.sidenav-header a:visited,.toolbar-top a:visited,.sidenav-header a:active,.toolbar-top a:active,.sidenav-header a:hover,.toolbar-top a:hover {color:inherit !important;}
+    {block:ShowHeaderImage}.sidenav-header {background-image:url('{HeaderImage}');}{/block:ShowHeaderImage}
+    .content a:link,.content a:visited,.content a:active,.answer a:link,.answer a:visited,.answer a:active,.link a:link,.link a:visited,.link a:active,.replies a:link,.replies a:visited,.replies a:active {color: {AccentColor};}
+    .content a:hover,.answer a:hover,.link a:hover,.replies a:hover {color: #333;}
+    .link,.exif,.answer {border-color:{AccentColor};}
+    {block:IfPostNotes}.post-notes{border:0;}{/block:IfPostNotes}
+    {CustomCSS}
+    </style>
 </head>
 
 <body>
+    <div id="main-content" class="main-content container">
 
-<div class="tnav"></div>
-
-<div class="container">
-    
-    <div class="top-section">
-        <div class="icon-sb">
-            <div class="open-sb menu-button"></div>
-        </div>
-        
-        <header class="main-header">
-            {block:IndexPage}
-    		<h1 class="blog-title">
-    			<a href="{BlogURL}">{Title}</a>
-    		</h1>
-    		{/block:IndexPage}
-    		
-    		{block:PermalinkPage}
-    		{block:PostSummary}
-    		<h3 class="blog-title-secondary">{PostSummary}</h3>
-    		{/block:PostSummary}
-    		{/block:PermalinkPage}
-    		
-    		{block:TagPage}
-    		<h3 class="blog-title-secondary">#{Tag}</h3>
-    		{/block:TagPage}
-    		
-    		{block:DayPage}
-    		<h3 class="blog-title-secondary">{Month} {DayOfMonth}, {Year}</h3>
-    		{/block:DayPage}
-    		
-    		{block:ShowDescription}
-    		<h5 class="blog-description">{Description}</h5>
-    		{/block:ShowDescription}
-        </header>
-    </div>
-    
-    <div class="content-wrapper">
-        
         {block:NoSearchResults}
-		<h3>No Result Found</h3>
-		{/block:NoSearchResults}
-        
+        <div class="post">
+            <h2>{lang:Sorry no results for SearchQuery}</h2>
+        </div>
+        {/block:NoSearchResults}
+
         {block:Posts}
-        <article class="post {block:Text}text-post {/block:Text}{block:Photo}photo-post {/block:Photo}{block:Panorama}panorama-post {/block:Panorama}{block:Photoset}photoset-post {/block:Photoset}{block:Quote}quote-post {/block:Quote}{block:Link}link-post {/block:Link}{block:Chat}chat-post {/block:Chat}{block:Audio}audio-post {/block:Audio}{block:Video}video-post {/block:Video}{block:Answer}answer-post {/block:Answer}">
-        
+        <div class="post">
+
             {block:Text}
-			<header>
-				<h2>{Title}</h2>
-			</header>
-			
-			<div class="content">
-				{Body}
-			</div>
-			{/block:Text}
-            
+            <div class="post-text">
+                <header>
+                    <h2>{Title}</h2>
+                </header>
+
+                <div class="content">
+                    {Body}
+                </div>
+            </div>
+            {/block:Text}
+
             {block:Photo}
-			<figure>
-				{LinkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}"/>{LinkCloseTag}
-				{block:Caption}
-				<figcaption class="content">
-					{Caption}
-				</figcaption>
-				{/block:Caption}
-			</figure>
-			{/block:Photo}
-			
-        {block:Panorama}
-			 <figure>
-				{LinkOpenTag}<img src="{PhotoURL-Panorama}" alt="{PhotoAlt}"/>{LinkCloseTag}
-				{block:Caption}
-				<figcaption class="content">
-					{Caption}
-				</figcaption>
-				{/block:Caption}
-			</figure>
-			{/block:Panorama}
-			
-			{block:Photoset}
-			<div class="photoset-layout">
-				{Photoset}
-			</div>
-			
-			{block:Caption}
-			<div class="caption">
-				{Caption}
-			</div>
-			{/block:Caption}
-			{/block:Photoset}
-			
-			{block:Quote}
-			<blockquote class="quote">
-				{Quote}
-				
-				{block:Source}
-				<cite class="content">
-					{Source}
-				 </cite>
-				{/block:Source}
-			</blockquote>
-			{/block:Quote}
-			
-			{block:Link}
-			<div class="link">
-				<h5><a href="{URL}" {Target}>{Name}</a></h5>
-				{block:Host}<h6>{Host}</h6>{/block:Host}
-			</div>
-			
-			{block:Description}
-			<div class="content">
-				{Description}
-			</div>
-			{/block:Description}
-			{/block:Link}
-			
-			{block:Chat}
-			<header>
-				<h2>{Title}</h2>
-			</header>
-			
-			<table class="chat">
-				{block:Lines}
-				<tr>
-					<th>
-					{block:Label}{Label}{/block:Label}
-					</th>
-					<td>{Line}</td>
-				</tr>
-				{/block:Lines}
-			</table>
-			{/block:Chat}
-			
-			{block:Audio}
-			<div>
-				<div class="art">
-					{block:AlbumArt}<img src="{AlbumArtURL}" alt="Art"/>{/block:AlbumArt}
-				</div>
-				<div class="id3">
-					{block:Artist}
-					<h5>{Artist}</h5>
-					{/block:Artist}
-					{block:TrackName}
-					<h5><strong>{TrackName}</strong></h5>
-					{/block:TrackName}
-					{block:Album}
-					<h5>{Album}</h5>
-					{/block:Album}
-				</div>
-			</div>
-			
-			{block:AudioPlayer}
-			<div class="player">
-				{AudioPlayerGrey}
-			</div>
-			{/block:AudioPlayer}
-			
-			{block:Caption}
-			<div class="content">
-				{Caption}
-			</div>
-			{/block:Caption}
-			{/block:Audio}
-			
-			{block:Video}
-			<div class="video">
-				{Video-500}
-			</div>
-			
-			{block:Caption}
-			<div class="content">
-				{Caption}
-			</div>
-			{/block:Caption}
-			{/block:Video}
-			
-			{block:Answer}
-			<div class="question">
-				<div class="portrait">
-					<img class="avatar" src="{AskerPortraitURL-96}" alt="Asker"/>
-				</div>
-				
-				<div class="asker-data">
-				<h5><strong>{Asker}</strong>:</h5>
-					<h6>{Question}</h6>
-				</div>
-			</div>
-			
-			{block:Answerer}
-			<div class="answer">
-				<h5><strong>{Answerer}</strong>:</h5>
-				<h6>{Answer}</h6>
-			</div>
-			{/block:Answerer}
-			
-			<div class="replies">
-				{Replies}
-			</div>
-			{/block:Answer}
-			
-			{block:Date}
-			<aside>
-				
-				{block:Photo}
-				{block:HighRes}
-				<div class="highres">
-					<a href="{PhotoURL-HighRes}">View in High-Res</a>
-				</div>
-				{/block:HighRes}
-				
-				{block:Exif}
-				<ul class="exif">
-					<li><strong>Details:</strong></li>
-					{block:Camera}<li><b>Camera:</b> {Camera}</li>{/block:Camera}
-					{block:Aperture}<li><b>Aperture:</b> {Aperture}</li>{/block:Aperture}
-					{block:Exposure}<li><b>Exposure:</b> {Exposure}</li>{/block:Exposure}
-					{block:FocalLength}<li><b>Focal Length:</b> {FocalLength}</li>{/block:FocalLength}
-				</ul>
-				{/block:Exif}
-				{/block:Photo}
-				
-				{block:Panorama}
-				{block:HighRes}
-				<div class="highres">
-					<a href="{PhotoURL-HighRes}">View in High-Res</a>
-				</div>
-				{/block:HighRes}
-				
-				{block:Exif}
-				<ul class="exif">
-					<li><strong>Details:</strong></li>
-					{block:Camera}<li><b>Camera:</b> {Camera}</li>{/block:Camera}
-					{block:Aperture}<li><b>Aperture:</b> {Aperture}</li>{/block:Aperture}
-					{block:Exposure}<li><b>Exposure:</b> {Exposure}</li>{/block:Exposure}
-					{block:FocalLength}<li><b>Focal Length:</b> {FocalLength}</li>{/block:FocalLength}
-				</ul>
-				{/block:Exif}
-				{/block:Panorama}
-				
-				<div class="notes-post">
-					<a href="{BlogURL}day/{Year}/{MonthNumberWithZero}/{DayofMonthWithZero}">{Month}, {DayOfMonth}, {Year}</a>{block:NoteCount}&nbsp;&nbsp;&ndash;&nbsp;&nbsp;<a href="{Permalink}#notes">{NoteCountWithLabel}</a>{/block:NoteCount}
-				</div>
-				
-				{block:Submission}
-				<div class="submitter">
-					Submitted by <a href="{SubmitterURL}">{Submitter}</a>
-				</div>
-				{/block:Submission}
-				
-				{block:ContentSource}
-				<div class="source-post">
-					<a href="{SourceURL}">
-						{lang:Source}:
-						{block:SourceLogo}
-						<img src="{BlackLogoURL}" width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}"/>
-						{/block:SourceLogo}
-						{block:NoSourceLogo}
-						{SourceTitle}
-						{/block:NoSourceLogo}
-					</a>
-				</div>
-				{/block:ContentSource}
-				
-				{block:HasTags}
-				<div class="tags">
-					<ul>
-					{block:Tags}
-						<li><a href="{TagURL}">#{Tag}</a></li>
-						{/block:Tags}
-					</ul>
-				</div>
-				{/block:HasTags}
-				
-				<div class="share-buttons">
-					<ul>
-						<li><a href="{Permalink}"><img width="34" class="permalink-icon" src="http://static.tumblr.com/5ck1zlp/FXHn9jq1o/extract.png" alt="export"/></a></li><!--permalink-->
-						<li>{ReblogButton size="30"}</li><!--reblog-->
-						<li>{LikeButton size="30"}</li><!--like-->
-				</div>
-			</aside>
-			{/block:Date}
-			
-			{block:PostNotes}
-			<aside class="post-notes">
-				{PostNotes}
-			</aside>
-			{/block:PostNotes}
-		
-		</article>
-		{/block:Posts}
+            <div class="post-photo">
+                <div class="photo">
+                    {LinkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}"/>{LinkCloseTag}
+                </div>
+
+                {block:HighRes}
+                <div class="highres table">
+                    <div class="row">
+                        <div class="cell cell-text">
+                            <a href="{PhotoURL-HighRes}">{lang:High-res}</a>
+                        </div>
+                        <div class="cell icon icon-xs">
+                            <i class="mdi mdi-quality-high"></i>
+                        </div>
+                    </div>
+                </div>
+                {/block:HighRes}
+
+                {block:IfExif}
+                {block:Exif}
+                <div class="exif">
+                    {block:Camera}
+                    <div class="row">
+                        <div class="cell icon icon-xs">
+                            <i class="mdi mdi-camera"></i>
+                        </div>
+                        <div class="cell cell-text">
+                            {Camera}
+                        </div>
+                    </div>
+                    {/block:Camera}
+                    {block:Aperture}
+                    <div class="row">
+                        <div class="cell icon icon-xs">
+                            <i class="mdi mdi-camera-iris"></i>
+                        </div>
+                        <div class="cell cell-text">
+                            {Aperture}
+                        </div>
+                    </div>
+                    {/block:Aperture}
+                    {block:Exposure}
+                    <div class="row">
+                        <div class="cell icon icon-xs">
+                            <i class="mdi mdi-contrast-box"></i>
+                        </div>
+                        <div class="cell cell-text">
+                            {Exposure}
+                        </div>
+                    </div>
+                    {/block:Exposure}
+                    {block:FocalLength}
+                    <div class="row">
+                        <div class="cell icon icon-xs">
+                            <i class="mdi mdi-ruler"></i>
+                        </div>
+                        <div class="cell cell-text">
+                            {FocalLength}
+                        </div>
+                    </div>
+                    {/block:FocalLength}
+                </div>
+                {/block:Exif}
+                {/block:IfExif}
+
+                {block:Caption}
+                <div class="content">
+                    {Caption}
+                </div>
+                {/block:Caption}
+            </div>
+            {/block:Photo}
+
+            {block:Panorama}
+            <div class="post-panorama">
+                <div class="panorama">
+                    {LinkOpenTag}<img src="{PhotoURL-Panorama}" alt="{PhotoAlt}"/>{LinkCloseTag}
+                </div>
+
+                {block:HighRes}
+                <div class="highres table">
+                    <div class="row">
+                        <div class="cell cell-text">
+                            <a href="{PhotoURL-HighRes}">{lang:High-res}</a>
+                        </div>
+                        <div class="cell icon icon-xs">
+                            <i class="mdi mdi-quality-high"></i>
+                        </div>
+                    </div>
+                </div>
+                {/block:HighRes}
+
+                {block:IfExif}
+                {block:Exif}
+                <div class="exif">
+                    {block:Camera}
+                    <div class="row">
+                        <div class="cell icon icon-xs">
+                            <i class="mdi mdi-camera"></i>
+                        </div>
+                        <div class="cell cell-text">
+                            {Camera}
+                        </div>
+                    </div>
+                    {/block:Camera}
+                    {block:Aperture}
+                    <div class="row">
+                        <div class="cell icon icon-xs">
+                            <i class="mdi mdi-camera-iris"></i>
+                        </div>
+                        <div class="cell cell-text">
+                            {Aperture}
+                        </div>
+                    </div>
+                    {/block:Aperture}
+                    {block:Exposure}
+                    <div class="row">
+                        <div class="cell icon icon-xs">
+                            <i class="mdi mdi-contrast-box"></i>
+                        </div>
+                        <div class="cell cell-text">
+                            {Exposure}
+                        </div>
+                    </div>
+                    {/block:Exposure}
+                    {block:FocalLength}
+                    <div class="row">
+                        <div class="cell icon icon-xs">
+                            <i class="mdi mdi-ruler"></i>
+                        </div>
+                        <div class="cell cell-text">
+                            {FocalLength}
+                        </div>
+                    </div>
+                    {/block:FocalLength}
+                </div>
+                {/block:Exif}
+                {/block:IfExif}
+
+                {block:Caption}
+                <div class="content">
+                    {Caption}
+                </div>
+                {/block:Caption}
+            </div>
+            {/block:Panorama}
+
+            {block:Photoset}
+            <div class="post-photoset">
+                <div class="photoset">
+                    {Photoset}
+                </div>
+                {block:Caption}
+                <div class="content">
+                    {Caption}
+                </div>
+                {/block:Caption}
+            </div>
+            {/block:Photoset}
+
+            {block:Quote}
+            <div class="post-quote">
+                <div class="quote">
+                    <div class="quote-icon">
+                        <i class="mdi mdi-format-quote"></i>
+                    </div>
+                    <div class="blockquote">
+                        {Quote}
+                    </div>
+                    {block:Source}
+                    <div class="quote-source">
+                        {Source}
+                    </div>
+                    {/block:Source}
+                </div>
+            </div>
+            {/block:Quote}
+
+            {block:Link}
+            <div class="post-link">
+                <div class="link">
+                    <h5><a href="{URL}" {Target}>{Name}</a></h5>
+                    {block:Host}
+                    <h6>{Host}</h6>
+                    {/block:Host}
+                </div>
+                {block:Description}
+                <div class="content">
+                    {Description}
+                </div>
+                {/block:Description}
+            </div>
+            {/block:Link}
+
+            {block:Chat}
+            <div class="post-chat">
+                {block:Title}
+                <header>
+                    <h2>{Title}</h2>
+                </header>
+                {/block:Title}
+
+                <div class="content-chat">
+                    {block:Lines}
+                    <div class="chat-row">
+                        {block:Label}
+                        <span class="chat-header">
+                            {Label}
+                        </span>
+                        {/block:Label}
+                        {line}
+                    </div>
+                    {/block:Lines}
+                </div>
+            </div>
+            {/block:Chat}
+
+            {block:Audio}
+            <div class="post-audio">
+                <div class="audio-tag table">
+                    <div class="row">
+                        <div class="cell audio-art">
+                            <div class="audio-art-missing">
+                                <i class="mdi mdi-library-music"></i>
+                            </div>
+                            {block:AlbumArt}
+                            <div class="audio-art-available">
+                                <img src="{AlbumArtURL}" alt="Audio" />
+                            </div>
+                            {/block:AlbumArt}
+                        </div>
+                        <div class="cell audio-id3">
+                            {block:Artist}
+                            <h5>{Artist}</h5>
+                            {/block:Artist}
+                            {block:TrackName}
+                            <h5><strong>{TrackName}</strong></h5>
+                            {/block:TrackName}
+                            {block:Album}
+                            <h5>{Album}</h5>
+                            {/block:Album}
+                        </div>
+                    </div>
+                </div>
+                {block:AudioPlayer}
+                <div class="audio-player">
+                    {AudioPlayerGrey}
+                </div>
+                {/block:AudioPlayer}
+                {block:Caption}
+                <div class="content">
+                    {Caption}
+                </div>
+                {/block:Caption}
+            </div>
+            {/block:Audio}
+
+            {block:Video}
+            <div class="post-video">
+                <div class="video">
+                    {video-500}
+                </div>
+                {block:Caption}
+                <div class="content">
+                    {Caption}
+                </div>
+                {/block:Caption}
+            </div>
+            {/block:Video}
+
+            {block:Answer}
+            <div class="post-answer">
+                <div class="row question">
+                    <div class="cell icon avatar asker-portrait">
+                        <img src="{AskerPortraitURL-96}" alt="Asker"/>
+                    </div>
+                    <div class="cell asker-data">
+                        <h5><strong>{Asker}</strong></h5>
+                        <p>{Question}</p>
+                    </div>
+                </div>
+                {block:Answerer}
+                <div class="answer">
+                    <h5><strong>{Answerer}</strong></h5>
+                    <p>{Answer}</p>
+                </div>
+                {/block:Answerer}
+                <div class="replies">
+                    {Replies}
+                </div>
+            </div>
+            {/block:Answer}
+
+            <!--Post details and notes-->
+            {block:Date}
+            <div class="post-details table">
+                {block:GroupMembers}
+                <div class="row post-group-author">
+                    <div class="cell icon icon-xs">
+                        <i class="mdi mdi-account"></i>
+                    </div>
+                    <div class="cell cell-text">
+                        <a href="{PostAuthorURL}">{PostAuthorName}</a>
+                    </div>
+                </div>
+                {/block:GroupMembers}
+
+
+                <div class="row post-date">
+                    <div class="cell icon icon-xs">
+                        <i class="mdi mdi-clock"></i>
+                    </div>
+                    <div class="cell cell-text">
+                        <a href="{BlogURL}day/{Year}/{MonthNumberWithZero}/{DayOfMonthWithZero}">{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}</a>
+                    </div>
+                </div>
+
+                {block:NoteCount}
+                <div class="row post-notes-count">
+                    <div class="cell icon icon-xs">
+                        <i class="mdi mdi-file-document-box"></i>
+                    </div>
+                    <div class="cell cell-text">
+                        <a href="{Permalink}#notes" target="_blank">{NoteCount} {lang:Notes}</a>
+                    </div>
+                </div>
+                {/block:NoteCount}
+
+                <div class="row post-permalink">
+                    <div class="cell icon icon-xs">
+                        <i class="mdi mdi-launch"></i>
+                    </div>
+                    <div class="cell cell-text">
+                        <a href="{Permalink}" target="_blank">{lang:Permalink}</a>
+                    </div>
+                </div>
+
+                {block:HasTags}
+                <div class="row post-tags">
+                    <div class="cell icon icon-xs">
+                        <i class="mdi mdi-tag"></i>
+                    </div>
+                    <div class="cell cell-text">
+                        <ul>
+                            {block:Tags}
+                            <li><a target="_blank" href="{TagURL}">#{Tag}</a></li>
+                            {/block:Tags}
+                        </ul>
+                    </div>
+                </div>
+                {/block:HasTags}
+            </div>
+            <!--post-details-->
+
+            {block:ContentSource}
+            <div class="post-source">
+                <ul>
+                    <li><b>{lang:Source}:</b></li>
+                    <li class="source">
+                        <a href="{SourceURL}" target="_blank">
+                            {block:SourceLogo}
+                                <img src="{BlackLogoURL}" width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}"/>
+                            {/block:SourceLogo}
+                            {block:NoSourceLogo}
+                                {SourceTitle}
+                            {/block:NoSourceLogo}
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            {/block:ContentSource}
+
+            {block:Submission}
+            <div class="post-submission">
+                <ul>
+                    <li><b>{lang:Posted by PostAuthorName}</b></li>
+                    <li>
+                        <a href="{SubmitterURL}" target="_blank">
+                            <ul>
+                                <li class="submitter-avatar">
+                                    <img src="{SubmitterPortraitURL-16}" alt="{Submitter}"/>
+                                </li>
+                                <li class="submitter-name">
+                                    {Submitter}
+                                </li>
+                            </ul>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            {/block:Submission}
+
+            <div class="post-share">
+                <ul>
+                    <li class="share-reblog">
+                        {ReblogButton size="30"}
+                    </li>
+                    <li class="share-like">
+                        {LikeButton size="30"}
+                    </li>
+                </ul>
+            </div>
+
+            {block:PostNotes}
+            {block:IfDisqusShortname}
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+                var disqus_shortname = '{text:Disqus Shortname}'; // Required - Enter shortname in Tumblr Theme Options
+                var disqus_url = '{Permalink}';
+
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+            {/block:IfDisqusShortname}
+
+            {block:IfPostNotes}
+            <div class="post-notes">
+                <h3>{lang:Notes}</h3>
+                {PostNotes}
+            </div>
+            {/block:IfPostNotes}
+            {/block:PostNotes}
+            {/block:Date}
+        </div>
+        {/block:Posts}
+        <!-- post -->
+
+        <!-- pagination -->
+        {block:Pagination}
+        <div class="pagination">
+            <div class="row">
+                {block:PreviousPage}
+                <div class="cell prev">
+                    <a class="prev" href="{PreviousPage}">
+    				    <i class="mdi mdi-chevron-left"></i>
+    				</a>
+                </div>
+                {/block:PreviousPage}
+
+                {block:JumpPagination lenght="5"}
+                {block:CurrentPage}
+                <div class="cell current-page">
+                    {PageNumber}
+                </div>
+                {/block:CurrentPage}
+                {block:JumpPage}
+                <div class="cell jump-page">
+                    <a href="{URL}">{PageNumber}</a>
+                </div>
+                {/block:JumpPage}
+                {/block:JumpPagination}
+
+                {block:NextPage}
+                <div class="cell next">
+                    <a href="{NextPage}">
+                        <i class="mdi mdi-chevron-right"></i>
+                    </a>
+                </div>
+                {/block:NextPage}
+            </div>
+        </div>
+        {/block:Pagination}
+
+        {block:DayPagination}
+        <div class="pagination day-pagination">
+            <div class="row">
+                {block:PreviousDayPage}
+                <div class="cell prev">
+                    <a href="{PreviousDayPage}">
+    				    <i class="mdi mdi-chevron-left"></i>
+    				</a>
+                </div>
+                {/block:PreviousDayPage}
+
+                {block:NextDayPage}
+                <div class="cell next">
+                    <a href="{NextDayPage}">
+                        <i class="mdi mdi-chevron-right"></i>
+                    </a>
+                </div>
+                {/block:NextDayPage}
+            </div>
+        </div>
+        {/block:DayPagination}
+
+        {block:PermalinkPagination}
+        <div class="pagination permalink-pagination">
+            <div class="row">
+    			{block:PreviousPost}
+    			<div class="cell prev">
+    				<a href="{PreviousPost}">
+    				    <i class="mdi mdi-chevron-left"></i>
+    				</a>
+    			</div>
+    			{/block:PreviousPost}
+
+    			{block:NextPost}
+    			<div class="cell next">
+    				<a href="{NextPost}">
+    				    <i class="mdi mdi-chevron-right"></i>
+    				</a>
+    			</div>
+    			{/block:NextPost}
+    		</div>
+        </div>
+        {/block:PermalinkPagination}
+        <!-- pagination -->
     </div>
-    
-    {block:Pagination}
-	<section class="pagination">
-		<ul>
-			
-			{block:PreviousPage}
-			<li>
-				<a class="prev" href="{PreviousPage}">&lt;</a>
-			</li>
-			{/block:PreviousPage}
-			
-			{block:JumpPagination lenght="5"}
-			{block:CurrentPage}
-			<li class="current_page">{PageNumber}</li>
-			{/block:CurrentPage}
-			{block:JumpPage}
-			<li class="jump_page">
-				<a href="{URL}">{PageNumber}</a>
-			</li>
-			{/block:JumpPage}
-			{/block:JumpPagination}
-			
-			{block:NextPage}
-			<li>
-				<a class="next" href="{NextPage}">&gt;</a>
-			</li>
-			{/block:NextPage}
-		
-		</ul>
-	</section>
-	{/block:Pagination}
-	
-	{block:DayPagination}
-	<section class="day-pagination pagination">
-		<ul>
-			{block:PreviousDayPage}
-			<li>
-				<a href="{PreviousDayPage}" class="prev">&lt;</a>
-			</li>
-			{/block:PreviousDayPage}
-			
-			{block:NextDayPage}
-			<li>
-				<a href="{NextDayPage}" class="next">&gt;</a>
-			</li>
-			{/block:NextDayPage}
-		</ul>
-	</section>
-	{/block:DayPagination}
-	
-	{block:PermalinkPagination}
-	<section class="permalink-pagination pagination">
-		<ul>
-			{block:PreviousPost}
-			<li>
-				<a href="{PreviousPost}" class="prev">&lt;</a>
-			</li>
-			{/block:PreviousPost}
-			
-			{block:NextPost}
-			<li>
-				<a href="{NextPost}" class="next">&gt;</a>
-			</li>
-			{/block:NextPost}
-		</ul>
-	</section>
-	{/block:PermalinkPagination}
-    
-</div>
+    <!-- main-content -->
 
-<div class="sidebar">
-	<div class="sidebar-header">
-		<figure>
-			<img width="64" height="64" class="avatar sidebar-avatar" src="{PortraitURL-96}"/>
-		</figure>
-		<h5><a href="{BlogUrl}">{Title}</a></h5>
-	</div>
-	
-	<div class="search-box sidebar-element">
-		<sub>search</sub>
-		
-		<form class="search-form" action="/search" method="get">
-			<input type="text" name="q" value="{SearchQuery}" class="input-text" style="width:75%"/>
-			<input type="submit" value="&crarr;" class="search-box-submit"/>
-		</form>
-	</div>
-	
-	<hr />
-	
-	<nav class="sidebar-nav sidebar-element">
-		{block:IfHomeLink}
-		<ul>
-			<li class="sidebar-nav-el">
-				<a href="{BlogURL}">Home</a>
-			</li>
-		</ul>
-		{/block:IfHomeLink}
-		{block:HasPages}
-		<ul>
-			{block:Pages}
-			<li class="page sidebar-nav-el">
-				<a href="{URL}">{Label}</a>
-			</li>
-			{/block:Pages}
-		</ul>
-		{/block:HasPages}
-		{block:SubmissionsEnabled}
-		<ul>
-			<li class="submit sidebar-nav-el">
-				<a href="{BlogURL}submit">{SubmitLabel}</a>
-			</li>
-		</ul>
-		{/block:SubmissionsEnabled}
-		{block:AskEnabled}
-		<ul>
-			<li class="ask sidebar-nav-el">
-				<a href="{BlogURL}ask">{AskLabel}</a>
-			</li>
-		</ul>
-		{/block:AskEnabled}
-	</nav>
-</div>
+    <div id="toolbar" class="toolbar-top">
+        <div class="toolbar-wrapper table">
+            <div id="toolbar-main" class="row">
+                <div id="toggle-sidebar" class="cell icon icon-s clickable">
+                    <i class="mdi mdi-menu"></i>
+                </div>
+                <div class="cell cell-text-pleft">
+                    <a href="{blogUrl}"><h1>{Title}</h1></a>
+                </div>
+                <div id="show-toolbar-search" class="cell icon icon-s clickable">
+                    <i class="mdi mdi-magnify"></i>
+                </div>
+            </div>
 
-<script>
-!function(a){a.fn.iFrameFixHeight=function(){this.each(function(){var b=a(this),c=b.parent();a(window).resize(function(){var a=parseInt(b.attr("width")),d=parseInt(b.attr("height")),e=a/d,f=c.width(),g=f/e;b.css("height",g)}),a(window).resize()})},a(".video iframe").iFrameFixHeight(),a.fn.sectionAdjust=function(){this.each(function(){var b=a(this),c=a(".top-section");a(window).resize(function(){var a=parseInt(c.outerHeight());b.css({paddingTop:a+16})}),a(window).resize()})},a(".content-wrapper").sectionAdjust(),a(".sidebar").materialSidebar({settings:{opener:".open-sb"}})}(jQuery);
-</script>
-    
-</body>    
+            <form id="toolbar-search" class="row search-form" action="/search" method="get">
+                <div id="hide-toolbar-search" class="cell icon icon-s clickable">
+                    <i class="mdi mdi-arrow-left"></i>
+                </div>
+                <div id="search-input" class="cell cell-text-pleft">
+                    <input type="text" name="q" value="{SearchQuery}" placeholder="Search"/>
+                </div>
+                <div id="search-submit" class="cell icon icon-s clickable">
+                    <input type="submit" value="&#62355;"/>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- Toolbar -->
+
+    <div id="sidenav" class="sidenav">
+        <div class="sidenav-wrapper">
+            <div class="sidenav-header">
+                <div class="opacity">
+                    <div class="sidenav-avatar avatar avatar-s">
+                        <img alt="avatar" src="{PortraitURL-96}" width="48px">
+                    </div>
+                    <div class="sidenav-title">
+                        <a href="{blogUrl}"><h1>{Title}</h1></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidenav-nav">
+                {block:IfHomeLink}
+                <div class="row clickable close-sidebar">
+                    <a href="{BlogUrl}">
+                        <div class="cell icon icon-s">
+                            <i class="mdi mdi-home"></i>
+                        </div>
+                        <div class="cell cell-text-pleft">{lang:Home}</div>
+                    </a>
+                </div>
+                {/block:IfHomeLink}
+                {block:AskEnabled}
+                <div class="row clickable close-sidebar">
+                    <a href="{BlogUrl}ask">
+                        <div class="cell icon icon-s">
+                            <i class="mdi mdi-forum"></i>
+                        </div>
+                        <div class="cell cell-text-pleft">{AskLabel}</div>
+                    </a>
+                </div>
+                {/block:AskEnabled}
+                {block:SubmissionsEnabled}
+                <div class="row clickable close-sidebar">
+                    <a href="{BlogUrl}submit">
+                        <div class="cell icon icon-s">
+                            <i class="mdi mdi-upload"></i>
+                        </div>
+                        <div class="cell cell-text-pleft">{SubmitLabel}</div>
+                    </a>
+                </div>
+                {/block:SumbissionsEnabled}
+            </div>
+
+            {block:HasPages}
+            <div class="sidenav-nav">
+                <div class="sidenav-nav-header">
+                    <h2>{lang:Pages}</h2>
+                </div>
+
+                {block:Pages}
+                <div class="row clickable close-sidebar">
+                    <a href="{URL}">
+                        <div class="cell icon icon-s">
+                            <i class="mdi mdi-file"></i>
+                        </div>
+                        <div class="cell cell-text-pleft">{Label}</div>
+                    </a>
+                </div>
+                {/block:Pages}
+            </div>
+            {/block:HasPages}
+
+            {block:GroupMembers}{block:IfShowGroupMembers}
+            <div id="group-members" class="sidenav-nav">
+                <div class="sidenav-nav-header">
+                    <h2>{lang:Group members}</h2>
+                </div>
+
+                <div class="row">
+                    <div class="cell">
+                        {block:GroupMember}
+                        <div class="member avatar avatar-xs">
+                            <a href="{GroupMemberURL}" target="_blank">
+                                <img src="{GroupMemberPortraitURL-48}" alt="{GroupMemberName}" width="24px" />
+                            </a>
+                        </div>
+                        {/block:GroupMember}
+                    </div>
+                </div>
+
+            </div>
+            {/block:IfShowGroupMembers}{/block:GroupMembers}
+        </div>
+    </div>
+    <!-- Sidenav -->
+</body>
 </html>

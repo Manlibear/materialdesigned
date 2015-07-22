@@ -1,0 +1,35 @@
+{
+  "name": "material-designed",
+  "version": "3.0.0",
+  "homepage": "http://materialdesigned.tumblr.com",
+  "authors": [
+    "Davide Di Criscito <davide.dicriscito@gmail.com> (http://github.com/dcdeiv)"
+  ],
+  "description": "A single-column Tumblr theme built to look like a web-app according to the Google's Material Design principles.",
+  "main": "theme/index.html",
+  "keywords": [
+    "Material-Designed",
+    "Material",
+    "Design",
+    "Google",
+    "Tumblr",
+    "Theme"
+  ],
+  "license": "GPLv2",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "Gruntfile.js",
+    "package.json"
+  ],
+  "dependencies": {
+    "mdi": "~1.1.34",
+    "normalize.css": "~3.0.3",
+    "simpler-sidebar": "~1.3.3",
+    "jquery": "1",
+    "jquery-ui": "1"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "material-designed",
+  "version": "3.0.0",
+  "description": "A single-column Tumblr theme built to look like a web-app according to the Google's Material Design principles.",
+  "homepage": "http://materialdesigned.tumblr.com",
+  "main": "theme/index.html",
+  "scripts": {
+    "test": "grunt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dcdeiv/Material-Designed.git"
+  },
+  "keywords": [
+    "Material-Designed",
+    "Material",
+    "Design",
+    "Google",
+    "Tumblr",
+    "Theme"
+  ],
+  "author": "Davide Di Criscito <davide.dicriscito@gmail.com> (http://github.com/dcdeiv)",
+  "license": "GPLv2",
+  "bugs": {
+    "url": "https://github.com/dcdeiv/Material-Designed/issues"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-cli": "^0.1.13",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-sass": "^0.9.2",
+    "grunt-contrib-uglify": "~0.2.0",
+    "grunt-contrib-watch": "^0.6.1"
+  }
+}
