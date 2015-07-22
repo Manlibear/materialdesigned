@@ -10,15 +10,12 @@
 }
 
 .content-chat {
-    .cell {
-        vertical-align: top;
-        padding: 0;
+    .chat-row {
+        margin-bottom: .5em;
     }
 
     .chat-header {
         font-weight: 600;
-    }
-    .chat-line {
-        padding-left: .5em;
+        margin-right: .5em;
     }
 }

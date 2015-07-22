@@ -462,13 +462,11 @@ textarea {
   font-size: 24px !important;
   margin: 0; }
 
-.content-chat .cell {
-  vertical-align: top;
-  padding: 0; }
+.content-chat .chat-row {
+  margin-bottom: .5em; }
 .content-chat .chat-header {
-  font-weight: 600; }
-.content-chat .chat-line {
-  padding-left: .5em; }
+  font-weight: 600;
+  margin-right: .5em; }
 
 .post-details {
   margin-top: 1em;
