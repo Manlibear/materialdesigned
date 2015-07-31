@@ -3,7 +3,7 @@
   "version": "3.0.0",
   "description": "A single-column Tumblr theme built to look like a web-app according to the Google's Material Design principles.",
   "homepage": "http://materialdesigned.tumblr.com",
-  "main": "theme/index.html",
+  "main": "dist/theme.html",
   "scripts": {
     "test": "grunt"
   },
