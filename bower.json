@@ -1,6 +1,6 @@
 {
   "name": "material-designed",
-  "version": "3.1.0",
+  "version": "3.1.1",
   "homepage": "http://materialdesigned.tumblr.com",
   "authors": [
     "Davide Di Criscito <davide.dicriscito@gmail.com> (http://github.com/dcdeiv)"
@@ -19,11 +19,8 @@
   "ignore": [
     "**/.*",
     "node_modules",
-    "bower_components",
     "test",
-    "tests",
-    "Gruntfile.js",
-    "package.json"
+    "tests"
   ],
   "dependencies": {
     "mdi": "~1.1.34",
