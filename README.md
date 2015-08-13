@@ -14,7 +14,7 @@ If you want to contribute, please reade the [CONTRIBUTING.md](CONTRIBUTING.md) g
 
 ##Components:
 **materialdesigned** make use of some third-party components:
-* [Html5Shiv](https://github.com/aFarkas/html5shiv]);
+* [Html5Shiv](https://github.com/aFarkas/html5shiv);
 * [normalize.css](https://github.com/necolas/normalize.css);
 * [MaterialDesign](https://github.com/Templarian/MaterialDesign);
 * [simpler-sidebar](https://github.com/dcdeiv/simpler-sidebar);
