@@ -1,4 +1,4 @@
-/*! material-designed v3.1.6 (http://materialdesigned.tumblr.com)
+/*! material-designed v3.1.7 (http://materialdesigned.tumblr.com)
 ** Davide Di Criscito <davide.dicriscito@gmail.com> (http://github.com/dcdeiv)
 ** (c) 2014-2015 Licensed under GPL-2.0
 */
