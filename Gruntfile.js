@@ -32,8 +32,7 @@ module.exports = function(grunt) {
           sourcemap: 'none'
         },
         files: {
-          'css/materialdesigned-style.css': 'css/sass/main.scss',
-          'css/spinner.css': 'css/sass/spinner.scss'
+          'css/materialdesigned-style.css': 'css/sass/main.scss'
         }
       }
     },

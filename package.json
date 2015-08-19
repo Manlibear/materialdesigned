@@ -1,6 +1,6 @@
 {
   "name": "material-designed",
-  "version": "3.1.1",
+  "version": "3.1.6",
   "description": "A single-column Tumblr theme built to look like a web-app according to the Google's Material Design principles.",
   "homepage": "http://materialdesigned.tumblr.com",
   "main": "dist/theme.html",

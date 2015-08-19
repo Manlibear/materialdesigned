@@ -1,6 +1,6 @@
 {
   "name": "material-designed",
-  "version": "3.1.1",
+  "version": "3.1.6",
   "homepage": "http://materialdesigned.tumblr.com",
   "authors": [
     "Davide Di Criscito <davide.dicriscito@gmail.com> (http://github.com/dcdeiv)"
@@ -29,5 +29,8 @@
     "jquery": "1",
     "jquery-ui": "1",
     "html5shiv": "~3.7.3"
+  },
+  "resolutions": {
+    "simpler-sidebar": "~1.4.0"
   }
 }
