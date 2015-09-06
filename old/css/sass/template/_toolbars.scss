@@ -1,0 +1,29 @@
+.toolbar-tumblr {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 4000;
+}
+
+.toolbar-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 2998;
+    padding: 4px 4px 4px 4px;
+    font-size: 20px;
+    font-weight: 500;
+
+    h1, h2, h3, h4, h5, h6 {
+        font-size: 20px;
+        font-weight: 500;
+    };
+
+    @include boxShadow(0px 1px 5px 0px rgba(50, 50, 50, 0.5));
+}
+
+.toolbar-title {
+    padding-left: 20px;
+}
