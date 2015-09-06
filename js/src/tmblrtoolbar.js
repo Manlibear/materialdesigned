@@ -1,37 +1,36 @@
 (function($) {
-    $.fn.tmblrToolbar = function(options) {
-        var toolbarTmblr, fixHeight,
-            defaults = {
-                toolbar: undefined,
-                callback: function() {}
-            },
-            cfg = $.extend(true, defaults, options),
-            tmblr = $(this),
-            toolbar = $(cfg.toolbar);
+    $(document).ready(function() {
+        var fixheight, tcontrols, cHeight, tcHeight,
+            controls = $('#tumblr_controls'),
+            toolbar = $('.toolbar-fixed');
 
-        tmblr.wrap('<div id="toolbar-tumblr" class="toolbar-tumblr">');
+        controls.wrap('<div id="tmblrcontrols">');
 
-        toolbarTmblr = $('#toolbar-tumblr');
+        tcontrols = $('#tmblrcontrols');
 
         fixHeight = function() {
-            tHeight = parseInt(tmblr.attr('height'));
+            cHeight = parseInt(controls.attr('height'));
 
-            toolbarTmblr.css({
-                height: tHeight + 2,
-                minHeight: 28
+            tcontrols.css({
+                height: cHeight + 2,
+                minHeight: 28,
+                position: 'fixed',
+                top:0,
+                left: 0,
+                right: 0,
+                background: 'rgba(0, 0, 0, 0.2) none repeat scroll 0% 0%',
             });
 
-            var ttHeight = toolbarTmblr.height();
+            tcHeight = tcontrols.height();
 
-            toolbar.css('padding-top', ttHeight + 4);
-
-            cfg.callback.call(this);
+            toolbar.css('top', tcHeight);
         };
 
-
-        $(window).load(function(){
+        $(window).load(function() {
             fixHeight();
             setTimeout(fixHeight, 100);
         });
-    };
+
+        fixHeight();
+    });
 })(jQuery);
