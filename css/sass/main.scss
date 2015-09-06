@@ -1,10 +1,8 @@
 /*! Material Designed */
 
 @import 'mixins';
-@import 'var_format';
+@import 'variables';
 
 @import 'format';
-@import 'inputs';
-
-// Template
-@import 'template/template';
+@import 'classes';
+@import 'layout/layout'

@@ -1,0 +1,26 @@
+.icon {
+    width: 40px;
+    
+    i {
+       padding: 8px;
+       margin: 8px; 
+    }
+}
+
+.inline {
+    display: inline-block;
+}
+
+.table {
+    display: table;
+    width: 100%;
+}
+
+.table-row {
+    display: table-row;
+    width: 100%;
+}
+
+.table-cell {
+    display: table-cell;
+}
