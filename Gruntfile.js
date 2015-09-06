@@ -28,8 +28,8 @@ module.exports = function(grunt) {
     sass: {
       dist: {
         options: {
-          style: 'compressed',
-          sourcemap: 'none'
+          style: 'compressed'
+          //sourcemap: 'none'
         },
         files: {
           'css/materialdesigned-style.css': 'css/sass/main.scss'
@@ -46,10 +46,7 @@ module.exports = function(grunt) {
         src: [
           'bower_components/simpler-sidebar/dist/jquery.simpler-sidebar.min.js',
           'js/src/tmblrtoolbar.js',
-          'js/src/iframeheightfix.js',
-          'js/src/fixmainwrapper.js',
-          'js/src/searchmodule.js',
-          'js/src/documentready.js'
+          'js/src/secondary-title.js'
         ],
         dest: 'js/materialdesigned-template.js'
       }
