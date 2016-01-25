@@ -1,0 +1,90 @@
+/*
+Error: Invalid CSS after "...r: {AccentColor": expected "{", was "};"
+        on line 10 of /home/dcdeiv/Progetti/materialdesigned/source/stylesheets/inline/inline.scss
+
+5: .toolbar-tumblr, .opacity {
+6:     background: rgba(0,0,0,0.2);
+7: }
+8: 
+9: .toolbar-top {
+10:     background-color: {AccentColor};
+11:     color: {color:Toolbar Text Color};
+12: 
+13:     a {
+14:         color: inherit !important;
+15: 
+
+Backtrace:
+/home/dcdeiv/Progetti/materialdesigned/source/stylesheets/inline/inline.scss:10
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:1179:in `expected'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:1115:in `expected'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:1110:in `tok!'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:654:in `block'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:724:in `declaration_or_ruleset'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:674:in `block_child'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:663:in `block_contents'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:655:in `block'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:899:in `nested_properties!'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:800:in `try_declaration'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:709:in `declaration_or_ruleset'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:674:in `block_child'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:663:in `block_contents'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:655:in `block'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:647:in `ruleset'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:673:in `block_child'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:666:in `block_contents'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:123:in `stylesheet'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:39:in `parse'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.21/lib/sass/engine.rb:403:in `_to_tree'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.21/lib/sass/engine.rb:278:in `render'
+/usr/local/lib/ruby/gems/2.3.0/gems/middleman-core-4.0.0/lib/middleman-core/renderers/sass.rb:66:in `evaluate'
+/usr/local/lib/ruby/gems/2.3.0/gems/tilt-1.4.1/lib/tilt/template.rb:103:in `render'
+/usr/local/lib/ruby/gems/2.3.0/gems/middleman-core-4.0.0/lib/middleman-core/file_renderer.rb:77:in `block in render'
+/usr/local/lib/ruby/gems/2.3.0/gems/activesupport-4.2.5.1/lib/active_support/notifications.rb:166:in `instrument'
+/usr/local/lib/ruby/gems/2.3.0/gems/middleman-core-4.0.0/lib/middleman-core/util.rb:120:in `instrument'
+/usr/local/lib/ruby/gems/2.3.0/gems/middleman-core-4.0.0/lib/middleman-core/file_renderer.rb:76:in `render'
+/usr/local/lib/ruby/gems/2.3.0/gems/middleman-core-4.0.0/lib/middleman-core/template_renderer.rb:95:in `_render_with_all_renderers'
+/usr/local/lib/ruby/gems/2.3.0/gems/middleman-core-4.0.0/lib/middleman-core/template_renderer.rb:67:in `render'
+/usr/local/lib/ruby/gems/2.3.0/gems/middleman-core-4.0.0/lib/middleman-core/sitemap/resource.rb:139:in `block in render'
+/usr/local/lib/ruby/gems/2.3.0/gems/activesupport-4.2.5.1/lib/active_support/notifications.rb:166:in `instrument'
+/usr/local/lib/ruby/gems/2.3.0/gems/middleman-core-4.0.0/lib/middleman-core/util.rb:120:in `instrument'
+/usr/local/lib/ruby/gems/2.3.0/gems/middleman-core-4.0.0/lib/middleman-core/sitemap/resource.rb:129:in `render'
+/usr/local/lib/ruby/gems/2.3.0/gems/middleman-core-4.0.0/lib/middleman-core/rack.rb:111:in `process_request'
+/usr/local/lib/ruby/gems/2.3.0/gems/middleman-core-4.0.0/lib/middleman-core/rack.rb:65:in `block in call'
+/usr/local/lib/ruby/gems/2.3.0/gems/middleman-core-4.0.0/lib/middleman-core/rack.rb:64:in `catch'
+/usr/local/lib/ruby/gems/2.3.0/gems/middleman-core-4.0.0/lib/middleman-core/rack.rb:64:in `call'
+/usr/local/lib/ruby/gems/2.3.0/gems/rack-1.6.4/lib/rack/urlmap.rb:66:in `block in call'
+/usr/local/lib/ruby/gems/2.3.0/gems/rack-1.6.4/lib/rack/urlmap.rb:50:in `each'
+/usr/local/lib/ruby/gems/2.3.0/gems/rack-1.6.4/lib/rack/urlmap.rb:50:in `call'
+/usr/local/lib/ruby/gems/2.3.0/gems/rack-1.6.4/lib/rack/head.rb:13:in `call'
+/usr/local/lib/ruby/gems/2.3.0/gems/rack-1.6.4/lib/rack/lint.rb:49:in `_call'
+/usr/local/lib/ruby/gems/2.3.0/gems/rack-1.6.4/lib/rack/lint.rb:37:in `call'
+/usr/local/lib/ruby/gems/2.3.0/gems/rack-1.6.4/lib/rack/builder.rb:153:in `call'
+/usr/local/lib/ruby/gems/2.3.0/gems/rack-1.6.4/lib/rack/mock.rb:74:in `request'
+/usr/local/lib/ruby/gems/2.3.0/gems/rack-1.6.4/lib/rack/mock.rb:56:in `get'
+/usr/local/lib/ruby/gems/2.3.0/gems/middleman-core-4.0.0/lib/middleman-core/builder.rb:165:in `output_resource'
+/usr/local/lib/ruby/gems/2.3.0/gems/middleman-core-4.0.0/lib/middleman-core/builder.rb:95:in `each'
+/usr/local/lib/ruby/gems/2.3.0/gems/middleman-core-4.0.0/lib/middleman-core/builder.rb:95:in `output_files'
+/usr/local/lib/ruby/gems/2.3.0/gems/middleman-core-4.0.0/lib/middleman-core/builder.rb:59:in `run!'
+/usr/local/lib/ruby/gems/2.3.0/gems/middleman-cli-4.0.0/lib/middleman-cli/build.rb:65:in `build'
+/usr/local/lib/ruby/gems/2.3.0/gems/thor-0.19.1/lib/thor/command.rb:27:in `run'
+/usr/local/lib/ruby/gems/2.3.0/gems/thor-0.19.1/lib/thor/invocation.rb:126:in `invoke_command'
+/usr/local/lib/ruby/gems/2.3.0/gems/thor-0.19.1/lib/thor/invocation.rb:133:in `block in invoke_all'
+/usr/local/lib/ruby/gems/2.3.0/gems/thor-0.19.1/lib/thor/invocation.rb:133:in `each'
+/usr/local/lib/ruby/gems/2.3.0/gems/thor-0.19.1/lib/thor/invocation.rb:133:in `map'
+/usr/local/lib/ruby/gems/2.3.0/gems/thor-0.19.1/lib/thor/invocation.rb:133:in `invoke_all'
+/usr/local/lib/ruby/gems/2.3.0/gems/thor-0.19.1/lib/thor/group.rb:232:in `dispatch'
+/usr/local/lib/ruby/gems/2.3.0/gems/thor-0.19.1/lib/thor/invocation.rb:115:in `invoke'
+/usr/local/lib/ruby/gems/2.3.0/gems/thor-0.19.1/lib/thor.rb:40:in `block in register'
+/usr/local/lib/ruby/gems/2.3.0/gems/thor-0.19.1/lib/thor/command.rb:27:in `run'
+/usr/local/lib/ruby/gems/2.3.0/gems/thor-0.19.1/lib/thor/invocation.rb:126:in `invoke_command'
+/usr/local/lib/ruby/gems/2.3.0/gems/thor-0.19.1/lib/thor.rb:359:in `dispatch'
+/usr/local/lib/ruby/gems/2.3.0/gems/thor-0.19.1/lib/thor/base.rb:440:in `start'
+/usr/local/lib/ruby/gems/2.3.0/gems/middleman-cli-4.0.0/bin/middleman:23:in `<top (required)>'
+/usr/local/bin/middleman:23:in `load'
+/usr/local/bin/middleman:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"...r: {AccentColor\": expected \"{\", was \"};\"\A         on line 10 of /home/dcdeiv/Progetti/materialdesigned/source/stylesheets/inline/inline.scss\A \A 5: .toolbar-tumblr, .opacity {\A 6:     background: rgba(0,0,0,0.2);\A 7: }\A 8: \A 9: .toolbar-top {\A 10:     background-color: {AccentColor};\A 11:     color: {color:Toolbar Text Color};\A 12: \A 13:     a {\A 14:         color: inherit !important;\A 15: "; }
